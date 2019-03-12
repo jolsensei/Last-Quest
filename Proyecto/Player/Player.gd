@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 const SPEED = 60
+const RUN = 500
 
 var dirMov = Vector2(0,0)
 var spriteMov = "down"
@@ -25,7 +26,13 @@ func keyboard_loop():
 	dirMov.y = -int(UP) + int(DOWN)
 	
 func movement_loop():
-	var motion = dirMov.normalized() * SPEED
+	var motion 
+
+	if(Input.is_action_just_pressed("ui_select")):
+		motion = dirMov.normalized() * RUN
+	else:
+		motion = dirMov.normalized() * SPEED
+		
 	move_and_slide(motion, Vector2(0,0))
 	
 func spriteMov_loop():
