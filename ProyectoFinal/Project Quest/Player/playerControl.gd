@@ -30,7 +30,9 @@ func use_item_A():
 	var item_to_use = _GLOBAL_DATA.playerObject.get_item_A()
 	
 	if item_to_use != null and item_to_use is Item:
-		print("Has an item")
+		print("Tried to use " + item_to_use.name)
+		var using_item = item_to_use.scene.instance()
+		add_child(using_item)
 	else:
 		print("Has no item")
 	
