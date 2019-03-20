@@ -1,9 +1,9 @@
-extends "res://Engine/movement.gd"
+extends "res://Engine/common_entity.gd"
 
 var movetimer_length = 15
 var movetimer = 0
 
-var SPEED = 40
+var SPEED = 0
 
 func _init():
 	GLOBAL_SPEED = SPEED

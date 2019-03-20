@@ -6,7 +6,6 @@ const down = Vector2(0,1)
 const left = Vector2(-1,0)
 const right = Vector2(1,0)
 
-
 func random():
 	var randomDirection = randi() % 4 + 1
 	match randomDirection:

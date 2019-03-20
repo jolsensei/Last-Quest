@@ -11,6 +11,7 @@ var max_rupees:int
 var rupees:int
 
 var item_A:Item
+var item_B:Item
 
 #Ingame invisible data
 
@@ -38,4 +39,10 @@ func get_item_A():
 	
 func set_item_A(item):
 	self.item_A = item
+	
+func get_item_B():
+	return item_B
+	
+func set_item_B(item):
+	self.item_B = item
 

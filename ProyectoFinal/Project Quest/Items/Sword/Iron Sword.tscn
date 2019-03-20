@@ -1,13 +1,14 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://swordController.gd" type="Script" id=1]
+[ext_resource path="res://Items/Sword/swordController.gd" type="Script" id=1]
 [ext_resource path="res://Items/Sword/Iron_Sword.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2, 5 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "sword_down"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -45,8 +46,9 @@ tracks/2/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "sword_left"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -84,8 +86,9 @@ tracks/2/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "sword_right"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:z_index")
 tracks/0/interp = 1
@@ -123,8 +126,8 @@ tracks/2/keys = {
 "values": [ Vector2( 10, 0 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "sword_up"
+[sub_resource type="Animation" id=5]
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -187,8 +190,8 @@ __meta__ = {
 }
 
 [node name="Animation" type="AnimationPlayer" parent="."]
-anims/sword_down = SubResource( 3 )
-anims/sword_left = SubResource( 4 )
-anims/sword_right = SubResource( 5 )
-anims/sword_up = SubResource( 2 )
+anims/sword_down = SubResource( 2 )
+anims/sword_left = SubResource( 3 )
+anims/sword_right = SubResource( 4 )
+anims/sword_up = SubResource( 5 )
 
