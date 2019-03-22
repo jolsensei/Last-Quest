@@ -17,8 +17,9 @@ var item_B:Item
 
 var speed:int
 var hitStun:int
+var scene
 
-func _init(start_name:String):
+func _init(start_name:String, scene:String):
 	name = start_name
 	max_hearts = 3.0
 	hearts = 1.75
@@ -26,6 +27,7 @@ func _init(start_name:String):
 	rupees = 0
 	
 	speed = 60
+	self.scene = load(scene)
 	
 	
 func damage(damage_suffered:float):

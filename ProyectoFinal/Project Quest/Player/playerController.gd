@@ -2,8 +2,8 @@ extends "res://Engine/common_entity.gd"
 
 var current_state = _ENUMS.STATE.DEFAULT
 
-func _init():
-	GLOBAL_SPEED = _GLOBAL_DATA.playerObject.speed
+func _init(speed:int):
+	GLOBAL_SPEED = speed
 	
 func _physics_process(delta):
 	
