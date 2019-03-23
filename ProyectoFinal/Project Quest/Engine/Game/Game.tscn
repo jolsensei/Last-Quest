@@ -60,3 +60,4 @@ margin_bottom = 14.0
 [node name="Pause-Inventory" parent="Menu" instance=ExtResource( 5 )]
 visible = false
 
+[connection signal="loaded" from="CurrentMap" to="GUI/Hearts" method="_on_map_loaded"]

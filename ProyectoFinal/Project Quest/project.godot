@@ -8,26 +8,9 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Object",
-"class": "Foe",
-"language": "GDScript",
-"path": "res://Foes/foe.gd"
-}, {
-"base": "Object",
-"class": "Item",
-"language": "GDScript",
-"path": "res://Items/item.gd"
-}, {
-"base": "Object",
-"class": "Player",
-"language": "GDScript",
-"path": "res://Player/player.gd"
-} ]
+_global_script_classes=[  ]
 _global_script_class_icons={
-"Foe": "",
-"Item": "",
-"Player": ""
+
 }
 
 [application]

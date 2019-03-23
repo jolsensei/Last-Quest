@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Items/Sword/swordController.gd" type="Script" id=1]
+[ext_resource path="res://Items/Sword/sword.gd" type="Script" id=1]
 [ext_resource path="res://Items/Sword/Iron_Sword.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]

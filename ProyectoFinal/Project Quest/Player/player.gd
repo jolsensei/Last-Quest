@@ -1,50 +1,82 @@
-extends Object
+extends "res://Engine/common_entity.gd"
 
-
-class_name Player
 
 #Ingame visible data
-var name:String
-var max_hearts:float
-var hearts:float
+var player_name:String
+var max_hearts = 3.0
+var hearts = 1.5
 var max_rupees:int
 var rupees:int
 
-var item_A:Item
-var item_B:Item
+var item_A = load("res://Items/Sword/Iron Sword.tscn")
+var item_B
+
 
 #Ingame invisible data
+var speed = 60
+var hitstun = 15
 
-var speed:int
-var hitStun:int
-var scene
+var current_state = _ENUMS.STATE.DEFAULT
+var type = "PLAYER"
 
-func _init(start_name:String, scene:String):
-	name = start_name
-	max_hearts = 3.0
-	hearts = 1.75
-	max_rupees = 99
-	rupees = 0
+func _init():
+	global_speed = speed
+	global_hitstun_time = hitstun
+	global_type = type
 	
-	speed = 60
-	self.scene = load(scene)
+func _physics_process(delta):
+	
+	match current_state:
+		_ENUMS.STATE.DEFAULT:
+			state_default()
+		_ENUMS.STATE.ATTACK:
+			state_attack()
 	
 	
-func damage(damage_suffered:float):
-	hearts -= damage_suffered
+func state_default():
+	
+	keyboard_loop()
+	movement_loop()
+	sprite_mov_loop()
+	damage_loop()
+	
+	if dirMov != Vector2(0,0):
+		animation_switch("walk_")
+	else:
+		animation_switch("idle_")
+	
+	if Input.is_action_just_pressed("a"):
+		use_item_by_button(_ENUMS.BUTTON.A)
+	if Input.is_action_just_pressed("b"):
+		use_item_by_button(_ENUMS.BUTTON.B)
+		
+func state_attack():
+	animation_switch("idle_")
+	damage_loop()
 
-func add_rupees(earned_rupees:int):
-	rupees += earned_rupees
+func keyboard_loop():
+	var UP		= Input.is_action_pressed("ui_up")
+	var DOWN	= Input.is_action_pressed("ui_down")
+	var LEFT	= Input.is_action_pressed("ui_left")
+	var RIGHT	= Input.is_action_pressed("ui_right")
 	
-func get_item_A():
-	return item_A
+	dirMov.x = -int(LEFT) + int(RIGHT)
+	dirMov.y = -int(UP) + int(DOWN)
 	
-func set_item_A(item):
-	self.item_A = item
-	
-func get_item_B():
-	return item_B
-	
-func set_item_B(item):
-	self.item_B = item
+func use_item_by_button(button):
+	var item_to_use
 
+	match(button):
+		_ENUMS.BUTTON.A:
+			item_to_use = item_A
+		_ENUMS.BUTTON.B:
+			item_to_use = item_B
+
+	if item_to_use != null:
+		print("Tried to use an item")
+		use_item(item_to_use)
+	else:
+		print("Has no item")
+		
+	
+	

@@ -1,6 +1,11 @@
 extends Node2D
 
+var type = null
+var damage = 1
+var max_amount = 1
+
 func _ready():
+	type = get_parent().type
 	$Animation.connect("animation_finished", self, "destroy")
 	$Animation.play(str("sword_", get_parent().spriteMov))
 	
