@@ -13,17 +13,17 @@ func _process(delta):
 		var y = (index / HEART_ROW_SIZE) * HEART_OFFSET
 		heart.position = Vector2(x,y)
 
-		var last_heart = floor(_GLOBAL_DATA.player.hearts)
+		var last_heart = floor(_GLOBAL_DATA.player.global_hearts)
 		if index > last_heart:
 			heart.frame = 0
 		if index == last_heart:
-			heart.frame = (_GLOBAL_DATA.player.hearts - last_heart) * 4
+			heart.frame = (_GLOBAL_DATA.player.global_hearts - last_heart) * 4
 		if index < last_heart:
 			heart.frame = 4
 
 
 func _on_map_loaded():
-	for i in _GLOBAL_DATA.player.max_hearts:
+	for i in _GLOBAL_DATA.player.global_max_hearts:
 		var new_heart = Sprite.new()
 		new_heart.texture = $Hearts.texture
 		new_heart.hframes = $Hearts.hframes

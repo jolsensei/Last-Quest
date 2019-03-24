@@ -3,7 +3,8 @@
 [ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Engine/Warps/Spawn.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Foes/gull.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Foes/Gull/gull.tscn" type="PackedScene" id=4]
+
 
 [node name="Test Room 2" type="Node"]
 

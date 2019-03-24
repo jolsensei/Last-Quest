@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gull.png-7ea771e639200f0362611416bb37d359.stex"
+path="res://.import/player_damage.png-c1aae242c219c02e1ec0e6a808cc163e.stex"
 
 [deps]
 
-source_file="res://Foes/gull.png"
-dest_files=[ "res://.import/gull.png-7ea771e639200f0362611416bb37d359.stex" ]
+source_file="res://Player/player_damage.png"
+dest_files=[ "res://.import/player_damage.png-c1aae242c219c02e1ec0e6a808cc163e.stex" ]
 
 [params]
 

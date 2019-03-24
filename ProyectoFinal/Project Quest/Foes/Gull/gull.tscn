@@ -1,7 +1,9 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Foes/gull.gd" type="Script" id=1]
-[ext_resource path="res://Foes/gull.png" type="Texture" id=2]
+[ext_resource path="res://Foes/Gull/gull.gd" type="Script" id=1]
+[ext_resource path="res://Foes/Gull/gull.png" type="Texture" id=2]
+
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle_down"

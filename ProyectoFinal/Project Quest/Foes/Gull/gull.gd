@@ -4,12 +4,14 @@ var movetimer_length = 15
 var movetimer = 0
 
 var speed = 10
-var damage = 1
-var hitstun = 10
+var damage = 0.5
+var hitstun = 15
+var max_hearts = 2
 
 func _init():
 	global_speed = speed
-	global_hitstun = hitstun
+	global_hitstun_time = hitstun
+	global_max_hearts = max_hearts
 
 func _ready():
 	dirMov = _DIRECTIONS.random()

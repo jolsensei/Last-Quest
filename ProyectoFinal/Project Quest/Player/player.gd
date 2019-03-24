@@ -3,8 +3,8 @@ extends "res://Engine/common_entity.gd"
 
 #Ingame visible data
 var player_name:String
-var max_hearts = 3.0
-var hearts = 1.5
+var max_hearts = 3
+var hearts = 0
 var max_rupees:int
 var rupees:int
 
@@ -23,6 +23,8 @@ func _init():
 	global_speed = speed
 	global_hitstun_time = hitstun
 	global_type = type
+	global_max_hearts = max_hearts
+#	global_hearts = hearts
 	
 func _physics_process(delta):
 	
@@ -53,6 +55,10 @@ func state_default():
 func state_attack():
 	animation_switch("idle_")
 	damage_loop()
+	
+	#To make able recieve damage while doing an attack
+	movement_loop()
+	dirMov = _DIRECTIONS.center
 
 func keyboard_loop():
 	var UP		= Input.is_action_pressed("ui_up")
