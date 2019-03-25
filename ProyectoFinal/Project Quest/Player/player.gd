@@ -5,8 +5,8 @@ extends "res://Engine/common_entity.gd"
 var player_name:String
 var max_hearts = 3
 var hearts = 0
-var max_rupees:int
-var rupees:int
+var max_rupees = 99
+var rupees = 0
 
 var item_A = load("res://Items/Sword/Iron Sword.tscn")
 var item_B

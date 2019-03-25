@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Engine/Game/game.gd" type="Script" id=1]
 [ext_resource path="res://Engine/currentMap.gd" type="Script" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/GUI/Hearts.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Engine/Pause/Pause.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/GUI/Rupees.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Engine/Pause/Pause.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 1.4
@@ -38,6 +39,10 @@ position = Vector2( 269.422, 10.2307 )
 offset = Vector2( 8, 8 )
 transform = Transform2D( 1, 0, 0, 1, 8, 8 )
 
+[node name="Rupees" parent="GUI" instance=ExtResource( 5 )]
+offset = Vector2( 8, 134 )
+transform = Transform2D( 1, 0, 0, 1, 8, 134 )
+
 [node name="Transition" type="CanvasLayer" parent="."]
 
 [node name="BlackScreen" type="ColorRect" parent="Transition"]
@@ -57,7 +62,8 @@ margin_bottom = 14.0
 
 [node name="Menu" type="CanvasLayer" parent="."]
 
-[node name="Pause-Inventory" parent="Menu" instance=ExtResource( 5 )]
+[node name="Pause-Inventory" parent="Menu" instance=ExtResource( 6 )]
 visible = false
 
 [connection signal="loaded" from="CurrentMap" to="GUI/Hearts" method="_on_map_loaded"]
+[connection signal="loaded" from="CurrentMap" to="GUI/Rupees" method="_on_map_loaded"]
