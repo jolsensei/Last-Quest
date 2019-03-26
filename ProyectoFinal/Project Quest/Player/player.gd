@@ -1,5 +1,6 @@
 extends "res://Engine/common_entity.gd"
 
+signal rupee_picked
 
 #Ingame visible data
 var player_name:String
@@ -83,6 +84,9 @@ func use_item_by_button(button):
 		use_item(item_to_use)
 	else:
 		print("Has no item")
-		
+
+func add_rupees(rupees):
+	self.rupees += rupees
+	emit_signal("rupee_picked")
 	
 	

@@ -62,6 +62,7 @@ func damage_loop():
 	for area in $HitBox.get_overlapping_areas():
 		var body = area.get_parent()
 		if global_hitstun == 0 and body.get("damage") != null and body.get("type") != global_type:
+			emit_signal("damaged")
 			global_hearts -= body.get("damage")
 			global_hitstun = global_hitstun_time
 			knock_dir = global_transform.origin - body.global_transform.origin
