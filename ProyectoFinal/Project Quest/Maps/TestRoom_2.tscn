@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Engine/Warps/Spawn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Foes/Gull/gull.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Drops/Rupee/Rupee.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Drops/Rupees/Rupee.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Drops/Hearts/Heart.tscn" type="PackedScene" id=6]
 
 [node name="Test Room 2" type="Node"]
 
@@ -41,35 +42,38 @@ position = Vector2( 20, 104 )
 position = Vector2( 120.387, 33.2868 )
 
 [node name="Rupee" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee7" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee10" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
 
 [node name="Rupee11" parent="." instance=ExtResource( 5 )]
-position = Vector2( 36.3093, 102.468 )
+position = Vector2( 27.0861, 20.2497 )
+
+[node name="Heart" parent="." instance=ExtResource( 6 )]
+position = Vector2( 53.4946, 19.5005 )
 

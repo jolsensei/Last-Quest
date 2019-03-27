@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rupee.png-d17b28869a4a69e1ecd58ade5c81942b.stex"
+path="res://.import/rupee.png-3ae04421a538d503e5ebeed16269cee3.stex"
 
 [deps]
 
-source_file="res://Drops/Rupee/rupee.png"
-dest_files=[ "res://.import/rupee.png-d17b28869a4a69e1ecd58ade5c81942b.stex" ]
+source_file="res://Drops/Rupees/rupee.png"
+dest_files=[ "res://.import/rupee.png-3ae04421a538d503e5ebeed16269cee3.stex" ]
 
 [params]
 

@@ -18,7 +18,7 @@ var speed = 60
 var hitstun = 15
 
 var current_state = _ENUMS.STATE.DEFAULT
-var type = "PLAYER"
+var type = _ENUMS.TYPE.PLAYER
 
 func _init():
 	global_speed = speed
@@ -88,5 +88,9 @@ func use_item_by_button(button):
 func add_rupees(rupees):
 	self.rupees += rupees
 	emit_signal("rupee_picked")
+	
+func heal(hearts):
+	self.global_hearts += hearts
+	global_hearts = min(global_hearts, global_max_hearts)
 	
 	

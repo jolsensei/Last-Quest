@@ -1,4 +1,4 @@
-extends Node
+extends Area2D
 
 export(bool) var disappears = false
 
