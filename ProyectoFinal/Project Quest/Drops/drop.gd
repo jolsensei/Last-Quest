@@ -9,3 +9,6 @@ func _ready():
 func area_entered(area):
 	var area_parent = area.get_parent()
 #	body_entered(area_parent.get_parent())
+
+func animation():
+	pass
