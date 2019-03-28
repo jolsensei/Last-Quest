@@ -6,3 +6,8 @@ func _ready():
 	
 func destroy(animation):
 	queue_free()
+	var drop = _DROP_MANAGER.random_drop()
+	if drop != null:
+		get_parent().add_child(drop)
+		drop.animation()
+		drop.global_transform = global_transform

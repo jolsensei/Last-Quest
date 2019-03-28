@@ -10,7 +10,7 @@ var max_rupees = 99
 var rupees = 0
 
 var item_A = load("res://Items/Sword/Iron Sword.tscn")
-var item_B
+var item_B = load("res://Items/Shield/Shield of Legend.tscn")
 
 
 #Ingame invisible data

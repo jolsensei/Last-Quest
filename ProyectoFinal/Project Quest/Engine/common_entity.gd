@@ -56,7 +56,7 @@ func damage_loop():
 	else:
 		$Sprite.texture = texture_default
 		if global_type == _ENUMS.TYPE.FOE and global_hearts <=0:
-			foe_death(_DROP_MANAGER.random_drop())
+			foe_death()
 		if global_type == _ENUMS.TYPE.PLAYER and global_hearts <=0:
 			get_tree().quit()
 	for area in $HitBox.get_overlapping_areas():
@@ -74,16 +74,12 @@ func use_item(item):
 	if get_tree().get_nodes_in_group(str(new_item, self)).size() > new_item.max_amount:
 		new_item.queue_free()
 		
-func foe_death(drop):
+func foe_death():
 	var death_animation = preload("res://Foes/enemy_death.tscn").instance()
 	get_parent().add_child(death_animation)
 	death_animation.global_transform = global_transform
 	queue_free()
 	
-	if drop != null:
-		get_parent().add_child(drop)
-		drop.animation()
-		drop.global_transform = global_transform
 	
 	
 	
