@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Player/GUI/rupeesUI.gd" type="Script" id=1]
-[ext_resource path="res://Player/GUI/rupee.png" type="Texture" id=2]
+[ext_resource path="res://Player/GUI/Rupees/rupeesUI.gd" type="Script" id=1]
+[ext_resource path="res://Player/GUI/Rupees/rupee.png" type="Texture" id=2]
 [ext_resource path="res://Font/DisposableDroidBB.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -23,7 +23,5 @@ margin_top = -5.01044
 margin_right = 45.8014
 margin_bottom = 10.9896
 custom_fonts/font = SubResource( 1 )
-custom_constants/shadow_offset_x = 2
-custom_constants/line_spacing = 0
 text = "000"
 

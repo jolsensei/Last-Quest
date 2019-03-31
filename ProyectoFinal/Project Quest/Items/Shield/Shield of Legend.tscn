@@ -8,6 +8,7 @@ extents = Vector2( 6, 6 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "shield_down"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -45,8 +46,9 @@ tracks/2/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "shield_left"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -84,8 +86,9 @@ tracks/2/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "shield_right"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -123,8 +126,8 @@ tracks/2/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "shield_up"
+[sub_resource type="Animation" id=5]
+length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -185,7 +188,7 @@ shape = SubResource( 1 )
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 anims/shield_down = SubResource( 2 )
-anims/shield_left = SubResource( 4 )
-anims/shield_right = SubResource( 5 )
-anims/shield_up = SubResource( 3 )
+anims/shield_left = SubResource( 3 )
+anims/shield_right = SubResource( 4 )
+anims/shield_up = SubResource( 5 )
 

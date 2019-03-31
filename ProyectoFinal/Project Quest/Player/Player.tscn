@@ -169,6 +169,7 @@ anims/walk_right = SubResource( 8 )
 anims/walk_up = SubResource( 9 )
 
 [node name="TopDownFollow" type="Camera2D" parent="."]
+visible = false
 current = true
 drag_margin_left = 0.0
 drag_margin_top = 0.0

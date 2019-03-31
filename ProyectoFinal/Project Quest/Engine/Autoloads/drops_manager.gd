@@ -7,10 +7,10 @@ var heart = load("res://Drops/Hearts/Heart.tscn")
 
 func random_drop():
 	
-#	var random = randi() % 4 + 1
-	var random = 1
+	var random = randi() % 4 + 1
+#	var random = 1
 	match random:
-		1:
+		1,3:
 			return rupee.instance()
 		2:
 			return heart.instance()

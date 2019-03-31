@@ -50,6 +50,7 @@ func state_default():
 	
 	if Input.is_action_just_pressed("a"):
 		use_item_by_button(_ENUMS.BUTTON.A)
+		_DIALOGS.print_dialog("You pressed A")
 	if Input.is_action_just_pressed("b"):
 		use_item_by_button(_ENUMS.BUTTON.B)
 		

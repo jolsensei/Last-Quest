@@ -25,6 +25,7 @@ _CURRENT_MAP="*res://Engine/currentMap.gd"
 _GLOBAL_DATA="*res://Engine/Autoloads/global_data.gd"
 _ENUMS="*res://Engine/Autoloads/enums.gd"
 _DROP_MANAGER="*res://Engine/Autoloads/drops_manager.gd"
+_DIALOGS="*res://Engine/Dialogs/dialogs.gd"
 
 [display]
 

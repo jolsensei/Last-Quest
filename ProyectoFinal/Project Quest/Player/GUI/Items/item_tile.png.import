@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hearts.png-d9416b6376749c9ae656844babf73a26.stex"
+path="res://.import/item_tile.png-d56347219f2781ddb8bc2e00319dd810.stex"
 
 [deps]
 
-source_file="res://Player/GUI/hearts.png"
-dest_files=[ "res://.import/hearts.png-d9416b6376749c9ae656844babf73a26.stex" ]
+source_file="res://Player/GUI/Items/item_tile.png"
+dest_files=[ "res://.import/item_tile.png-d56347219f2781ddb8bc2e00319dd810.stex" ]
 
 [params]
 
