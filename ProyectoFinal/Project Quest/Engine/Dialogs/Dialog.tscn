@@ -11,12 +11,18 @@ font_data = ExtResource( 2 )
 
 [node name="Dialog" type="Control"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_top = 112.0
 margin_right = 160.0
 margin_bottom = 144.0
 color = Color( 0, 0, 0, 0.941176 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Container" type="Container" parent="."]
 anchor_top = 1.0
@@ -25,6 +31,9 @@ anchor_bottom = 1.0
 margin_top = 112.0
 margin_right = 160.0
 margin_bottom = 144.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Label" type="Label" parent="Container"]
 anchor_top = 1.0
@@ -36,4 +45,7 @@ custom_fonts/font = SubResource( 1 )
 text = "Hey! What do you think about this dialog box? Do you like it?"
 valign = 1
 autowrap = true
+__meta__ = {
+"_edit_lock_": true
+}
 
