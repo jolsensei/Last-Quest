@@ -1,10 +1,18 @@
 extends Control
 
+var is_paused = false
+
 func _ready():
 	_DIALOG_MANAGER.connect("send_dialog", self, "print_dialog")
 
 func print_dialog(dialog):
-	visible = not visible
+	visible = true
+	
+	get_tree().paused = true
+	
 	$Container/Label.text = dialog
-	get_tree().paused = not get_tree().paused
+	
+	is_paused = true
+	
+
 

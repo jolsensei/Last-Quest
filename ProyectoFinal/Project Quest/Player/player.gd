@@ -16,6 +16,7 @@ var item_B = load("res://Items/Shield/Shield of Legend.tscn")
 #Ingame invisible data
 var speed = 60
 var hitstun = 15
+var can_read = false
 
 var current_state = _ENUMS.STATE.DEFAULT
 var type = _ENUMS.TYPE.PLAYER
@@ -48,12 +49,12 @@ func state_default():
 	else:
 		animation_switch("idle_")
 	
-	if Input.is_action_just_pressed("a"):
+	if Input.is_action_just_pressed("a") and !can_read:
 		use_item_by_button(_ENUMS.BUTTON.A)
-		_DIALOG_MANAGER.emit_signal("send_dialog", "A pressed")
-	if Input.is_action_just_pressed("b"):
+		
+	if Input.is_action_just_pressed("b") and !can_read:
 		use_item_by_button(_ENUMS.BUTTON.B)
-		_DIALOG_MANAGER.emit_signal("send_dialog", "B pressed")
+
 		
 func state_attack():
 	animation_switch("idle_")
