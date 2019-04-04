@@ -5,8 +5,6 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
-extra_spacing_top = -2
-extra_spacing_bottom = -2
 font_data = ExtResource( 2 )
 
 [node name="Dialog" type="Control"]
@@ -35,16 +33,18 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Container"]
+[node name="Label" type="RichTextLabel" parent="Container"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
+margin_left = 6.0
 margin_top = -31.0
-custom_fonts/font = SubResource( 1 )
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_lock_": true
-}
+margin_right = -6.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Trying some text, but it's not a Lorem Impsun, muahahahaha"
+scroll_active = false
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
