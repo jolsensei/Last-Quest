@@ -1,7 +1,6 @@
 extends Node2D
 
 export(String) var text
-var can_read = false
 
 func _ready():
 	set_process_input(false) #This way _input is not called in every key input

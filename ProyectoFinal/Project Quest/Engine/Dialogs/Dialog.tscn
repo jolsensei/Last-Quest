@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Engine/Dialogs/dialogs.gd" type="Script" id=1]
-[ext_resource path="res://Font/DisposableDroidBB.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
+extra_spacing_char = 1
 font_data = ExtResource( 2 )
 
 [node name="Dialog" type="Control"]
@@ -41,7 +42,7 @@ margin_left = 6.0
 margin_top = -31.0
 margin_right = -6.0
 custom_fonts/normal_font = SubResource( 1 )
-text = "Trying some text, but it's not a Lorem Impsun, muahahahaha"
+text = "Some text to try"
 scroll_active = false
 
 [node name="Timer" type="Timer" parent="."]

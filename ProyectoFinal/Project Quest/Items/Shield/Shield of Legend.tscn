@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Items/Shield/shield.gd" type="Script" id=1]
 [ext_resource path="res://Items/Shield/shield_of _legend.png" type="Texture" id=2]
+[ext_resource path="res://Items/Shield/shield_of_legend_portrait.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 6 )
@@ -191,4 +192,8 @@ anims/shield_down = SubResource( 2 )
 anims/shield_left = SubResource( 3 )
 anims/shield_right = SubResource( 4 )
 anims/shield_up = SubResource( 5 )
+
+[node name="Portrait" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
 

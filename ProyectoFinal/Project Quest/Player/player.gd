@@ -12,6 +12,8 @@ var rupees = 0
 var item_A = load("res://Items/Sword/Iron Sword.tscn")
 var item_B = load("res://Items/Shield/Shield of Legend.tscn")
 
+var inventory = []
+
 
 #Ingame invisible data
 var speed = 60
@@ -27,6 +29,11 @@ func _init():
 	global_type = type
 	global_max_hearts = max_hearts
 #	global_hearts = hearts
+
+	inventory.resize(8)
+
+	inventory[0] = load("res://Items/Sword/Iron Sword.tscn").instance()
+	inventory[1] = load("res://Items/Shield/Shield of Legend.tscn").instance()
 	
 func _physics_process(delta):
 	

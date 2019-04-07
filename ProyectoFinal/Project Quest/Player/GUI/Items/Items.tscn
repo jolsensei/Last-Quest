@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Player/GUI/Items/itemsUI.gd" type="Script" id=1]
 [ext_resource path="res://Player/GUI/Items/item_tile.png" type="Texture" id=2]
-[ext_resource path="res://Font/DisposableDroidBB.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 12
@@ -23,10 +23,10 @@ texture = ExtResource( 2 )
 position = Vector2( 6, 8 )
 
 [node name="Label" type="Label" parent="ItemA"]
-margin_left = 2.0
+margin_left = 3.0
 margin_top = -2.0
-margin_right = 8.0
-margin_bottom = 10.0
+margin_right = 9.0
+margin_bottom = 13.0
 custom_fonts/font = SubResource( 1 )
 text = "A"
 
@@ -34,10 +34,10 @@ text = "A"
 position = Vector2( 30, 8 )
 
 [node name="Label" type="Label" parent="ItemB"]
-margin_left = 2.0
+margin_left = 3.0
 margin_top = -2.0
-margin_right = 8.0
-margin_bottom = 10.0
+margin_right = 9.0
+margin_bottom = 13.0
 custom_fonts/font = SubResource( 1 )
 text = "B"
 
