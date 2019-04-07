@@ -16,10 +16,10 @@ func _on_Area2D_body_exited(body):
 		
 func close_to(close):
 		print("Close") if close else print("Far")
-		_GLOBAL_DATA.player.can_read = close
+		_GLOBAL_DATA.player.can_interact = close
 		set_process_input(close)
 		
 func _input(event):
 #	print("Test")
-	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_read:
+	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact:
 		_DIALOG_MANAGER.show(["This is a test, you can press A to skip the following Lorem Ipsum so you know...", "Hope this works well"])

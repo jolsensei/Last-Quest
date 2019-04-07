@@ -18,7 +18,7 @@ var inventory = []
 #Ingame invisible data
 var speed = 60
 var hitstun = 15
-var can_read = false
+var can_interact = false
 
 var current_state = _ENUMS.STATE.DEFAULT
 var type = _ENUMS.TYPE.PLAYER
@@ -30,10 +30,10 @@ func _init():
 	global_max_hearts = max_hearts
 #	global_hearts = hearts
 
-	inventory.resize(8)
+	inventory.resize(16)
 
-	inventory[0] = load("res://Items/Sword/Iron Sword.tscn").instance()
-	inventory[1] = load("res://Items/Shield/Shield of Legend.tscn").instance()
+	inventory[0] = load("res://Items/Sword/Iron Sword.tscn")
+	inventory[1] = load("res://Items/Shield/Shield of Legend.tscn")
 	
 func _physics_process(delta):
 	
@@ -56,10 +56,10 @@ func state_default():
 	else:
 		animation_switch("idle_")
 	
-	if Input.is_action_just_pressed("a") and !can_read:
+	if Input.is_action_just_pressed("a") and !can_interact:
 		use_item_by_button(_ENUMS.BUTTON.A)
 		
-	if Input.is_action_just_pressed("b") and !can_read:
+	if Input.is_action_just_pressed("b") and !can_interact:
 		use_item_by_button(_ENUMS.BUTTON.B)
 
 		
