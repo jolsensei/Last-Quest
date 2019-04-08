@@ -8,7 +8,7 @@ func _on_Game_game_loaded():
 	for item in _GLOBAL_DATA.player.inventory:
 		var new_slot = TextureButton.new()
 		new_slot.texture_focused = load("res://Engine/Pause/item_selected.png")
-		
+
 		if item != null:
 			new_slot.texture_normal = item.instance().get_node("Portrait").texture
 		else:
@@ -40,12 +40,9 @@ func change_item(button):
 			match(button):
 				_ENUMS.BUTTON.A:
 					control_placement(item_to_place, _ENUMS.BUTTON.A)
-					_GLOBAL_DATA.player.item_A = item_to_place
 				_ENUMS.BUTTON.B:
 					control_placement(item_to_place, _ENUMS.BUTTON.B)
-					_GLOBAL_DATA.player.item_B = item_to_place
 			emit_signal("equipment_changed")
-
 		count += 1
 
 func control_placement(item, button):
@@ -53,6 +50,8 @@ func control_placement(item, button):
 		_ENUMS.BUTTON.A:
 			if _GLOBAL_DATA.player.item_B == item:
 				_GLOBAL_DATA.player.item_B = _GLOBAL_DATA.player.item_A
+			_GLOBAL_DATA.player.item_A = item
 		_ENUMS.BUTTON.B:
 			if _GLOBAL_DATA.player.item_A == item:
 				_GLOBAL_DATA.player.item_A = _GLOBAL_DATA.player.item_B
+			_GLOBAL_DATA.player.item_B = item
