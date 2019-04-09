@@ -182,3 +182,6 @@ drag_margin_bottom = 0.0
 visible = false
 shape = SubResource( 10 )
 
+[node name="Lift" type="Position2D" parent="."]
+position = Vector2( 0, -8 )
+
