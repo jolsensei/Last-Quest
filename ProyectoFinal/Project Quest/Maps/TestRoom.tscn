@@ -53,3 +53,6 @@ position = Vector2( -8, 24 )
 [node name="Pot" parent="." instance=ExtResource( 7 )]
 position = Vector2( 24, 104 )
 
+[node name="Pot2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -8, 104 )
+

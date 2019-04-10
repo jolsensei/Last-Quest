@@ -18,7 +18,9 @@ var inventory = []
 #Ingame invisible data
 var speed = 60
 var hitstun = 15
+
 var can_interact = false
+var hands_free = true
 
 var current_state = _ENUMS.STATE.DEFAULT
 var type = _ENUMS.TYPE.PLAYER
@@ -56,10 +58,10 @@ func state_default():
 	else:
 		animation_switch("idle_")
 	
-	if Input.is_action_just_pressed("a") and !can_interact:
+	if Input.is_action_just_pressed("a") and !can_interact and hands_free:
 		use_item_by_button(_ENUMS.BUTTON.A)
 		
-	if Input.is_action_just_pressed("b") and !can_interact:
+	if Input.is_action_just_pressed("b") and !can_interact and hands_free:
 		use_item_by_button(_ENUMS.BUTTON.B)
 
 		
