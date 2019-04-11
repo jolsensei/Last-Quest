@@ -10,7 +10,7 @@ var max_rupees = 99
 var rupees = 0
 
 var item_A = load("res://Items/Sword/Iron Sword.tscn")
-var item_B = load("res://Items/Shield/Shield of Legend.tscn")
+var item_B #= load("res://Items/Shield/Shield of Legend.tscn")
 
 var inventory = []
 
@@ -35,7 +35,7 @@ func _init():
 	inventory.resize(16)
 
 	inventory[0] = load("res://Items/Sword/Iron Sword.tscn")
-	inventory[1] = load("res://Items/Shield/Shield of Legend.tscn")
+#	inventory[1] = load("res://Items/Shield/Shield of Legend.tscn")
 	
 func _physics_process(delta):
 	
@@ -53,11 +53,16 @@ func state_default():
 	sprite_mov_loop()
 	damage_loop()
 	
-	if dirMov != Vector2(0,0):
+	
+	if dirMov != Vector2(0,0) and !hands_free:
+		animation_switch("walk_lift_")
+	elif !hands_free:
+		animation_switch("idle_lift_")
+	elif  dirMov != Vector2(0,0):
 		animation_switch("walk_")
 	else:
 		animation_switch("idle_")
-	
+
 	if Input.is_action_just_pressed("a") and !can_interact and hands_free:
 		use_item_by_button(_ENUMS.BUTTON.A)
 		

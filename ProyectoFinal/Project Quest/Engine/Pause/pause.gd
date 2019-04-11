@@ -4,7 +4,14 @@ signal equipment_changed
 
 var in_pause = false
 
+func _ready():
+	_SIGNAL_MANAGER.connect("update_inventory", self, "_on_Game_game_loaded")
+
 func _on_Game_game_loaded():
+
+	for child in get_node("GridContainer").get_children(): #We delete them as we are going to create new ones
+		get_node("GridContainer").remove_child(child)
+
 	for item in _GLOBAL_DATA.player.inventory:
 		var new_slot = TextureButton.new()
 		new_slot.texture_focused = load("res://Engine/Pause/item_selected.png")

@@ -5,7 +5,7 @@ var page = 0
 var currently_in_dialog = false
 
 func _ready():
-	_DIALOG_MANAGER.connect("send_dialog", self, "print_dialog")
+	_SIGNAL_MANAGER.connect("send_dialog", self, "print_dialog")
 	$Container/Label.set_visible_characters(0)
 	set_process_input(false)
 	
@@ -35,6 +35,7 @@ func _input(event):
 			else:
 				Input.action_release("a")
 				on_dialog(false)
+				_GLOBAL_DATA.player.get_node("GetItem").texture = null #In the case we recieved an item
 		else:
 			$Container/Label.set_visible_characters($Container/Label.get_total_character_count())
 
