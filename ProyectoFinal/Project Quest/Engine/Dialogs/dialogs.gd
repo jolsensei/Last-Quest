@@ -10,20 +10,21 @@ func _ready():
 	set_process_input(false)
 	
 
-func print_dialog(dialog):
+func print_dialog(texture, dialog):
+	
+	if texture != null:
+		put_texture(true, texture)
+		dialog = highlight(dialog, Color.red)
+	else:
+		put_texture(false, null)
 	
 	globalDialog = dialog
-	
 	$Container/Label.set_bbcode(globalDialog[page])
 	
 	$Timer.start()
 	
 	on_dialog(true)
-	
-	
-	
-	
-	
+
 
 func _input(event):
 	if Input.is_action_just_pressed("a") and currently_in_dialog:
@@ -55,3 +56,24 @@ func on_dialog(boolean):
 		$Timer.stop()
 		page = 0
 
+func put_texture(boolean, texture):
+	if boolean:
+		$Container/Portrait.texture = texture
+		$Container/Label.margin_left = 32
+	else:
+		$Container/Portrait.texture = null
+		$Container/Label.margin_left = 6
+		
+
+func highlight(dialog, color):
+	var highlighted_dialog = []
+	highlighted_dialog.resize(dialog.size())
+	var count = 0
+	for text in dialog:
+		text = text.replace("/*", "[color=red]")
+		text = text.replace("*/", "[/color]")
+		highlighted_dialog[count] = text
+		count += 1
+
+	return highlighted_dialog
+	

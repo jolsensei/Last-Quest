@@ -38,7 +38,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=4]
 resource_name = "idle_lift_down"
 step = 0.5
 tracks/0/type = "value"
@@ -54,7 +54,7 @@ tracks/0/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=5]
 resource_name = "idle_lift_left"
 step = 0.5
 tracks/0/type = "value"
@@ -70,7 +70,7 @@ tracks/0/keys = {
 "values": [ 18 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=6]
 resource_name = "idle_lift_right"
 step = 0.5
 tracks/0/type = "value"
@@ -86,7 +86,7 @@ tracks/0/keys = {
 "values": [ 13 ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=7]
 resource_name = "idle_lift_up"
 step = 0.5
 tracks/0/type = "value"
@@ -102,8 +102,7 @@ tracks/0/keys = {
 "values": [ 15 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "idle_right"
+[sub_resource type="Animation" id=8]
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -118,8 +117,7 @@ tracks/0/keys = {
 "values": [ 3 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "idle_up"
+[sub_resource type="Animation" id=9]
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -134,8 +132,7 @@ tracks/0/keys = {
 "values": [ 5 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "walk_down"
+[sub_resource type="Animation" id=10]
 length = 0.6
 loop = true
 step = 0.3
@@ -152,8 +149,7 @@ tracks/0/keys = {
 "values": [ 1, 2 ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "walk_left"
+[sub_resource type="Animation" id=11]
 length = 0.6
 loop = true
 step = 0.3
@@ -170,8 +166,7 @@ tracks/0/keys = {
 "values": [ 9, 8 ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "walk_lift_down"
+[sub_resource type="Animation" id=12]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -221,8 +216,7 @@ tracks/0/keys = {
 "values": [ 14, 13 ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "walk_lift_up"
+[sub_resource type="Animation" id=15]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -238,8 +232,7 @@ tracks/0/keys = {
 "values": [ 16, 17 ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "walk_right"
+[sub_resource type="Animation" id=16]
 length = 0.6
 loop = true
 step = 0.3
@@ -256,8 +249,7 @@ tracks/0/keys = {
 "values": [ 4, 3 ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "walk_up"
+[sub_resource type="Animation" id=17]
 length = 0.6
 loop = true
 step = 0.3
@@ -274,7 +266,7 @@ tracks/0/keys = {
 "values": [ 6, 7 ]
 }
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 7, 9 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -294,20 +286,20 @@ shape = SubResource( 1 )
 [node name="Animation" type="AnimationPlayer" parent="."]
 anims/idle_down = SubResource( 2 )
 anims/idle_left = SubResource( 3 )
-anims/idle_lift_down = SubResource( 15 )
-anims/idle_lift_left = SubResource( 16 )
-anims/idle_lift_right = SubResource( 17 )
-anims/idle_lift_up = SubResource( 18 )
-anims/idle_right = SubResource( 4 )
-anims/idle_up = SubResource( 5 )
-anims/walk_down = SubResource( 6 )
-anims/walk_left = SubResource( 7 )
-anims/walk_lift_down = SubResource( 11 )
+anims/idle_lift_down = SubResource( 4 )
+anims/idle_lift_left = SubResource( 5 )
+anims/idle_lift_right = SubResource( 6 )
+anims/idle_lift_up = SubResource( 7 )
+anims/idle_right = SubResource( 8 )
+anims/idle_up = SubResource( 9 )
+anims/walk_down = SubResource( 10 )
+anims/walk_left = SubResource( 11 )
+anims/walk_lift_down = SubResource( 12 )
 anims/walk_lift_left = SubResource( 13 )
 anims/walk_lift_right = SubResource( 14 )
-anims/walk_lift_up = SubResource( 12 )
-anims/walk_right = SubResource( 8 )
-anims/walk_up = SubResource( 9 )
+anims/walk_lift_up = SubResource( 15 )
+anims/walk_right = SubResource( 16 )
+anims/walk_up = SubResource( 17 )
 
 [node name="TopDownFollow" type="Camera2D" parent="."]
 visible = false
@@ -321,7 +313,7 @@ drag_margin_bottom = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 visible = false
-shape = SubResource( 10 )
+shape = SubResource( 18 )
 
 [node name="Lift" type="Position2D" parent="."]
 visible = false
