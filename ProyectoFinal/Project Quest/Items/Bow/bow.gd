@@ -7,6 +7,7 @@ var max_amount = 3
 var speed = 150
 var dirMov = null
 
+
 func _ready():
 	if get_parent().arrows > 0:
 		add_to_group("destroy_on_hit")
@@ -22,7 +23,7 @@ func _ready():
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
 	else:
-		set_process(false)
+		queue_free()
 		
 
 

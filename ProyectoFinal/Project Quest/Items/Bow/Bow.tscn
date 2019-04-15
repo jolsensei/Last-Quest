@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Items/Bow/bow.gd" type="Script" id=1]
 [ext_resource path="res://Items/Bow/arrow.png" type="Texture" id=2]
 [ext_resource path="res://Items/Bow/bow.png" type="Texture" id=3]
+[ext_resource path="res://Items/Bow/bow_count.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2, 2 )
@@ -82,11 +83,18 @@ shape = SubResource( 1 )
 [node name="Portrait" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 3 )
+hframes = 11
+frame = 10
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 anims/down = SubResource( 2 )
 anims/left = SubResource( 3 )
 anims/right = SubResource( 4 )
 anims/up = SubResource( 5 )
+
+[node name="Counter" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 4 )
+hframes = 11
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]
