@@ -3,6 +3,7 @@ extends KinematicBody2D
 signal damaged
 
 var dirMov = Vector2(0,0)
+var last_dirMov = Vector2(0,1)
 var spriteMov = "down"
 var knock_dir = Vector2(0,0)
 
@@ -32,6 +33,8 @@ func movement_loop():
 		motion = knock_dir.normalized() * 125
 		
 	move_and_slide(motion, Vector2(0,0))
+	if dirMov != _DIRECTIONS.center and _DIRECTIONS.cardinal_directions.has(dirMov):
+		last_dirMov = dirMov
 	
 func sprite_mov_loop():
 	match dirMov:
@@ -66,12 +69,14 @@ func damage_loop():
 			global_hearts -= body.get("damage")
 			global_hitstun = global_hitstun_time
 			knock_dir = global_transform.origin - body.global_transform.origin
+			if body.get_groups().has("destroy_on_hit"):
+				body.queue_free()
 			
 func use_item(item):
 	var new_item = item.instance()
-	new_item.add_to_group(str(new_item, self))
+	new_item.add_to_group(str(item, self))
 	add_child(new_item)
-	if get_tree().get_nodes_in_group(str(new_item, self)).size() > new_item.max_amount:
+	if get_tree().get_nodes_in_group(str(item, self)).size() > new_item.max_amount:
 		new_item.queue_free()
 		
 func foe_death():

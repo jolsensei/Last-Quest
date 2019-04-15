@@ -8,9 +8,12 @@ var max_hearts = 3
 var hearts = 0
 var max_rupees = 99
 var rupees = 0
+var max_arrows = 10
+var arrows = 10
+
 
 var item_A = load("res://Items/Sword/Iron Sword.tscn")
-var item_B #= load("res://Items/Shield/Shield of Legend.tscn")
+var item_B = load("res://Items/Bow/Bow.tscn")
 
 var inventory = []
 
@@ -35,7 +38,9 @@ func _init():
 	inventory.resize(16)
 
 	inventory[0] = load("res://Items/Sword/Iron Sword.tscn")
-#	inventory[1] = load("res://Items/Shield/Shield of Legend.tscn")
+	inventory[4] = load("res://Items/Shield/Shield of Legend.tscn")
+	inventory[5] = load("res://Items/Boomerang/Boomerang.tscn")
+	inventory[6] = load("res://Items/Bow/Bow.tscn")
 	
 func _physics_process(delta):
 	
