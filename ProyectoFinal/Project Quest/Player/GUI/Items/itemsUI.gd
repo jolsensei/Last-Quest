@@ -2,6 +2,7 @@ extends Node
 
 func _ready():
 	_SIGNAL_MANAGER.connect("update_counter", self, "update_counter")
+	_SIGNAL_MANAGER.connect("update_AB", self, "update_AB")
 	
 
 func _on_map_loaded():
@@ -28,6 +29,9 @@ func _on_map_loaded():
 
 
 func _on_PauseInventory_equipment_changed():
+	_on_map_loaded()
+	
+func update_AB():
 	_on_map_loaded()
 	
 func update_counter(number, item):

@@ -13,7 +13,7 @@ var arrows = 10
 
 
 var item_A = load("res://Items/Sword/Iron Sword.tscn")
-var item_B = load("res://Items/Bow/Bow.tscn")
+var item_B = load("res://Items/Boomerang/Boomerang.tscn")
 
 var inventory = []
 
@@ -114,5 +114,9 @@ func add_rupees(rupees):
 func heal(hearts):
 	self.global_hearts += hearts
 	global_hearts = min(global_hearts, global_max_hearts)
+	
+func give_arrows(arrows):
+	self.arrows += arrows
+	self.arrows = min(self.arrows, max_arrows)
 	
 	

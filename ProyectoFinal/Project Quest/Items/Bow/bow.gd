@@ -2,7 +2,7 @@ extends Node
 
 var type = null
 var damage = 1
-var max_amount = 3
+var max_amount = 1
 
 var speed = 150
 var dirMov = null
@@ -34,3 +34,4 @@ func _process(delta):
 func _on_HitBox_body_entered(body):
 	if body.get("type") != _ENUMS.TYPE.PLAYER:
 		queue_free()
+

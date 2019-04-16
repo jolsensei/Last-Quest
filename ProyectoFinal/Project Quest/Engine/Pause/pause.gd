@@ -6,6 +6,7 @@ var in_pause = false
 
 func _ready():
 	_SIGNAL_MANAGER.connect("update_inventory", self, "_on_Game_game_loaded")
+	_SIGNAL_MANAGER.connect("update_counter", self, "update_counter")
 
 func _on_Game_game_loaded():
 
@@ -36,8 +37,6 @@ func _input(event):
 		change_item(_ENUMS.BUTTON.B)
 
 
-
-
 func change_item(button):
 	var count = 0
 	for slot in $GridContainer.get_children():
@@ -62,3 +61,4 @@ func control_placement(item, button):
 			if _GLOBAL_DATA.player.item_A == item:
 				_GLOBAL_DATA.player.item_A = _GLOBAL_DATA.player.item_B
 			_GLOBAL_DATA.player.item_B = item
+			

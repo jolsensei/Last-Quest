@@ -34,6 +34,7 @@ text = "A"
 [node name="CounterA" type="Sprite" parent="ItemA"]
 position = Vector2( 0, -9 )
 texture = ExtResource( 4 )
+vframes = 3
 hframes = 11
 
 [node name="ItemB" type="Sprite" parent="."]
@@ -50,5 +51,6 @@ text = "B"
 [node name="CounterB" type="Sprite" parent="ItemB"]
 position = Vector2( 0, -9 )
 texture = ExtResource( 4 )
+vframes = 3
 hframes = 11
 
