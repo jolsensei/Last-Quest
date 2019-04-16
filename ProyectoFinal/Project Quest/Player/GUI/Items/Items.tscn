@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/GUI/Items/itemsUI.gd" type="Script" id=1]
 [ext_resource path="res://Player/GUI/Items/item_tile.png" type="Texture" id=2]
 [ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://Items/counter.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 12
@@ -30,6 +31,11 @@ margin_bottom = 13.0
 custom_fonts/font = SubResource( 1 )
 text = "A"
 
+[node name="CounterA" type="Sprite" parent="ItemA"]
+position = Vector2( 0, -9 )
+texture = ExtResource( 4 )
+hframes = 11
+
 [node name="ItemB" type="Sprite" parent="."]
 position = Vector2( 30, 8 )
 
@@ -40,4 +46,9 @@ margin_right = 9.0
 margin_bottom = 13.0
 custom_fonts/font = SubResource( 1 )
 text = "B"
+
+[node name="CounterB" type="Sprite" parent="ItemB"]
+position = Vector2( 0, -9 )
+texture = ExtResource( 4 )
+hframes = 11
 

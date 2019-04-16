@@ -6,7 +6,7 @@ var max_amount = 3
 
 var speed = 150
 var dirMov = null
-
+var has_counter = true
 
 func _ready():
 	if get_parent().arrows > 0:
@@ -15,8 +15,8 @@ func _ready():
 		dirMov = get_parent().last_dirMov
 		self.position = get_parent().position
 		$Animation.play(get_parent().spriteMov)
-		
 		get_parent().arrows -= 1
+		_SIGNAL_MANAGER.update_counter(get_parent().arrows, self.name)
 		print(get_parent().arrows)
 		
 		var new_parent = get_parent().get_parent()

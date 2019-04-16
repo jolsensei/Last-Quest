@@ -3,6 +3,7 @@ extends Node2D
 var type = null
 var damage = 0
 var max_amount = 1
+var has_counter = false
 
 
 func _ready():
