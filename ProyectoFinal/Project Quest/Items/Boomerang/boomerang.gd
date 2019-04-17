@@ -1,4 +1,4 @@
-extends Node
+extends KinematicBody2D
 
 var type = null
 var damage = 0
@@ -9,6 +9,7 @@ var dirMov = null
 var has_counter = false
 
 var going_back = false
+var body_exited = false
 
 func _ready():
 	$Timer.start()
@@ -23,19 +24,43 @@ func _ready():
 
 func _process(delta):
 	if going_back:
-		self.global_position -= dirMov * speed * delta
+		var direction = (_GLOBAL_DATA.player.global_position - self.global_position).normalized()
+		move_and_slide(direction*speed)
+
 	else:
 		self.global_position += dirMov * speed * delta
+		
+		
 
 
 
 func _on_HitBox_body_entered(body):
+	
 	if body.get("type") == _ENUMS.TYPE.PLAYER and going_back:
 		queue_free()
-	elif body.get("type") != _ENUMS.TYPE.PLAYER:
-		going_back = not going_back
+		print("Grab")
 
+	elif body.get("type") != _ENUMS.TYPE.PLAYER:
+		going_back = true
+		if !body_exited:
+			queue_free()
+		print("Wall")
+		
+func _on_HitBox_body_exited(body): #In order to solve a bug, whe need to know if the boomerang left the player
+	if body.get("type") == _ENUMS.TYPE.PLAYER:
+		body_exited = true
 
 func _on_Timer_timeout():
 	$Timer.stop()
 	going_back = true
+	print("Max")
+
+
+func _on_HitBox_area_entered(area):
+	if area.has_method("give_to_player"):
+			going_back = true
+
+
+
+
+
