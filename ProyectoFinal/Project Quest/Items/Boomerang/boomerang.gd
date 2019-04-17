@@ -11,6 +11,9 @@ var has_counter = false
 var going_back = false
 var body_exited = false
 
+var item = null
+var carry_item = false
+
 func _ready():
 	$Timer.start()
 	type = get_parent().type
@@ -26,6 +29,8 @@ func _process(delta):
 	if going_back:
 		var direction = (_GLOBAL_DATA.player.global_position - self.global_position).normalized()
 		move_and_slide(direction*speed)
+		if carry_item and item.get_ref():
+			item.get_ref().global_position = self.global_position
 
 	else:
 		self.global_position += dirMov * speed * delta
@@ -38,13 +43,12 @@ func _on_HitBox_body_entered(body):
 	
 	if body.get("type") == _ENUMS.TYPE.PLAYER and going_back:
 		queue_free()
-		print("Grab")
+		carry_item = false
 
 	elif body.get("type") != _ENUMS.TYPE.PLAYER:
 		going_back = true
 		if !body_exited:
 			queue_free()
-		print("Wall")
 		
 func _on_HitBox_body_exited(body): #In order to solve a bug, whe need to know if the boomerang left the player
 	if body.get("type") == _ENUMS.TYPE.PLAYER:
@@ -53,13 +57,15 @@ func _on_HitBox_body_exited(body): #In order to solve a bug, whe need to know if
 func _on_Timer_timeout():
 	$Timer.stop()
 	going_back = true
-	print("Max")
 
 
 func _on_HitBox_area_entered(area):
 	if area.has_method("give_to_player"):
-			going_back = true
-
+		going_back = true
+		item = weakref(area)
+		carry_item = true
+		if !body_exited:
+			queue_free()
 
 
 
