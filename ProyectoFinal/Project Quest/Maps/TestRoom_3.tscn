@@ -29,5 +29,14 @@ warp_position = "E_Medio"
 position = Vector2( 143, 72 )
 
 [node name="gull" parent="." instance=ExtResource( 4 )]
-position = Vector2( 46, 103 )
+position = Vector2( 41, 114 )
+
+[node name="gull2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 59, 104 )
+
+[node name="gull3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 53, 83 )
+
+[node name="gull4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 33, 92 )
 

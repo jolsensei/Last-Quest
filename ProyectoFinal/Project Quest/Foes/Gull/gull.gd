@@ -8,6 +8,8 @@ var damage = 0.5
 var hitstun = 15
 var max_hearts = 2
 
+var type = _ENUMS.TYPE.FOE
+
 func _init():
 	global_speed = speed
 	global_hitstun_time = hitstun

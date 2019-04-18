@@ -109,6 +109,7 @@ func use_item_by_button(button):
 
 func add_rupees(rupees):
 	self.rupees += rupees
+	self.rupees = min(self.rupees, max_rupees)
 	emit_signal("rupee_picked")
 	
 func heal(hearts):

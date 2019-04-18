@@ -6,3 +6,7 @@ func body_entered(body):
 		_SIGNAL_MANAGER.update_AB()
 		queue_free()
 
+func give_to_player():
+	_GLOBAL_DATA.player.give_arrows(5)
+	_SIGNAL_MANAGER.update_AB()
+	_SIGNAL_MANAGER.show(null, ["5 arrows! Use them wisely"])

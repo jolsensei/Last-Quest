@@ -1,14 +1,18 @@
 extends "res://Events/basic_event.gd"
 
 var picked = false
+var throw = false
 
-var dirMov
+var dirMov = null
 var max_amount = 1
+var speed = 100
+
+var type = _ENUMS.TYPE.TERRAIN
+var damage = 2
 
 func _ready():
 	set_physics_process(false)
 	set_process(false)
-	dirMov =  _GLOBAL_DATA.player.dirMov
 
 func _input(event):
 
@@ -21,7 +25,18 @@ func _input(event):
 		Input.action_release("a")
 		
 
-	if Input.is_action_just_pressed("a") and picked:
+	if Input.is_action_just_pressed("a") and picked and _GLOBAL_DATA.player.dirMov != Vector2(0,0):
+		$Timer.start()
+		type = _ENUMS.TYPE.PLAYER
+		picked = false
+		set_z_index(0)
+		_GLOBAL_DATA.player.hands_free = true
+		dirMov = _GLOBAL_DATA.player.last_dirMov
+		drop()
+		Input.action_release("a")
+		throw = true
+		
+	elif Input.is_action_just_pressed("a") and picked:
 		$Sprite/StaticBody2D/CollisionShape2D.disabled = false
 		picked = false
 		set_z_index(0)
@@ -29,11 +44,15 @@ func _input(event):
 		_GLOBAL_DATA.player.hands_free = true
 		drop()
 		Input.action_release("a")
+		
+
 
 func _physics_process(delta):
 	if picked:
 		self.global_position = _GLOBAL_DATA.player.get_node("Lift").global_position
 		set_process_input(true)
+	if throw:
+		self.global_position += dirMov * speed * delta
 
 func drop():
 	var player_position = _GLOBAL_DATA.player.global_position
@@ -48,10 +67,36 @@ func drop():
 			player_position.y -= 4
 	self.global_position = player_position
 
+func pot_break():
+	$Sprite.frame = 1
+	set_physics_process(false)
+	set_process(false)
+	$Area2D/CollisionShape2D.disabled = true
+	$Sprite/StaticBody2D/CollisionShape2D.disabled = true
+	$Animation.play("break")
+
+
+func _on_Animation_animation_finished(anim_name):
+	var drop = _DROP_MANAGER.random_drop()
+	if drop != null:
+		get_parent().add_child(drop)
+		drop.animation()
+		drop.global_transform = global_transform
+	queue_free()
+	
+func _on_Timer_timeout():
+	$Timer.stop()
+	pot_break()
+
 
 func _on_Area2D_body_entered(body):
+	if body.get("type") != _ENUMS.TYPE.PLAYER and throw:
+		print(body)
+		pot_break()
 	_on_body_entered(body)
 
 
 func _on_Area2D_body_exited(body):
 	_on_body_exited(body)
+
+

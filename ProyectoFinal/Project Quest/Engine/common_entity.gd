@@ -64,7 +64,7 @@ func damage_loop():
 			get_tree().quit()
 	for area in $HitBox.get_overlapping_areas():
 		var body = area.get_parent()
-		if global_hitstun == 0 and body.get("damage") != null and body.get("type") != global_type:
+		if global_hitstun == 0 and body.get("damage") != null and body.get("type") != global_type  and body.get("type") != _ENUMS.TYPE.TERRAIN:
 			emit_signal("damaged")
 			global_hearts -= body.get("damage")
 			global_hitstun = global_hitstun_time

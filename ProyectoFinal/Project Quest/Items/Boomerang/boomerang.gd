@@ -36,9 +36,6 @@ func _process(delta):
 		self.global_position += dirMov * speed * delta
 		
 		
-
-
-
 func _on_HitBox_body_entered(body):
 	
 	if body.get("type") == _ENUMS.TYPE.PLAYER and going_back:

@@ -38,7 +38,7 @@ warp_to = "res://Maps/TestRoom_3.tscn"
 warp_position = "E_Medio"
 
 [node name="Spawn" parent="." instance=ExtResource( 3 )]
-position = Vector2( 43, 72 )
+position = Vector2( 33, 71 )
 
 [node name="E_Arriba" parent="." instance=ExtResource( 3 )]
 position = Vector2( 141, 40 )
@@ -54,7 +54,7 @@ position = Vector2( 24, 24 )
 text = "This effect is clean af mate, it's so cool boiii. But what happen if this is so long? Will it stop? Maybe crash? NO! Seems like scroll itself LOL"
 
 [node name="gull" parent="." instance=ExtResource( 5 )]
-position = Vector2( 85, 27 )
+position = Vector2( 96, 74 )
 
 [node name="Chest" parent="." instance=ExtResource( 6 )]
 position = Vector2( -8, 24 )
@@ -71,6 +71,6 @@ position = Vector2( 24, 104 )
 position = Vector2( -8, 104 )
 
 [node name="Big Chest" parent="." instance=ExtResource( 8 )]
-position = Vector2( 96, 80 )
+position = Vector2( 96, 23 )
 item_inside = "res://Items/Shield/Shield of Legend.tscn"
 
