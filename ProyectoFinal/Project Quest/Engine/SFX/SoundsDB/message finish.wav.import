@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/message finish.wav-b9a4612201efde6ba0b16d8c3da5c71d.sample"
+
+[deps]
+
+source_file="res://Engine/SFX/SoundsDB/message finish.wav"
+dest_files=[ "res://.import/message finish.wav-b9a4612201efde6ba0b16d8c3da5c71d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

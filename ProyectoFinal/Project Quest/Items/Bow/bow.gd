@@ -32,6 +32,7 @@ func _process(delta):
 
 
 func _on_HitBox_body_entered(body):
+	_SIGNAL_MANAGER.play_sfx("arrow_hit_wall")
 	if body.get("type") != _ENUMS.TYPE.PLAYER:
 		queue_free()
 

@@ -4,6 +4,7 @@ signal send_dialog
 signal update_inventory
 signal update_counter
 signal update_AB
+signal play_sfx
 
 func show(texture, text):
 	
@@ -17,3 +18,6 @@ func update_counter(number, item):
 	
 func update_AB():
 	emit_signal("update_AB")
+
+func play_sfx(sound):
+	emit_signal("play_sfx", sound)

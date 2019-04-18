@@ -80,6 +80,7 @@ pause_mode = 2
 visible = false
 
 [node name="Player" type="AudioStreamPlayer" parent="."]
+volume_db = -20.0
 script = ExtResource( 9 )
 
 [connection signal="game_loaded" from="." to="Menu/Pause-Inventory" method="_on_Game_game_loaded"]

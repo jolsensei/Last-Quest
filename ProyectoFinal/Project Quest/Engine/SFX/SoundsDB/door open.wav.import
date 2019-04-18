@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/door open.wav-a45476f19f5a49870a39d3adc26634ae.sample"
+
+[deps]
+
+source_file="res://Engine/SFX/SoundsDB/door open.wav"
+dest_files=[ "res://.import/door open.wav-a45476f19f5a49870a39d3adc26634ae.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

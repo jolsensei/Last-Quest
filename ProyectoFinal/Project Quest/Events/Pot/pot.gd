@@ -10,6 +10,8 @@ var speed = 100
 var type = _ENUMS.TYPE.TERRAIN
 var damage = 2
 
+export(String, FILE, "*.tscn") var mandatory_drop = null
+
 func _ready():
 	set_physics_process(false)
 	set_process(false)
@@ -77,11 +79,18 @@ func pot_break():
 
 
 func _on_Animation_animation_finished(anim_name):
-	var drop = _DROP_MANAGER.random_drop()
-	if drop != null:
-		get_parent().add_child(drop)
-		drop.animation()
-		drop.global_transform = global_transform
+	
+	if mandatory_drop != null:
+		var instance = load(mandatory_drop).instance()
+		get_parent().add_child(instance)
+		instance.animation()
+		instance.global_transform = global_transform
+	else:
+		var drop = _DROP_MANAGER.random_drop()
+		if drop != null:
+			get_parent().add_child(drop)
+			drop.animation()
+			drop.global_transform = global_transform
 	queue_free()
 	
 func _on_Timer_timeout():

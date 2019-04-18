@@ -69,6 +69,7 @@ position = Vector2( 24, 104 )
 
 [node name="Pot2" parent="." instance=ExtResource( 7 )]
 position = Vector2( -8, 104 )
+mandatory_drop = "res://Drops/Keys/Key.tscn"
 
 [node name="Big Chest" parent="." instance=ExtResource( 8 )]
 position = Vector2( 96, 23 )

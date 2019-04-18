@@ -12,9 +12,10 @@ func _ready():
 
 func print_dialog(texture, dialog):
 	
+	dialog = highlight(dialog, Color.red)
+	
 	if texture != null:
 		put_texture(true, texture)
-		dialog = highlight(dialog, Color.red)
 	else:
 		put_texture(false, null)
 	

@@ -11,4 +11,4 @@ func animation():
 func give_to_player():
 	if _GLOBAL_DATA.player.global_hearts < _GLOBAL_DATA.player.global_max_hearts:
 		_GLOBAL_DATA.player.heal(1)
-	_SIGNAL_MANAGER.show(null, ["Yay, hope it helps"])
+	_SIGNAL_MANAGER.show(null, ["You healed one full heart"])

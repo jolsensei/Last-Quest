@@ -6,10 +6,16 @@ signal rupee_picked
 var player_name:String
 var max_hearts = 3
 var hearts = 0
+
 var max_rupees = 99
 var rupees = 0
+
 var max_arrows = 10
 var arrows = 10
+
+var max_keys = 9
+var keys = 0
+
 
 
 var item_A = load("res://Items/Sword/Iron Sword.tscn")
