@@ -10,6 +10,7 @@ var has_counter = true
 
 func _ready():
 	if get_parent().arrows > 0:
+		_SFX.play_sfx("arrow")
 		add_to_group("destroy_on_hit")
 		type = get_parent().type
 		dirMov = get_parent().last_dirMov
@@ -32,7 +33,7 @@ func _process(delta):
 
 
 func _on_HitBox_body_entered(body):
-	_SIGNAL_MANAGER.play_sfx("arrow_hit_wall")
 	if body.get("type") != _ENUMS.TYPE.PLAYER:
+		_SFX.play_sfx("arrow_hit_wall")
 		queue_free()
 

@@ -18,7 +18,8 @@ func _ready():
 
 func _input(event):
 
-	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact and _GLOBAL_DATA.player.hands_free:
+	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact and _GLOBAL_DATA.player.hands_free and !picked:
+		_SFX.play_sfx("lift")
 		$Sprite/StaticBody2D/CollisionShape2D.disabled = true
 		picked = true
 		set_z_index(1)
@@ -28,6 +29,7 @@ func _input(event):
 		
 
 	if Input.is_action_just_pressed("a") and picked and _GLOBAL_DATA.player.dirMov != Vector2(0,0):
+		_SFX.play_sfx("throw")
 		$Timer.start()
 		type = _ENUMS.TYPE.PLAYER
 		picked = false
@@ -39,6 +41,7 @@ func _input(event):
 		throw = true
 		
 	elif Input.is_action_just_pressed("a") and picked:
+		_SFX.play_sfx("land")
 		$Sprite/StaticBody2D/CollisionShape2D.disabled = false
 		picked = false
 		set_z_index(0)
@@ -70,6 +73,8 @@ func drop():
 	self.global_position = player_position
 
 func pot_break():
+	picked = true
+	_SFX.play_sfx("break_sound")
 	$Sprite.frame = 1
 	set_physics_process(false)
 	set_process(false)
@@ -94,6 +99,7 @@ func _on_Animation_animation_finished(anim_name):
 	queue_free()
 	
 func _on_Timer_timeout():
+	_SFX.play_sfx("break_sound")
 	$Timer.stop()
 	pot_break()
 

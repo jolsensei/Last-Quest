@@ -15,6 +15,7 @@ func print_dialog(texture, dialog):
 	dialog = highlight(dialog, Color.red)
 	
 	if texture != null:
+		_SFX.play_sfx("item_get")
 		put_texture(true, texture)
 	else:
 		put_texture(false, null)
@@ -35,6 +36,7 @@ func _input(event):
 				$Container/Label.set_bbcode(globalDialog[page])
 				$Container/Label.set_visible_characters(0)
 			else:
+				_SFX.play_sfx("message_finish")
 				Input.action_release("a")
 				on_dialog(false)
 				_GLOBAL_DATA.player.get_node("GetItem").texture = null #In the case we recieved an item
@@ -43,7 +45,10 @@ func _input(event):
 
 
 func _on_Timer_timeout():
-	$Container/Label.set_visible_characters($Container/Label.get_visible_characters()+1)
+	
+	if $Container/Label.get_visible_characters() <= $Container/Label.get_total_character_count():
+		$Container/Label.set_visible_characters($Container/Label.get_visible_characters()+1)
+		_SFX.play_sfx("message")
 	
 func on_dialog(boolean):
 	

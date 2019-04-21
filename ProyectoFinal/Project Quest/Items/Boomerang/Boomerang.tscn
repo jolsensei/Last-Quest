@@ -46,7 +46,11 @@ anims/spin = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="SFX" type="Timer" parent="."]
+wait_time = 0.2
+
 [connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]
 [connection signal="body_exited" from="HitBox" to="." method="_on_HitBox_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="SFX" to="." method="_on_SFX_timeout"]

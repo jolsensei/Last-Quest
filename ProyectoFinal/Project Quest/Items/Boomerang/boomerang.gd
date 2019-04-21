@@ -16,6 +16,7 @@ var carry_item = false
 
 func _ready():
 	$Timer.start()
+	$SFX.start()
 	type = get_parent().type
 	dirMov = get_parent().last_dirMov
 	self.position = get_parent().position
@@ -37,12 +38,11 @@ func _process(delta):
 		
 		
 func _on_HitBox_body_entered(body):
-	
 	if body.get("type") == _ENUMS.TYPE.PLAYER and going_back:
 		queue_free()
 		carry_item = false
 
-	elif body.get("type") != _ENUMS.TYPE.PLAYER:
+	elif body.get("type") != _ENUMS.TYPE.PLAYER and body.get("type") != _ENUMS.TYPE.TERRAIN:
 		going_back = true
 		if !body_exited:
 			queue_free()
@@ -66,4 +66,5 @@ func _on_HitBox_area_entered(area):
 
 
 
-
+func _on_SFX_timeout():
+	_SFX.play_sfx("boomerang")

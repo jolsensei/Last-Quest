@@ -26,6 +26,7 @@ _GLOBAL_DATA="*res://Engine/Autoloads/global_data.gd"
 _ENUMS="*res://Engine/Autoloads/enums.gd"
 _DROP_MANAGER="*res://Engine/Autoloads/drops_manager.gd"
 _SIGNAL_MANAGER="*res://Engine/signal_manager.gd"
+_SFX="*res://Engine/SFX/SFX.gd"
 
 [display]
 

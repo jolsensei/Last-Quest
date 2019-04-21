@@ -9,7 +9,6 @@ func _ready():
 func _input(event):
 #	print("Test")
 	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact and !opened:
-		
 		var instanced_item_inside = item_inside.instance()
 		
 		_GLOBAL_DATA.player.get_node("Sprite").frame = 10 #Get object

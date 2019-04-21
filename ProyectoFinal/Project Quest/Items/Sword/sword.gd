@@ -6,6 +6,7 @@ var max_amount = 1
 var has_counter = false
 
 func _ready():
+	_SFX.play_sfx("sword")
 	type = get_parent().type
 	$Animation.connect("animation_finished", self, "destroy")
 	$Animation.play(str("sword_", get_parent().spriteMov))

@@ -26,6 +26,7 @@ func _on_Game_game_loaded():
 
 func _input(event):
 	if event.is_action_pressed("pause") and !_GLOBAL_DATA.player.can_interact:
+		_SFX.play_sfx("map")
 		$GridContainer.get_child(0).grab_focus()
 		get_tree().paused = not get_tree().paused
 		visible = not visible
@@ -35,6 +36,8 @@ func _input(event):
 		change_item(_ENUMS.BUTTON.A)
 	if event.is_action_pressed("b") and in_pause:
 		change_item(_ENUMS.BUTTON.B)
+	if in_pause and (event.is_action_pressed("ui_down") or event.is_action_pressed("ui_up") or event.is_action_pressed("ui_left") or event.is_action_pressed("ui_right")):
+			_SFX.play_sfx("cursor")
 
 
 func change_item(button):
