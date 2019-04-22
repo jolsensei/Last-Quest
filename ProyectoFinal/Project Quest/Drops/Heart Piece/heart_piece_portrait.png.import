@@ -1,0 +1,31 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/heart_piece_portrait.png-6e37a1c7c079cfdcf8620b26cae02e09.stex"
+
+[deps]
+
+source_file="res://Drops/Heart Piece/heart_piece_portrait.png"
+dest_files=[ "res://.import/heart_piece_portrait.png-6e37a1c7c079cfdcf8620b26cae02e09.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

@@ -10,12 +10,14 @@ func _ready():
 	set_process_input(false)
 	
 
-func print_dialog(texture, dialog):
+func print_dialog(sfx_activated, texture, dialog):
 	
 	dialog = highlight(dialog, Color.red)
 	
-	if texture != null:
+	if(sfx_activated):
 		_SFX.play_sfx("item_get")
+	
+	if texture != null:
 		put_texture(true, texture)
 	else:
 		put_texture(false, null)

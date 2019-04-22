@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Engine/Game/game.gd" type="Script" id=1]
 [ext_resource path="res://Engine/currentMap.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Player/GUI/Items/Items.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Engine/Pause/Pause.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Engine/Dialogs/Dialog.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Engine/Transition.tscn" type="PackedScene" id=9]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
@@ -45,6 +46,8 @@ visible = false
 [node name="Dialog" parent="Menu" instance=ExtResource( 8 )]
 pause_mode = 2
 visible = false
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 9 )]
 
 [connection signal="game_loaded" from="." to="Menu/Pause-Inventory" method="_on_Game_game_loaded"]
 [connection signal="loaded" from="CurrentMap" to="GUI/Items" method="_on_map_loaded"]

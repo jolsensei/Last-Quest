@@ -24,4 +24,4 @@ func destroy(animation):
 func give_to_player():
 	_GLOBAL_DATA.player.inventory[4] = load("res://Items/Shield/Shield of Legend.tscn")
 	_SIGNAL_MANAGER.update_inventory()
-	_SIGNAL_MANAGER.show($Portrait.texture, ["You got the /*Legend's Shield*/! Wait, this is from an anime right?!","Use it with /*A*/ or /*B*/ to /*block*/ enemy attacks"])
+	_SIGNAL_MANAGER.show(true, $Portrait.texture, ["You got the /*Legend's Shield*/! Wait, this is from an anime right?!","Use it with /*A*/ or /*B*/ to /*block*/ enemy attacks"])

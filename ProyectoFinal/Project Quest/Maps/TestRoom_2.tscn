@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Drops/Hearts/Heart.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Drops/Arrows/Arrow.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Events/Chest/Chest.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Drops/Heart Piece/Heart Piece.tscn" type="PackedScene" id=9]
 
 [node name="Test Room 2" type="Node"]
 
@@ -85,4 +86,20 @@ position = Vector2( 73.5221, 22.3992 )
 [node name="Chest" parent="." instance=ExtResource( 8 )]
 position = Vector2( 104, 24 )
 item_inside = "res://Drops/Keys/Key.tscn"
+
+[node name="Chest2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 136, 104 )
+item_inside = "res://Drops/Heart Piece/Heart Piece.tscn"
+
+[node name="Heart Piece" parent="." instance=ExtResource( 9 )]
+position = Vector2( 136, 39 )
+
+[node name="Heart Piece2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 136, 55 )
+
+[node name="Heart Piece3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 136, 71 )
+
+[node name="Heart Piece4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 136, 87 )
 

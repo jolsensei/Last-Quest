@@ -7,6 +7,8 @@ var player_name:String
 var max_hearts = 3
 var hearts = 0
 
+var heart_pieces = 0
+
 var max_rupees = 99
 var rupees = 0
 

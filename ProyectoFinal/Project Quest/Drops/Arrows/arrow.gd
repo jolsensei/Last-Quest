@@ -9,4 +9,4 @@ func body_entered(body):
 func give_to_player():
 	_GLOBAL_DATA.player.give_arrows(5)
 	_SIGNAL_MANAGER.update_AB()
-	_SIGNAL_MANAGER.show(null, ["5 arrows! Use them wisely"])
+	_SIGNAL_MANAGER.show(false, null, ["5 arrows! Use them wisely"])

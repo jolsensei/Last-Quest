@@ -4,6 +4,11 @@ extends CanvasLayer
 const HEART_ROW_SIZE = 6
 const HEART_OFFSET = 10
 
+func _ready():
+	_SIGNAL_MANAGER.connect("update_hearts", self, "update_hearts")
+
+func update_hearts():
+	_on_map_loaded()
 
 func _process(delta):
 	for heart in $Hearts.get_children():
@@ -23,6 +28,9 @@ func _process(delta):
 
 
 func _on_map_loaded():
+	for child in  $Hearts.get_children(): #We delete them as we are going to create new ones
+		 $Hearts.remove_child(child)
+	
 	for i in _GLOBAL_DATA.player.global_max_hearts:
 		var new_heart = Sprite.new()
 		new_heart.texture = $Hearts.texture
