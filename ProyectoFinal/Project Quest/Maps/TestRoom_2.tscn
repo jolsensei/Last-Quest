@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Drops/Arrows/Arrow.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Events/Chest/Chest.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Drops/Heart Piece/Heart Piece.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Drops/Heart Container/Heart Container.tscn" type="PackedScene" id=10]
 
 [node name="Test Room 2" type="Node"]
 
@@ -36,52 +37,22 @@ warp_to = "res://Maps/TestRoom.tscn"
 warp_position = "E_Arriba"
 
 [node name="E_Arriba" parent="." instance=ExtResource( 3 )]
-position = Vector2( 20, 40 )
+position = Vector2( 16, 40 )
 
 [node name="E_Abajo" parent="." instance=ExtResource( 3 )]
-position = Vector2( 20, 104 )
+position = Vector2( 16, 104 )
 
 [node name="gull" parent="." instance=ExtResource( 4 )]
-position = Vector2( 90.0822, 67.0173 )
+position = Vector2( 41, 71 )
 
 [node name="Rupee" parent="." instance=ExtResource( 5 )]
 position = Vector2( 27.0861, 20.2497 )
 
-[node name="Rupee2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
-[node name="Rupee3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
-[node name="Rupee4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
-[node name="Rupee5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
-[node name="Rupee6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
-[node name="Rupee7" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
-[node name="Rupee8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
-[node name="Rupee9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
-[node name="Rupee10" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
-[node name="Rupee11" parent="." instance=ExtResource( 5 )]
-position = Vector2( 27.0861, 20.2497 )
-
 [node name="Heart" parent="." instance=ExtResource( 6 )]
-position = Vector2( 53.4946, 19.5005 )
+position = Vector2( 45, 21 )
 
 [node name="Arrow" parent="." instance=ExtResource( 7 )]
-position = Vector2( 73.5221, 22.3992 )
+position = Vector2( 67, 23 )
 
 [node name="Chest" parent="." instance=ExtResource( 8 )]
 position = Vector2( 104, 24 )
@@ -91,15 +62,13 @@ item_inside = "res://Drops/Keys/Key.tscn"
 position = Vector2( 136, 104 )
 item_inside = "res://Drops/Heart Piece/Heart Piece.tscn"
 
-[node name="Heart Piece" parent="." instance=ExtResource( 9 )]
-position = Vector2( 136, 39 )
+[node name="Chest3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 104, 104 )
+item_inside = "res://Drops/Heart Container/Heart Container.tscn"
 
-[node name="Heart Piece2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 136, 55 )
+[node name="HeartPiece3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 134, 40 )
 
-[node name="Heart Piece3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 136, 71 )
-
-[node name="Heart Piece4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 136, 87 )
+[node name="Heart Container" parent="." instance=ExtResource( 10 )]
+position = Vector2( 130, 73 )
 
