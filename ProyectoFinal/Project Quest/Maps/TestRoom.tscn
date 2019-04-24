@@ -36,6 +36,7 @@ warp_position = "E_Arriba"
 position = Vector2( -32, 72 )
 warp_to = "res://Maps/TestRoom_3.tscn"
 warp_position = "E_Medio"
+zone_name = "Dungeon of Tests"
 
 [node name="Spawn" parent="." instance=ExtResource( 3 )]
 position = Vector2( 33, 71 )

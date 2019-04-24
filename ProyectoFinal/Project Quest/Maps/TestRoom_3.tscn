@@ -27,6 +27,7 @@ tile_data = PoolIntArray( 131068, 20, 0, 131069, 22, 0, 131071, 32, 0, 65536, 34
 position = Vector2( 168, 72 )
 warp_to = "res://Maps/TestRoom.tscn"
 warp_position = "E_Medio"
+zone_name = "Dummy Hills"
 
 [node name="E_Medio" parent="." instance=ExtResource( 3 )]
 position = Vector2( 152, 72 )
