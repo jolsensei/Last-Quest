@@ -7,9 +7,15 @@ var in_pause = false
 func _ready():
 	_SIGNAL_MANAGER.connect("update_inventory", self, "_on_Game_game_loaded")
 	_SIGNAL_MANAGER.connect("update_counter", self, "update_counter")
+	_SIGNAL_MANAGER.connect("update_collection", self, "update_collection")
+
+func update_collection():
+	$Collection/Sprite.frame = _GLOBAL_DATA.player.heart_pieces
 
 func _on_Game_game_loaded():
-
+	
+	$Collection/Sprite.frame = _GLOBAL_DATA.player.heart_pieces
+	
 	for child in get_node("GridContainer").get_children(): #We delete them as we are going to create new ones
 		get_node("GridContainer").remove_child(child)
 
@@ -31,6 +37,8 @@ func _input(event):
 		get_tree().paused = not get_tree().paused
 		visible = not visible
 		in_pause = not in_pause
+		if !in_pause and $Collection.visible:
+			change_visibility()
 
 	if event.is_action_pressed("a") and in_pause:
 		change_item(_ENUMS.BUTTON.A)
@@ -38,7 +46,8 @@ func _input(event):
 		change_item(_ENUMS.BUTTON.B)
 	if in_pause and (event.is_action_pressed("ui_down") or event.is_action_pressed("ui_up") or event.is_action_pressed("ui_left") or event.is_action_pressed("ui_right")):
 			_SFX.play_sfx("cursor")
-
+	if event.is_action_pressed("a") and in_pause and ($TextureButton.has_focus() or $TextureButton2.has_focus()):
+		change_visibility()
 
 func change_item(button):
 	var count = 0
@@ -64,4 +73,8 @@ func control_placement(item, button):
 			if _GLOBAL_DATA.player.item_A == item:
 				_GLOBAL_DATA.player.item_A = _GLOBAL_DATA.player.item_B
 			_GLOBAL_DATA.player.item_B = item
-			
+
+func change_visibility():
+	$Collection.visible = not $Collection.visible
+	$Inventory.visible = not $Inventory.visible
+	$GridContainer.visible = not $GridContainer.visible

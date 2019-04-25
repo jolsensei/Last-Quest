@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Engine/Pause/pause.gd" type="Script" id=1]
-[ext_resource path="res://Font/DisposableDroidBB.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Engine/Pause/inventory.png" type="Texture" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
+[ext_resource path="res://Engine/Pause/inventory.png" type="Texture" id=2]
+[ext_resource path="res://Engine/Pause/heart_pieces.png" type="Texture" id=3]
+[ext_resource path="res://Engine/Pause/arrow.png" type="Texture" id=4]
+[ext_resource path="res://Engine/Pause/item_selected.png" type="Texture" id=5]
 
 [node name="Pause-Inventory" type="Control"]
 pause_mode = 2
@@ -16,19 +15,10 @@ margin_right = 160.0
 margin_bottom = 144.0
 color = Color( 0, 0, 0, 0.392157 )
 
-[node name="Label" type="Label" parent="."]
-visible = false
-margin_right = 160.0
-margin_bottom = 20.0
-custom_fonts/font = SubResource( 1 )
-text = "-Paused-"
-align = 1
-valign = 1
-
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Inventory" type="Sprite" parent="."]
 position = Vector2( 80, 80 )
 scale = Vector2( 1.25, 1.25 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="GridContainer" type="GridContainer" parent="."]
 margin_left = 42.0
@@ -41,4 +31,36 @@ columns = 4
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Collection" type="Sprite" parent="."]
+visible = false
+position = Vector2( 80, 80 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Collection"]
+position = Vector2( -20.8, -20 )
+texture = ExtResource( 3 )
+hframes = 4
+
+[node name="TextureButton" type="TextureButton" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 132.0
+margin_top = 72.0
+margin_right = 148.0
+margin_bottom = 88.0
+texture_normal = ExtResource( 4 )
+texture_focused = ExtResource( 5 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 28.0
+margin_top = 88.0
+margin_right = 44.0
+margin_bottom = 104.0
+rect_rotation = 180.0
+texture_normal = ExtResource( 4 )
+texture_focused = ExtResource( 5 )
 

@@ -7,9 +7,9 @@ signal update_AB
 signal enter_animation
 signal enter_finished
 signal update_hearts
+signal update_collection
 
 func show(sfx_activated, texture, text):
-	
 	emit_signal("send_dialog", sfx_activated, texture, text)
 
 func update_inventory():
@@ -26,3 +26,6 @@ func enter_animation(warp_to, warp_position, zone_name):
 	
 func update_hearts():
 	emit_signal("update_hearts")
+	
+func update_collection():
+	emit_signal("update_collection")

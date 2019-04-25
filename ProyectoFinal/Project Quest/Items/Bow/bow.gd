@@ -9,7 +9,7 @@ var dirMov = null
 var has_counter = true
 
 func _ready():
-	if get_parent().arrows > 0:
+	if get_parent().arrows > 0 and get_tree().get_nodes_in_group("destroy_on_hit").size() < max_amount:
 		_SFX.play_sfx("arrow")
 		add_to_group("destroy_on_hit")
 		type = get_parent().type
@@ -18,7 +18,7 @@ func _ready():
 		$Animation.play(get_parent().spriteMov)
 		get_parent().arrows -= 1
 		_SIGNAL_MANAGER.update_counter(get_parent().arrows, self.name)
-		print(get_parent().arrows)
+#		print(get_parent().arrows)
 		
 		var new_parent = get_parent().get_parent()
 		get_parent().remove_child(self)
