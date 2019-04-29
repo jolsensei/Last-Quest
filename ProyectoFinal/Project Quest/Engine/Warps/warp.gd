@@ -13,5 +13,5 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name == "Player":
-			_SIGNAL_MANAGER.enter_animation(warp_to, warp_position, zone_name)
+			_SIGNAL_MANAGER.enter_animation(warp_to, warp_position, tr(zone_name))
 			emit_signal("player_entered")

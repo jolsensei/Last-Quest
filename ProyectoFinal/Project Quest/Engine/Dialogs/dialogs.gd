@@ -42,6 +42,7 @@ func _input(event):
 				Input.action_release("a")
 				on_dialog(false)
 				_GLOBAL_DATA.player.get_node("GetItem").texture = null #In the case we recieved an item
+				_SIGNAL_MANAGER.dialog_finished()
 		else:
 			$Container/Label.set_visible_characters($Container/Label.get_total_character_count())
 

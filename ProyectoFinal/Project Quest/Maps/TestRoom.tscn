@@ -36,7 +36,7 @@ warp_position = "E_Arriba"
 position = Vector2( -32, 72 )
 warp_to = "res://Maps/TestRoom_3.tscn"
 warp_position = "E_Medio"
-zone_name = "Dungeon of Tests"
+zone_name = "Z_001"
 
 [node name="Spawn" parent="." instance=ExtResource( 3 )]
 position = Vector2( 33, 71 )
@@ -52,7 +52,7 @@ position = Vector2( 141, 104 )
 
 [node name="Sign" parent="." instance=ExtResource( 4 )]
 position = Vector2( 24, 24 )
-text = "This effect is clean af mate, it's so cool boiii. But what happen if this is so long? Will it stop? Maybe crash? NO! Seems like scroll itself LOL"
+text = "S_001"
 
 [node name="gull" parent="." instance=ExtResource( 5 )]
 position = Vector2( 96, 74 )

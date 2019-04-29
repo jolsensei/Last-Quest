@@ -1,0 +1,15 @@
+id,en,es
+KEY,You found a /*small key*/ ! //You can use it to /*open*/ a /*locked door*/,¡ Has encontrado una /*llave pequeña*/ ! //Puedes /*usarla*/ para abrir una /*puerta cerrada*/
+ARROWS,5 /*arrows*/ ! Use them wisely,¡ 5 /*flechas*/ ! Úsalas sabiamente
+HEART_CONTAINER,You got a /*heart container*/ ! //You get a new /*full heart*/ ! That's great,¡ Has conseguido un /*contenedor de corazón*/  ! //¡ Consigues un /*corazón extra*/ ! Genial
+HEART_PIECE_1,You got a /*heart piece*/ ! Get 3 more to get a /*full heart*/,¡ Has conseguido un /*cuarto de corazón*/ ! Consigue 3 más para obtener un /*corazón extra*/
+HEART_PIECE_2,You got a /*heart piece*/ ! Get 2 more to get a /*full heart*/,¡ Has conseguido un /*cuarto de corazón*/ ! Consigue 2 más para obtener un /*corazón extra*/
+HEART_PIECE_3,You got a /*heart piece*/ ! Get only 1 more to get a /*full heart*/,¡ Has conseguido un /*cuarto de corazón*/ ! Consigue uno más para obtener un /*corazón extra*/
+HEART_PIECE_4,You got a /*heart piece*/ ! You get a /*full heart*/!,¡ Has conseguido un /*cuarto de corazón*/ ! Obtienes un /*corazón extra*/
+HEART,You healed one full heart,Te has curado un corazón
+RUPEE_1,"WoW, a single rupee, today is a day to celebrate","Vaya, una rupia, un día para celebrar"
+,,
+LEGENDS_SHIELD,"You got the /*Legend's Shield*/ ! Wait, this is from an anime, right ?!//Use it with /*A*/ or /*B*/ to /*block*/ enemy attacks","¡ Has conseguido el /*Escudo Legendario*/ ! Espera, !¿ Esto es de un anime, verdad ?¡//Úsalo con /*A*/ o /*B*/ para /*bloquear*/ ataques enemigos"
+S_001,"This is a test, you can press A to skip the following Lorem Ipsum so you know...//Hope this works well","Esto es una prueba, puedes pulsar A para saltar el siguiente Lorem Ipsum asi que ya sabes...//Espero que funcione bien"
+Z_001,Dungeon of Tests,Mazmorra de las Pruebas
+Z_002,Dummy Hills,Colinas Maniquí

@@ -27,6 +27,7 @@ _ENUMS="*res://Engine/Autoloads/enums.gd"
 _DROP_MANAGER="*res://Engine/Autoloads/drops_manager.gd"
 _SIGNAL_MANAGER="*res://Engine/signal_manager.gd"
 _SFX="*res://Engine/SFX/SFX.gd"
+_TRANSLATION_MANAGER="*res://Translation/translation_manager.gd"
 
 [display]
 
@@ -61,6 +62,11 @@ b={
  ]
 }
 
+[locale]
+
+translations=PoolStringArray( "res://Translation/LastQuest-DialogSheet.en.translation", "res://Translation/LastQuest-DialogSheet.es.translation" )
+
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"

@@ -8,6 +8,7 @@ signal enter_animation
 signal enter_finished
 signal update_hearts
 signal update_collection
+signal dialog_finished
 
 func show(sfx_activated, texture, text):
 	emit_signal("send_dialog", sfx_activated, texture, text)
@@ -29,3 +30,6 @@ func update_hearts():
 	
 func update_collection():
 	emit_signal("update_collection")
+
+func dialog_finished():
+	emit_signal("dialog_finished")
