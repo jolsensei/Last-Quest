@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Events/Chest/Chest.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Events/Pot/Pot.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Events/Chest/Big Chest.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/Bomb/Bomb.tscn" type="PackedScene" id=9]
 
 [node name="Test Room 1" type="Node"]
 
@@ -75,4 +76,7 @@ mandatory_drop = "res://Drops/Keys/Key.tscn"
 [node name="Big Chest" parent="." instance=ExtResource( 8 )]
 position = Vector2( 96, 23 )
 item_inside = "res://Items/Shield/Shield of Legend.tscn"
+
+[node name="Bomb" parent="." instance=ExtResource( 9 )]
+position = Vector2( 52, 102 )
 

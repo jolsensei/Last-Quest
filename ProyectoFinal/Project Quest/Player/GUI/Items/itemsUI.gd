@@ -47,3 +47,5 @@ func get_current_value(item):
 	match(item):
 		"Bow":
 			return _GLOBAL_DATA.player.arrows
+		"Bomb":
+			return _GLOBAL_DATA.player.bombs
