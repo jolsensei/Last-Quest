@@ -21,6 +21,7 @@ var bombs = 10
 var max_keys = 9
 var keys = 0
 
+var bracelet_of_will = false
 
 
 var item_A = load("res://Items/Sword/Iron Sword.tscn")
@@ -49,10 +50,10 @@ func _init():
 	inventory.resize(16)
 
 	inventory[0] = load("res://Items/Sword/Iron Sword.tscn")
-	inventory[3] = load("res://Items/Shield/Shield of Legend.tscn")
-	inventory[5] = load("res://Items/Boomerang/Boomerang.tscn")
-	inventory[6] = load("res://Items/Bow/Bow.tscn")
-	inventory[7] = load("res://Items/Bomb/Bomb.tscn")
+#	inventory[3] = load("res://Items/Shield/Shield of Legend.tscn")
+#	inventory[5] = load("res://Items/Boomerang/Boomerang.tscn")
+#	inventory[6] = load("res://Items/Bow/Bow.tscn")
+#	inventory[7] = load("res://Items/Bomb/Bomb.tscn")
 	
 func _physics_process(delta):
 	

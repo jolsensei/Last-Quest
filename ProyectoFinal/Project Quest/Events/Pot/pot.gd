@@ -18,7 +18,7 @@ func _ready():
 
 func _input(event):
 
-	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact and _GLOBAL_DATA.player.hands_free and !picked:
+	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact and _GLOBAL_DATA.player.hands_free and !picked and _GLOBAL_DATA.player.bracelet_of_will:
 		_SFX.play_sfx("lift")
 		$Sprite/StaticBody2D/CollisionShape2D.disabled = true
 		picked = true
@@ -84,18 +84,6 @@ func pot_break():
 
 
 func _on_Animation_animation_finished(anim_name):
-	
-	if mandatory_drop != null:
-		var instance = load(mandatory_drop).instance()
-		get_parent().add_child(instance)
-		instance.animation()
-		instance.global_transform = global_transform
-	else:
-		var drop = _DROP_MANAGER.random_drop()
-		if drop != null:
-			get_parent().add_child(drop)
-			drop.animation()
-			drop.global_transform = global_transform
 	queue_free()
 	
 func _on_Timer_timeout():

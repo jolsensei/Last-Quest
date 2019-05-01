@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lay bomb.wav-928fc90ac75cee08a70fe3f4bb40e2ed.sample"
+
+[deps]
+
+source_file="res://Engine/SFX/SoundsDB/lay bomb.wav"
+dest_files=[ "res://.import/lay bomb.wav-928fc90ac75cee08a70fe3f4bb40e2ed.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

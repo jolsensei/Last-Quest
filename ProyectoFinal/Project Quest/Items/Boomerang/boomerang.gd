@@ -64,7 +64,10 @@ func _on_HitBox_area_entered(area):
 		if !body_exited:
 			queue_free()
 
-
-
 func _on_SFX_timeout():
 	_SFX.play_sfx("boomerang")
+	
+func give_to_player():
+	_GLOBAL_DATA.player.inventory[5] = load("res://Items/Boomerang/Boomerang.tscn")
+	_SIGNAL_MANAGER.update_inventory()
+	_SIGNAL_MANAGER.show(true, $Portrait.texture, _TRANSLATION_MANAGER.translate(tr("BOOMERANG")))

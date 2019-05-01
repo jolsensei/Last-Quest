@@ -22,6 +22,6 @@ func destroy(animation):
 	queue_free()
 
 func give_to_player():
-	_GLOBAL_DATA.player.inventory[4] = load("res://Items/Shield/Shield of Legend.tscn")
+	_GLOBAL_DATA.player.inventory[3] = load("res://Items/Shield/Shield of Legend.tscn")
 	_SIGNAL_MANAGER.update_inventory()
 	_SIGNAL_MANAGER.show(true, $Portrait.texture, _TRANSLATION_MANAGER.translate(tr("LEGENDS_SHIELD")))

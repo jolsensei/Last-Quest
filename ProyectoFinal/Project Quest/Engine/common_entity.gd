@@ -66,10 +66,11 @@ func damage_loop():
 		var body = area.get_parent()
 		if global_hitstun == 0 and body.get("damage") != null and body.get("type") != global_type  and body.get("type") != _ENUMS.TYPE.TERRAIN:
 			emit_signal("damaged")
-			if body.get("type") == _ENUMS.TYPE.PLAYER:
-				_SFX.play_sfx("enemy_hit")
-			else:
+			if global_type == _ENUMS.TYPE.PLAYER:
 				_SFX.play_sfx("link_hurt")
+			else:
+				_SFX.play_sfx("enemy_hit")
+				
 			global_hearts -= body.get("damage")
 			global_hitstun = global_hitstun_time
 			knock_dir = global_transform.origin - body.global_transform.origin

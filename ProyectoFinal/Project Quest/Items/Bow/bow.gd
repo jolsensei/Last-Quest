@@ -36,4 +36,8 @@ func _on_HitBox_body_entered(body):
 	if body.get("type") != _ENUMS.TYPE.PLAYER and body.get("type") != _ENUMS.TYPE.TERRAIN:
 		_SFX.play_sfx("arrow_hit_wall")
 		queue_free()
-
+		
+func give_to_player():
+	_GLOBAL_DATA.player.inventory[6] = load("res://Items/Bow/Bow.tscn")
+	_SIGNAL_MANAGER.update_inventory()
+	_SIGNAL_MANAGER.show(true, $Portrait.texture, _TRANSLATION_MANAGER.translate(tr("BOW")))

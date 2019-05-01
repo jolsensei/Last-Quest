@@ -9,7 +9,11 @@ HEART_PIECE_4,You got a /*heart piece*/ ! You get a /*full heart*/!,¡ Has conse
 HEART,You healed one full heart,Te has curado un corazón
 RUPEE_1,"WoW, a single rupee, today is a day to celebrate","Vaya, una rupia, un día para celebrar"
 ,,
-LEGENDS_SHIELD,"You got the /*Legend's Shield*/ ! Wait, this is from an anime, right ?!//Use it with /*A*/ or /*B*/ to /*block*/ enemy attacks","¡ Has conseguido el /*Escudo Legendario*/ ! Espera, !¿ Esto es de un anime, verdad ?¡//Úsalo con /*A*/ o /*B*/ para /*bloquear*/ ataques enemigos"
+LEGENDS_SHIELD,"You got the /*Legend's Shield*/ ! Wait, this is from an anime, right ?!//You can /*block*/ enemy attacks with it //Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Escudo Legendario*/ ! Espera, !¿ Esto es de un anime, verdad ?¡//Úsalo para /*bloquear*/ ataques enemigos //Equípalo en la /*A*/ o /*B*/"
+BRACELET_OF_WILL,"You got the /*Bracelet of Will*/ ! //With this bracelet, you can even /*lift rocks*/ //You know, where there is a will, there is a way","¡ Has conseguido el /*Bracelete de la voluntad*/ ! //Con este bracelete, puedes /*levantar*/ incluso /*piedras*/ //Ya sabes, querer es poder"
+BOMBS,"You got the /*Bombs*/ !//Be careful, they are quite dangerous//Equip them to /*A*/ or /*B*/","¡ Has conseguido las /*Bombas*/ !//Cuidado, son bastante peligrosas//Equípalas en la /*A*/ o /*B*/"
+BOOMERANG,"You got the /*Boomerang*/ !//Deals no damage, but it can pick up items for you !//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Búmeran*///No hace daño, pero puede recoger objetos por ti//Equípalo en la /*A*/ o /*B*/"
+BOW,You got the /*Bow*/ !//Shoot powerfull arrows with it//Equip it to /*A*/ or /*B*/,¡ Has conseguido el /*Arco*///Dispara poderosas flechas con el//Equípalo en la /*A*/ o /*B*/
 S_001,"This is a test, you can press A to skip the following Lorem Ipsum so you know...//Hope this works well","Esto es una prueba, puedes pulsar A para saltar el siguiente Lorem Ipsum asi que ya sabes...//Espero que funcione bien"
 Z_001,Dungeon of Tests,Mazmorra de las Pruebas
 Z_002,Dummy Hills,Colinas Maniquí

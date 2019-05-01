@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=20 format=2]
+[gd_resource type="TileSet" load_steps=21 format=2]
 
 [ext_resource path="res://Tiles/underworld.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/fix.png" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 0, 16, 16, 0, 16, 0, 0 )
@@ -605,4 +606,14 @@ points = PoolVector2Array( 16, 0, 16, 16, 0, 16, 0, 0 )
 43/navigation_offset = Vector2( 0, 0 )
 43/shapes = [  ]
 43/z_index = 0
+44/name = "entrance_top"
+44/texture = ExtResource( 2 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 0, 0, 16, 16 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 0, 0 )
+44/navigation_offset = Vector2( 0, 0 )
+44/shapes = [  ]
+44/z_index = 0
 
