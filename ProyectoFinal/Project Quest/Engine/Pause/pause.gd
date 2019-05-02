@@ -3,6 +3,7 @@ extends Control
 signal equipment_changed
 
 var in_pause = false
+var first_time = true
 
 func _ready():
 	_SIGNAL_MANAGER.connect("update_inventory", self, "_on_Game_game_loaded")
@@ -10,14 +11,17 @@ func _ready():
 	_SIGNAL_MANAGER.connect("update_collection", self, "update_collection")
 
 func update_collection():
-	$Collection/Sprite.frame = _GLOBAL_DATA.player.heart_pieces
-
+	$Collection/Hearts.frame = _GLOBAL_DATA.player.heart_pieces
+	$Collection/Bracelet.visible = _GLOBAL_DATA.player.bracelet_of_will
+	
+	
 func _on_Game_game_loaded():
 	
-	$Collection/Sprite.frame = _GLOBAL_DATA.player.heart_pieces
+	$Collection/Hearts.frame = _GLOBAL_DATA.player.heart_pieces
+	$Collection/Bracelet.visible = _GLOBAL_DATA.player.bracelet_of_will
 	
-	for child in get_node("GridContainer").get_children(): #We delete them as we are going to create new ones
-		get_node("GridContainer").remove_child(child)
+	for child in $Inventory/GridContainer.get_children(): #We delete them as we are going to create new ones
+		$Inventory/GridContainer.remove_child(child)
 
 	for item in _GLOBAL_DATA.player.inventory:
 		var new_slot = TextureButton.new()
@@ -28,12 +32,12 @@ func _on_Game_game_loaded():
 		else:
 			new_slot.texture_normal = load("res://Engine/Pause/empty.png")
 			
-		get_node("GridContainer").add_child(new_slot)
+		$Inventory/GridContainer.add_child(new_slot)
 
 func _input(event):
 	if event.is_action_pressed("pause") and !_GLOBAL_DATA.player.can_interact:
 		_SFX.play_sfx("map")
-		$GridContainer.get_child(0).grab_focus()
+		$Inventory/GridContainer.get_child(0).grab_focus()
 		get_tree().paused = not get_tree().paused
 		visible = not visible
 		in_pause = not in_pause
@@ -47,11 +51,22 @@ func _input(event):
 	if in_pause and (event.is_action_pressed("ui_down") or event.is_action_pressed("ui_up") or event.is_action_pressed("ui_left") or event.is_action_pressed("ui_right")):
 			_SFX.play_sfx("cursor")
 	if event.is_action_pressed("a") and in_pause and ($TextureButton.has_focus() or $TextureButton2.has_focus()):
-		change_visibility()
+		$Timer.start()
+		$Anim.play("flip")
+		var bottom_right = $TextureButton.has_focus()
+		var bottom_left = $TextureButton2.has_focus()
+		match(true):
+			bottom_right:
+				$Buttons.play("press_r")
+			bottom_left:
+				$Buttons.play("press_l")
+
+func _on_Timer_timeout():
+	change_visibility()
 
 func change_item(button):
 	var count = 0
-	for slot in $GridContainer.get_children():
+	for slot in $Inventory/GridContainer.get_children():
 		if slot.has_focus():
 			print(count)
 			var item_to_place = _GLOBAL_DATA.player.inventory[count]
@@ -77,4 +92,4 @@ func control_placement(item, button):
 func change_visibility():
 	$Collection.visible = not $Collection.visible
 	$Inventory.visible = not $Inventory.visible
-	$GridContainer.visible = not $GridContainer.visible
+	$Inventory/GridContainer.visible = not $Inventory/GridContainer.visible
