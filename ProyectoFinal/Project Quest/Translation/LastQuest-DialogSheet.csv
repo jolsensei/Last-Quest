@@ -7,13 +7,16 @@ HEART_PIECE_2,You got a /*heart piece*/ ! Get 2 more to get a /*full heart*/,¡ 
 HEART_PIECE_3,You got a /*heart piece*/ ! Get only 1 more to get a /*full heart*/,¡ Has conseguido un /*cuarto de corazón*/ ! Consigue uno más para obtener un /*corazón extra*/
 HEART_PIECE_4,You got a /*heart piece*/ ! You get a /*full heart*/!,¡ Has conseguido un /*cuarto de corazón*/ ! Obtienes un /*corazón extra*/
 HEART,You healed one full heart,Te has curado un corazón
-RUPEE_1,"WoW, a single rupee, today is a day to celebrate","Vaya, una rupia, un día para celebrar"
+RUPEE_1,"WoW, a single /*rupee*/, today is a day to celebrate","Vaya, una /*rupia*/, un día para celebrar"
+RUPEE_5,"Yeah, five /*rupees*/, not so bad","Yeah, cinco /*rupias*/, ni tan mal"
+RUPEE_20,"Ohh, twenty /*rupees*/, a good reason to smile !","Ohh, veinte /*rupias*/, un buen motivo para sonreir"
+RUPEE_50,Fifty /*rupees*/ ! Make sure you don't spend them suddenly,¡ Cincuenta /*rupias*/ ! Asegurate de no gastarlas de golpe
 ,,
 LEGENDS_SHIELD,"You got the /*Legend's Shield*/ ! Wait, this is from an anime, right ?!//You can /*block*/ enemy attacks with it //Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Escudo Legendario*/ ! Espera, !¿ Esto es de un anime, verdad ?¡//Úsalo para /*bloquear*/ ataques enemigos //Equípalo en la /*A*/ o /*B*/"
 BRACELET_OF_WILL,"You got the /*Bracelet of Will*/ ! //With this bracelet, you can even /*lift rocks*/ //You know, where there is a will, there is a way","¡ Has conseguido el /*Bracelete de la voluntad*/ ! //Con este bracelete, puedes /*levantar*/ incluso /*piedras*/ //Ya sabes, querer es poder"
 BOMBS,"You got the /*Bombs*/ !//Be careful, they are quite dangerous//Equip them to /*A*/ or /*B*/","¡ Has conseguido las /*Bombas*/ !//Cuidado, son bastante peligrosas//Equípalas en la /*A*/ o /*B*/"
-BOOMERANG,"You got the /*Boomerang*/ !//Deals no damage, but it can pick up items for you !//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Búmeran*///No hace daño, pero puede recoger objetos por ti//Equípalo en la /*A*/ o /*B*/"
-BOW,You got the /*Bow*/ !//Shoot powerfull arrows with it//Equip it to /*A*/ or /*B*/,¡ Has conseguido el /*Arco*///Dispara poderosas flechas con el//Equípalo en la /*A*/ o /*B*/
+BOOMERANG,"You got the /*Boomerang*/ !//Deals no damage, but it can pick up items for you !//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Búmeran*/ ! //No hace daño, pero puede recoger objetos por ti//Equípalo en la /*A*/ o /*B*/"
+BOW,You got the /*Bow*/ !//Shoot powerfull arrows with it//Equip it to /*A*/ or /*B*/,¡ Has conseguido el /*Arco*/ ! //Dispara poderosas flechas con el//Equípalo en la /*A*/ o /*B*/
 S_001,"This is a test, you can press A to skip the following Lorem Ipsum so you know...//Hope this works well","Esto es una prueba, puedes pulsar A para saltar el siguiente Lorem Ipsum asi que ya sabes...//Espero que funcione bien"
 Z_001,Dungeon of Tests,Mazmorra de las Pruebas
 Z_002,Dummy Hills,Colinas Maniquí

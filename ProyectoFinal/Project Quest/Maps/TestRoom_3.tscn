@@ -3,11 +3,11 @@
 [ext_resource path="res://Tiles/Dungeon.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Engine/Warps/Spawn.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Foes/Gull/gull.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Events/Locked Doors/LockedDoor.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Engine/Warps/Hole.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Drops/Keys/Key.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Events/Bombable wall/Bombable wall.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Events/Locked Doors/LockedDoor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Engine/Warps/Hole.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Drops/Keys/Key.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Events/Bombable wall/Bombable wall.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Foes/Glare/Glare.tscn" type="PackedScene" id=8]
 
 [node name="Test Room 2" type="Node"]
 
@@ -33,28 +33,19 @@ zone_name = "Z_002"
 [node name="E_Medio" parent="." instance=ExtResource( 3 )]
 position = Vector2( 152, 72 )
 
-[node name="gull" parent="." instance=ExtResource( 4 )]
-position = Vector2( 41, 114 )
-
-[node name="gull2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 59, 104 )
-
-[node name="gull3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 53, 83 )
-
-[node name="gull4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 33, 92 )
-
-[node name="LockedDoor" parent="." instance=ExtResource( 5 )]
+[node name="LockedDoor" parent="." instance=ExtResource( 4 )]
 position = Vector2( 56, 8 )
 
-[node name="Hole" parent="." instance=ExtResource( 6 )]
+[node name="Hole" parent="." instance=ExtResource( 5 )]
 position = Vector2( 0, 72 )
 scale = Vector2( 2, 7 )
 
-[node name="Key" parent="." instance=ExtResource( 7 )]
+[node name="Key" parent="." instance=ExtResource( 6 )]
 position = Vector2( -40, 38 )
 
-[node name="Bombable wall" parent="." instance=ExtResource( 8 )]
+[node name="Bombable wall" parent="." instance=ExtResource( 7 )]
 position = Vector2( 104, 8 )
+
+[node name="Glare" parent="." instance=ExtResource( 8 )]
+position = Vector2( 40, 72 )
 

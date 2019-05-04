@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Drops/Rupees/1/rupee.gd" type="Script" id=1]
+[ext_resource path="res://Drops/Rupees/1/rupee_animation.png" type="Texture" id=2]
+[ext_resource path="res://Drops/Rupees/1/rupee_portrait.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 6 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "drop"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 2, 4, 6, 8, 8 ]
+}
+
+[node name="Rupee" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 9
+frame = 8
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 1 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/drop = SubResource( 2 )
+
+[node name="Portrait" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+

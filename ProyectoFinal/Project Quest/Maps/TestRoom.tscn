@@ -64,7 +64,7 @@ item_inside = "res://Drops/Hearts/Heart.tscn"
 
 [node name="Chest2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 56, 24 )
-item_inside = "res://Drops/Rupees/Rupee.tscn"
+item_inside = "res://Drops/Rupees/50/Rupee_50.tscn"
 
 [node name="Pot" parent="." instance=ExtResource( 7 )]
 position = Vector2( 24, 104 )

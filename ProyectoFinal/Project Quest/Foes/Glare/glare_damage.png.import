@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rupee_animation.png-5a124cbc213c949bd97043cd07748ab1.stex"
+path="res://.import/glare_damage.png-ad71401d44eb161b6a6f08e8b1fc262d.stex"
 
 [deps]
 
-source_file="res://Drops/Rupees/rupee_animation.png"
-dest_files=[ "res://.import/rupee_animation.png-5a124cbc213c949bd97043cd07748ab1.stex" ]
+source_file="res://Foes/Glare/glare_damage.png"
+dest_files=[ "res://.import/glare_damage.png-ad71401d44eb161b6a6f08e8b1fc262d.stex" ]
 
 [params]
 

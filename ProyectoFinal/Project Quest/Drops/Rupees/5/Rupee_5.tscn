@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Drops/Rupees/rupee.gd" type="Script" id=1]
-[ext_resource path="res://Drops/Rupees/rupee_animation.png" type="Texture" id=2]
-[ext_resource path="res://Drops/Rupees/rupee_portrait.png" type="Texture" id=3]
+[ext_resource path="res://Drops/Rupees/5/rupee_5.gd" type="Script" id=1]
+[ext_resource path="res://Drops/Rupees/5/rupee_5_animation.png" type="Texture" id=2]
+[ext_resource path="res://Drops/Rupees/5/rupee_portrait_5.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 6 )
