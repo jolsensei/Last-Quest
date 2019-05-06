@@ -8,6 +8,7 @@
 extents = Vector2( 7, 7 )
 
 [node name="Heart Container" type="Area2D"]
+z_index = -1
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

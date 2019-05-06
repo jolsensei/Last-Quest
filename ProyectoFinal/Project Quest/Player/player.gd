@@ -133,4 +133,8 @@ func give_arrows(arrows):
 	self.arrows += arrows
 	self.arrows = min(self.arrows, max_arrows)
 	
+func give_bombs(bombs):
+	self.bombs += bombs
+	self.bombs = min(self.bombs, max_bombs)
+	
 	

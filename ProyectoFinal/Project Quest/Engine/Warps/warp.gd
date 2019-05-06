@@ -15,3 +15,4 @@ func _physics_process(delta):
 		if body.name == "Player":
 			_SIGNAL_MANAGER.enter_animation(warp_to, warp_position, tr(zone_name))
 			emit_signal("player_entered")
+			body.hands_free = true
