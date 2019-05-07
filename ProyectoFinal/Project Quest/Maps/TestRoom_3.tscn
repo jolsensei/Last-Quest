@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Tiles/Dungeon.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Drops/Keys/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Events/Bombable wall/Bombable wall.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Foes/Glare/Glare.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Foes/Thorn-Thorn/Thorn-Thorn.tscn" type="PackedScene" id=9]
 
 [node name="Test Room 2" type="Node"]
 
@@ -47,5 +48,8 @@ position = Vector2( -40, 38 )
 position = Vector2( 104, 8 )
 
 [node name="Glare" parent="." instance=ExtResource( 8 )]
-position = Vector2( 40, 72 )
+position = Vector2( 38, 35 )
+
+[node name="Thorn-Thorn" parent="." instance=ExtResource( 9 )]
+position = Vector2( 81, 104 )
 

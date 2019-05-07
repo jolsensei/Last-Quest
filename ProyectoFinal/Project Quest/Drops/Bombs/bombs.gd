@@ -9,4 +9,4 @@ func body_entered(body):
 func give_to_player():
 	_GLOBAL_DATA.player.give_bombs(5)
 	_SIGNAL_MANAGER.update_AB()
-	_SIGNAL_MANAGER.show(false, null, _TRANSLATION_MANAGER.translate(tr("BOMBS")))
+	_SIGNAL_MANAGER.show(false, null, _TRANSLATION_MANAGER.translate(tr("5_BOMBS")))

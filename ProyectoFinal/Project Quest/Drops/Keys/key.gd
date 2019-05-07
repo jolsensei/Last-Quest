@@ -3,7 +3,7 @@ extends "res://Drops/drop.gd"
 func body_entered(body):
 	if body.get("type") == _ENUMS.TYPE.PLAYER and body.get("keys") < body.get("max_keys"):
 		_SFX.play_sfx("key")
-		body.keys += 1
+		body.add_keys(1)
 		queue_free()
 
 func animation():

@@ -4,11 +4,11 @@
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Engine/Warps/Spawn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Events/Sign/Sign.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Foes/Gull/gull.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Events/Chest/Chest.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Events/Pot/Pot.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Events/Chest/Big Chest.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Events/Stone/Stone.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Events/Chest/Chest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Events/Pot/Pot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Events/Chest/Big Chest.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Events/Stone/Stone.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Foes/Spirak/Spirak.tscn" type="PackedScene" id=9]
 
 [node name="Test Room 1" type="Node"]
 
@@ -38,6 +38,7 @@ position = Vector2( -32, 72 )
 warp_to = "res://Maps/TestRoom_3.tscn"
 warp_position = "E_Medio"
 zone_name = "Z_001"
+show_keys = true
 
 [node name="Spawn" parent="." instance=ExtResource( 3 )]
 position = Vector2( 33, 71 )
@@ -55,44 +56,44 @@ position = Vector2( 141, 104 )
 position = Vector2( 24, 24 )
 text = "S_001"
 
-[node name="gull" parent="." instance=ExtResource( 5 )]
-position = Vector2( 96, 74 )
-
-[node name="Chest" parent="." instance=ExtResource( 6 )]
+[node name="Chest" parent="." instance=ExtResource( 5 )]
 position = Vector2( -8, 24 )
 item_inside = "res://Drops/Hearts/Heart.tscn"
 
-[node name="Chest2" parent="." instance=ExtResource( 6 )]
+[node name="Chest2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 56, 24 )
 item_inside = "res://Drops/Rupees/50/Rupee_50.tscn"
 
-[node name="Pot" parent="." instance=ExtResource( 7 )]
+[node name="Pot" parent="." instance=ExtResource( 6 )]
 position = Vector2( 24, 104 )
 
-[node name="Pot2" parent="." instance=ExtResource( 7 )]
+[node name="Pot2" parent="." instance=ExtResource( 6 )]
 position = Vector2( -8, 104 )
 mandatory_drop = "res://Drops/Keys/Key.tscn"
 
-[node name="Big Chest" parent="." instance=ExtResource( 8 )]
+[node name="Big Chest" parent="." instance=ExtResource( 7 )]
 position = Vector2( 96, 23 )
 item_inside = "res://Items/Shield/Shield of Legend.tscn"
 
-[node name="Big Chest2" parent="." instance=ExtResource( 8 )]
+[node name="Big Chest2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 128, 136 )
 item_inside = "res://Items/Bracelet ofWill/Bracelet of Will.tscn"
 
-[node name="Big Chest3" parent="." instance=ExtResource( 8 )]
+[node name="Big Chest3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, 136 )
 item_inside = "res://Items/Boomerang/Boomerang.tscn"
 
-[node name="Big Chest5" parent="." instance=ExtResource( 8 )]
+[node name="Big Chest5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 48, 168 )
 item_inside = "res://Items/Bomb/Bomb.tscn"
 
-[node name="Big Chest4" parent="." instance=ExtResource( 8 )]
+[node name="Big Chest4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, 168 )
 item_inside = "res://Items/Bow/Bow.tscn"
 
-[node name="Stone" parent="." instance=ExtResource( 9 )]
+[node name="Stone" parent="." instance=ExtResource( 8 )]
 position = Vector2( 79, 143 )
+
+[node name="Spirak" parent="." instance=ExtResource( 9 )]
+position = Vector2( 90, 72 )
 

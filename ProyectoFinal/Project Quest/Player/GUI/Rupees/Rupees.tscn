@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/GUI/Rupees/rupeesUI.gd" type="Script" id=1]
-[ext_resource path="res://Player/GUI/Rupees/rupee.png" type="Texture" id=2]
+[ext_resource path="res://Player/GUI/Rupees/ruppes_counter.png" type="Texture" id=2]
 [ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -16,10 +16,10 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 5.0
+margin_left = 7.0
 margin_top = -7.0
-margin_right = 45.0
-margin_bottom = 9.00004
+margin_right = 25.0
+margin_bottom = 9.0
 custom_fonts/font = SubResource( 1 )
 text = "000"
 

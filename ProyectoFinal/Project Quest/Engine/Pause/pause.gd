@@ -68,7 +68,7 @@ func change_item(button):
 	var count = 0
 	for slot in $Inventory/GridContainer.get_children():
 		if slot.has_focus():
-			print(count)
+#			print(count)
 			var item_to_place = _GLOBAL_DATA.player.inventory[count]
 			match(button):
 				_ENUMS.BUTTON.A:

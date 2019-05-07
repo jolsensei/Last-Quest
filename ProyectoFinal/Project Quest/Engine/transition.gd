@@ -23,3 +23,6 @@ func _on_Animation_animation_finished(anim_name):
 		
 	if anim_name != "show_zone_name":
 		get_tree().paused = false
+		
+	if anim_name == "exit":
+		_GLOBAL_DATA.player.can_interact = false

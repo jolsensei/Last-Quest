@@ -1,6 +1,7 @@
 extends "res://Engine/common_entity.gd"
 
 signal rupee_picked
+signal key_picked
 
 #Ingame visible data
 var player_name:String
@@ -25,7 +26,7 @@ var bracelet_of_will = false
 
 
 var item_A = load("res://Items/Sword/Iron Sword.tscn")
-var item_B = load("res://Items/Bomb/Bomb.tscn")
+var item_B = load("res://Foes/Spirak/Shoot/Spirak Shoot.tscn")
 
 var inventory = []
 
@@ -124,6 +125,11 @@ func add_rupees(rupees):
 	self.rupees += rupees
 	self.rupees = min(self.rupees, max_rupees)
 	emit_signal("rupee_picked")
+	
+func add_keys(keys):
+	self.keys += keys
+	self.keys = min(self.keys, max_keys)
+	emit_signal("key_picked")
 	
 func heal(hearts):
 	self.global_hearts += hearts

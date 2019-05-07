@@ -5,10 +5,10 @@ signal update_inventory
 signal update_counter
 signal update_AB
 signal enter_animation
-signal enter_finished
 signal update_hearts
 signal update_collection
 signal dialog_finished
+signal show_keys
 
 func show(sfx_activated, texture, text):
 	emit_signal("send_dialog", sfx_activated, texture, text)
@@ -33,3 +33,6 @@ func update_collection():
 
 func dialog_finished():
 	emit_signal("dialog_finished")
+	
+func show_keys(boolean):
+	emit_signal("show_keys", boolean)

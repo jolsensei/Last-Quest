@@ -13,6 +13,6 @@ func _on_body_exited(body):
 		close_to(false)
 		
 func close_to(close):
-		print("Close") if close else print("Far")
+#		print("Close") if close else print("Far")
 		_GLOBAL_DATA.player.can_interact = close
 		set_process_input(close)
