@@ -1,9 +1,11 @@
 extends Node
 
+var slot = 1
 var player
 var map
 var world = []
 var last_position
+var last_map
 var volume = -20
 var locale = "en"
 

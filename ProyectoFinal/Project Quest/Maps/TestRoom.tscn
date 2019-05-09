@@ -27,17 +27,17 @@ tile_data = PoolIntArray( 65534, 4, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3
 
 [node name="Warp" parent="." instance=ExtResource( 2 )]
 position = Vector2( 160, 104 )
-warp_to = "res://Maps/TestRoom_2.tscn"
+warp_to = 1
 warp_position = "E_Abajo"
 
 [node name="Warp2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 160, 40 )
-warp_to = "res://Maps/TestRoom_2.tscn"
+warp_to = 1
 warp_position = "E_Arriba"
 
 [node name="Warp3" parent="." instance=ExtResource( 2 )]
 position = Vector2( -32, 72 )
-warp_to = "res://Maps/TestRoom_3.tscn"
+warp_to = 2
 warp_position = "E_Medio"
 zone_name = "Z_001"
 show_keys = true

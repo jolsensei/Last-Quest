@@ -2,14 +2,14 @@ extends Area2D
 
 signal player_entered
 
-export(String, FILE, "*.tscn") var warp_to
+enum WORLDS{TEST, TEST2, TEST3}
+
+#export(String, FILE, "*.tscn") var warp_to
+export(WORLDS) var warp_to
 export(String) var warp_position
 export(String) var zone_name
 export(bool) var show_keys
 
-func _ready():
-	_SIGNAL_MANAGER.connect("enter_finished", self, "enter_finished") 
-	
 
 func _physics_process(delta):
 	var bodies = get_overlapping_bodies()

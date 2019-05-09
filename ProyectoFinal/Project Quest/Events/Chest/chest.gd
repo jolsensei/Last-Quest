@@ -1,14 +1,16 @@
 extends "res://Events/basic_event.gd"
 
-var opened = false
+export var opened = false
 export(String, FILE, "*.tscn") var item_inside
 
 func _ready():
-	item_inside = load(item_inside)
+	if opened:
+		$Sprite.frame = 1    
 
 func _input(event):
+	
 	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact and !opened:
-		var instanced_item_inside = item_inside.instance()
+		var instanced_item_inside = load(item_inside).instance()
 		
 		_GLOBAL_DATA.player.get_node("Sprite").frame = 10 #Get object
 		_GLOBAL_DATA.player.get_node("GetItem").texture = instanced_item_inside.get_node("Portrait").texture

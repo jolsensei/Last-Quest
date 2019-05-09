@@ -10,7 +10,7 @@
 [ext_resource path="res://Foes/Glare/Glare.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Foes/Thorn-Thorn/Thorn-Thorn.tscn" type="PackedScene" id=9]
 
-[node name="Test Room 2" type="Node"]
+[node name="Test Room 3" type="Node"]
 
 [node name="Floor" type="TileMap" parent="."]
 z_index = -1
@@ -27,7 +27,6 @@ tile_data = PoolIntArray( -65530, 44, 0, 131068, 20, 0, 131069, 22, 0, 131071, 3
 
 [node name="Warp" parent="." instance=ExtResource( 2 )]
 position = Vector2( 168, 72 )
-warp_to = "res://Maps/TestRoom.tscn"
 warp_position = "E_Medio"
 zone_name = "Z_002"
 

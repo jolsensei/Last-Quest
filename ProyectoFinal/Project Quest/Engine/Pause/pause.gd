@@ -60,7 +60,9 @@ func _input(event):
 				$Buttons.play("press_r")
 			bottom_left:
 				$Buttons.play("press_l")
-
+	if event.is_action_pressed("a") and in_pause and $Collection/Save.has_focus():
+		pass
+	
 func _on_Timer_timeout():
 	change_visibility()
 
