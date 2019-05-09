@@ -10,10 +10,13 @@ var max_hearts = 1
 
 var type = _ENUMS.TYPE.FOE
 
+var shoot = load("res://Foes/Spirak/Shoot/Spirak Shoot.tscn")
+
 func _init():
 	global_speed = speed
 	global_hitstun_time = hitstun
 	global_max_hearts = max_hearts
+	global_type = type
 
 func _ready():
 	dirMov = _DIRECTIONS.random()
@@ -39,4 +42,4 @@ func _physics_process(delta):
 func _on_ChaseArea_body_entered(body):
 	if body.get("type") == _ENUMS.TYPE.PLAYER :
 		print("FIREEE")
-		use_item(preload("res://Foes/Spirak/Shoot/Spirak Shoot.tscn"))
+		use_item(shoot)

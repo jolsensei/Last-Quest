@@ -9,6 +9,7 @@ export(bool) var show_keys
 
 func _ready():
 	_SIGNAL_MANAGER.connect("enter_finished", self, "enter_finished") 
+	
 
 func _physics_process(delta):
 	var bodies = get_overlapping_bodies()

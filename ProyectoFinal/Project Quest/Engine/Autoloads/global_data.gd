@@ -2,9 +2,13 @@ extends Node
 
 var player
 var map
+var world = []
 var last_position
 var volume = -20
 var locale = "en"
 
 func _init():
-	pass
+	world.resize(3)
+	world[0] = load("res://Maps/TestRoom.tscn")
+	world[1] = load("res://Maps/TestRoom_2.tscn")
+	world[2] = load("res://Maps/TestRoom_3.tscn")

@@ -56,8 +56,8 @@ visible = false
 [node name="Transition" parent="." instance=ExtResource( 10 )]
 
 [connection signal="game_loaded" from="." to="Menu/Pause-Inventory" method="_on_Game_game_loaded"]
-[connection signal="loaded" from="CurrentMap" to="GUI/Items" method="_on_map_loaded"]
 [connection signal="loaded" from="CurrentMap" to="GUI/Hearts" method="_on_map_loaded"]
+[connection signal="loaded" from="CurrentMap" to="GUI/Items" method="_on_map_loaded"]
 [connection signal="key_picked" from="CurrentMap/Player" to="GUI/Keys" method="_on_Player_key_picked"]
 [connection signal="rupee_picked" from="CurrentMap/Player" to="GUI/Rupees" method="_on_player_rupee_picked"]
 [connection signal="equipment_changed" from="Menu/Pause-Inventory" to="GUI/Items" method="_on_PauseInventory_equipment_changed"]

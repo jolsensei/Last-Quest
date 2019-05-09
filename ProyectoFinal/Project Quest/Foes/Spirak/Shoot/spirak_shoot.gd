@@ -1,13 +1,12 @@
 extends Node
 
 var type = null
-var damage = 1
+var damage = 0.25
 var max_amount = 4
 
 var speed = 120
 var dirMov = null
 var has_counter = false
-
 
 func _ready():
 	_SFX.play_sfx("arrow")
@@ -19,7 +18,7 @@ func _ready():
 	var new_parent = get_parent().get_parent()
 	get_parent().remove_child(self)
 	new_parent.add_child(self)
-		
+
 
 
 func _process(delta):
@@ -27,7 +26,6 @@ func _process(delta):
 
 
 func _on_HitBox_body_entered(body):
-	print(body.name)
-	if body.get("type") != _ENUMS.TYPE.FOE and body.get("type") != _ENUMS.TYPE.TERRAIN:
+	if body.get("type") != _ENUMS.TYPE.PLAYER and body.get("type") != _ENUMS.TYPE.TERRAIN:
 		_SFX.play_sfx("arrow_hit_wall")
 		queue_free()

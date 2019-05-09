@@ -7,7 +7,6 @@ func _ready():
 	item_inside = load(item_inside)
 
 func _input(event):
-#	print("Test")
 	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact and !opened:
 		var instanced_item_inside = item_inside.instance()
 		

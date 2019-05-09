@@ -12,7 +12,6 @@ func initialize():
 	changeLevel(NEW_MAP, WARP_POSITION)
 	
 func changeLevel(mapToWarp, position):
-		
 #We remove the player, then remove the map, to load the new map
 	_GLOBAL_DATA.map.remove_child(_GLOBAL_DATA.player)
 	remove_child(_GLOBAL_DATA.map)
