@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/spirak.png-1f76bc8b9b79e4dfe7c824610cbcfe75.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

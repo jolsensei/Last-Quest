@@ -313,4 +313,3 @@ position = Vector2( 0, -8 )
 
 [node name="GetItem" type="Sprite" parent="."]
 position = Vector2( 0, -15 )
-

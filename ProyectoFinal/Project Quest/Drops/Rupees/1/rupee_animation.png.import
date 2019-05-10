@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/rupee_animation.png-e785bccddb64e5d73f24eade02cf4fb7.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

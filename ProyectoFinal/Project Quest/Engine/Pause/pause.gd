@@ -61,7 +61,8 @@ func _input(event):
 			bottom_left:
 				$Buttons.play("press_l")
 	if event.is_action_pressed("a") and in_pause and $Collection/Save.has_focus():
-		pass
+		_SAVE_SYSTEM.save_game()
+		_SAVE_SYSTEM.delete_temp()
 	
 func _on_Timer_timeout():
 	change_visibility()

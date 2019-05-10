@@ -5,7 +5,7 @@ var player
 var map
 var world = []
 var last_position
-var last_map
+var last_map = 0
 var volume = -20
 var locale = "en"
 

@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/big_chest.png-0c080eefd6a1b526490f3abc2f2ad42c.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

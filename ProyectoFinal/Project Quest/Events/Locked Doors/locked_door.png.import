@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/locked_door.png-3e9c420ebdf28e271d1ceb4ab824cb09.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

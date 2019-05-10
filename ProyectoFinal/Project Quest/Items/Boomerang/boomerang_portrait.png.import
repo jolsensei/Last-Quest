@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/boomerang_portrait.png-75c4c9d43801074373e5744aab1088eb.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

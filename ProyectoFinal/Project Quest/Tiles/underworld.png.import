@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/underworld.png-1992e3b1680295e2361a7f2c12a62c6e.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

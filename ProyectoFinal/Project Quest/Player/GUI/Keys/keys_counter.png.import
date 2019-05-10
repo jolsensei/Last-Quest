@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/keys_counter.png-ae16a31b237494cd863f7d69a57b097a.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

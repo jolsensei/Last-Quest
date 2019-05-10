@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/overworld.png-691e568200a6ac3e28cc2778f5bce5d8.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

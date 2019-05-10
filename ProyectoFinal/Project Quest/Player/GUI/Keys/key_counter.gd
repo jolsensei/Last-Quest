@@ -15,3 +15,8 @@ func show_keys(boolean):
 func _on_Timer_timeout():
 	$Sprite.visible = visbility
 	$Label.visible = visbility
+
+
+func _on_Game_game_loaded():
+	$Label.set_text(str(_GLOBAL_DATA.player.keys))
+	_GLOBAL_DATA.player.connect("key_picked", self, "_on_Player_key_picked")

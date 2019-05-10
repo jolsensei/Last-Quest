@@ -9,3 +9,8 @@ func _on_player_rupee_picked():
 		
 	if _GLOBAL_DATA.player.rupees == _GLOBAL_DATA.player.max_rupees:
 		$Label.set("custom_colors/font_color", Color.greenyellow)
+
+
+func _on_Game_game_loaded():
+	$Label.set_text("0" + str(_GLOBAL_DATA.player.rupees))
+	_GLOBAL_DATA.player.connect("rupee_picked", self, "_on_player_rupee_picked")

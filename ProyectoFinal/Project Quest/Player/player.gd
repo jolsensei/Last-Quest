@@ -4,42 +4,42 @@ signal rupee_picked
 signal key_picked
 
 #Ingame visible data
-var player_name:String
-var max_hearts = 3
-var hearts = 0
+export var player_name:String
+export var max_hearts = 3
+export var hearts = 0
 
-var heart_pieces = 0
+export var heart_pieces = 0
 
-var max_rupees = 99
-var rupees = 0
+export var max_rupees = 99
+export var rupees = 0
 
-var max_arrows = 10
-var arrows = 10
+export var max_arrows = 10
+export var arrows = 10
 
-var max_bombs = 10
-var bombs = 10
+export var max_bombs = 10
+export var bombs = 10
 
-var max_keys = 9
-var keys = 0
+export var max_keys = 9
+export var keys = 0
 
-var bracelet_of_will = false
+export var bracelet_of_will = false
 
 
-var item_A = load("res://Items/Sword/Iron Sword.tscn")
-var item_B = load("res://Foes/Spirak/Shoot/Spirak Shoot.tscn")
+export var item_A:Resource = load("res://Items/Sword/Iron Sword.tscn")
+export var item_B:Resource
 
-var inventory = []
+export var inventory = []
 
 
 #Ingame invisible data
-var speed = 60
-var hitstun = 15
+export var speed = 60
+export var hitstun = 15
 
-var can_interact = false
-var hands_free = true
+export var can_interact = false
+export var hands_free = true
 
-var current_state = _ENUMS.STATE.DEFAULT
-var type = _ENUMS.TYPE.PLAYER
+export var current_state = _ENUMS.STATE.DEFAULT
+export var type = _ENUMS.TYPE.PLAYER
 
 func _init():
 	global_speed = speed
@@ -51,10 +51,10 @@ func _init():
 	inventory.resize(16)
 
 	inventory[0] = load("res://Items/Sword/Iron Sword.tscn")
-	inventory[3] = load("res://Items/Shield/Shield of Legend.tscn")
-	inventory[5] = load("res://Items/Boomerang/Boomerang.tscn")
-	inventory[6] = load("res://Items/Bow/Bow.tscn")
-	inventory[7] = load("res://Items/Bomb/Bomb.tscn")
+#	inventory[3] = load("res://Items/Shield/Shield of Legend.tscn")
+#	inventory[5] = load("res://Items/Boomerang/Boomerang.tscn")
+#	inventory[6] = load("res://Items/Bow/Bow.tscn")
+#	inventory[7] = load("res://Items/Bomb/Bomb.tscn")
 	
 func _physics_process(delta):
 	

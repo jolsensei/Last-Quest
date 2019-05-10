@@ -15,8 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="ProjectQuest"
-run/main_scene="res://Engine/Game/Game.tscn"
+config/name="Last Quest"
+run/main_scene="res://Engine/Menus/Title/Title.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -29,6 +29,7 @@ _DROP_MANAGER="*res://Engine/Autoloads/drops_manager.gd"
 _SIGNAL_MANAGER="*res://Engine/signal_manager.gd"
 _SFX="*res://Engine/SFX/SFX.gd"
 _TRANSLATION_MANAGER="*res://Translation/translation_manager.gd"
+_SAVE_SYSTEM="*res://Engine/save_system.gd"
 
 [display]
 

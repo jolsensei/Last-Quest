@@ -8,18 +8,18 @@ export(String) var WARP_POSITION
 var current_map = 0
 
 func initialize():
-	_GLOBAL_DATA.player = $Player
-	_GLOBAL_DATA.map = load(NEW_MAP).instance()
+	_GLOBAL_DATA.player = load_player()
+#	_GLOBAL_DATA.map = load(NEW_MAP).instance()
 	remove_child(_GLOBAL_DATA.player)
-	startLevel(current_map, WARP_POSITION)
+	startLevel(_GLOBAL_DATA.last_map, WARP_POSITION)
 	
 func startLevel(mapToWarp, position):
 #We remove the player, then remove the map, to load the new map
 #	_GLOBAL_DATA.map.remove_child(_GLOBAL_DATA.player)
 #	remove_child(_GLOBAL_DATA.map)
-	_GLOBAL_DATA.map.queue_free()
+#	_GLOBAL_DATA.map.queue_free()
 	_GLOBAL_DATA.map = reload(mapToWarp)
-	current_map = mapToWarp
+	_GLOBAL_DATA.last_map = mapToWarp
 	add_child(_GLOBAL_DATA.map)
 	
 #We add the player in the new map in the spawn position
@@ -31,13 +31,13 @@ func startLevel(mapToWarp, position):
 	
 	
 func changeLevel(mapToWarp, position):
-	save(current_map)
+	save(_GLOBAL_DATA.last_map)
 #We remove the player, then remove the map, to load the new map
 	_GLOBAL_DATA.map.remove_child(_GLOBAL_DATA.player)
 #	remove_child(_GLOBAL_DATA.map)
 	_GLOBAL_DATA.map.queue_free()
 	_GLOBAL_DATA.map = reload(mapToWarp)
-	current_map = mapToWarp
+	_GLOBAL_DATA.last_map = mapToWarp
 	add_child(_GLOBAL_DATA.map)
 	
 #We add the player in the new map in the spawn position
@@ -50,12 +50,27 @@ func changeLevel(mapToWarp, position):
 func save(number):
 	var scene = PackedScene.new()
 	scene.pack(_GLOBAL_DATA.map)
-	ResourceSaver.save("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/"+str(number)+".scn", scene)
-
+	ResourceSaver.save("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(number)+".tscn", scene)
+	
+	
 func reload(number):
 	var scene = PackedScene.new()
-	scene = load("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/"+str(number)+".scn")
-	if scene != null:
+	
+	if Directory.new().file_exists("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(number)+".tscn"):
+		scene = load("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(number)+".tscn")
+		print("Temporal")
 		return scene.instance()
+	elif Directory.new().file_exists("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/RoomState/"+str(number)+".tscn"):
+		scene = load("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/RoomState/"+str(number)+".tscn")
+		return scene.instance()
+		print("Guardado")
 	else:
+		print("Nuevo")
 		return _GLOBAL_DATA.world[number].instance()
+
+func load_player():
+	if Directory.new().file_exists("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Game/Player.tscn"):
+		remove_child($Player)
+		add_child(load("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Game/Player.tscn").instance())
+
+	return $Player

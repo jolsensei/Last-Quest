@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/ruppes_counter.png-c81c50d25f585e4296ac9d32ccce0fe8.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
