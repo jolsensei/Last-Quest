@@ -11,7 +11,8 @@ func initialize():
 	_GLOBAL_DATA.player = load_player()
 #	_GLOBAL_DATA.map = load(NEW_MAP).instance()
 	remove_child(_GLOBAL_DATA.player)
-	startLevel(_GLOBAL_DATA.last_map, WARP_POSITION)
+#	startLevel(_GLOBAL_DATA.last_map, WARP_POSITION)
+	startLevel(_GLOBAL_DATA.player.last_map, _GLOBAL_DATA.player.last_position)
 	
 func startLevel(mapToWarp, position):
 #We remove the player, then remove the map, to load the new map
@@ -24,8 +25,8 @@ func startLevel(mapToWarp, position):
 	
 #We add the player in the new map in the spawn position
 	_GLOBAL_DATA.map.add_child(_GLOBAL_DATA.player)
-	var spawn = _GLOBAL_DATA.map.get_node(position)
-	_GLOBAL_DATA.player.position = (spawn.position)
+#	var spawn = _GLOBAL_DATA.map.get_node(position)
+	_GLOBAL_DATA.player.position = (position)
 	
 	emit_signal("loaded")
 	

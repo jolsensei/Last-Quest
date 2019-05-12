@@ -6,7 +6,7 @@ signal key_picked
 #Ingame visible data
 export var player_name:String
 export var max_hearts = 3
-export var hearts = 0
+export var hearts = 3
 
 export var heart_pieces = 0
 
@@ -41,12 +41,13 @@ export var hands_free = true
 export var current_state = _ENUMS.STATE.DEFAULT
 export var type = _ENUMS.TYPE.PLAYER
 
+export var last_position:Vector2 = Vector2(33,71)
+export var last_map:int
+
 func _init():
 	global_speed = speed
 	global_hitstun_time = hitstun
 	global_type = type
-	global_max_hearts = max_hearts
-#	global_hearts = hearts
 
 	inventory.resize(16)
 
@@ -55,6 +56,10 @@ func _init():
 #	inventory[5] = load("res://Items/Boomerang/Boomerang.tscn")
 #	inventory[6] = load("res://Items/Bow/Bow.tscn")
 #	inventory[7] = load("res://Items/Bomb/Bomb.tscn")
+	
+func _ready():
+	global_max_hearts = max_hearts
+	global_hearts = hearts
 	
 func _physics_process(delta):
 	
@@ -142,5 +147,3 @@ func give_arrows(arrows):
 func give_bombs(bombs):
 	self.bombs += bombs
 	self.bombs = min(self.bombs, max_bombs)
-	
-	

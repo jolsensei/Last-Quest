@@ -12,7 +12,7 @@ var global_hitstun_time = 10
 var global_type = _ENUMS.TYPE.FOE
 
 var global_max_hearts = 0
-var global_hearts
+var global_hearts = 0
 
 var global_speed = 0
 

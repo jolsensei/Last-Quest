@@ -18,7 +18,9 @@ func save_rooms_state():
 	
 func save_player():
 	var scene = PackedScene.new()
-	
+	_GLOBAL_DATA.player.last_map = _GLOBAL_DATA.last_map
+	_GLOBAL_DATA.player.last_position = _GLOBAL_DATA.player.global_position
+	_GLOBAL_DATA.player.hearts = _GLOBAL_DATA.player.global_hearts
 	scene.pack(_GLOBAL_DATA.player)
 	ResourceSaver.save("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Game/Player.tscn", scene)
 	

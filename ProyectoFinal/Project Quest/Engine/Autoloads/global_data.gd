@@ -1,6 +1,6 @@
 extends Node
 
-var slot = 1
+var slot = 2
 var player
 var map
 var world = []

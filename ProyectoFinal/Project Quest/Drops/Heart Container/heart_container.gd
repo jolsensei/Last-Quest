@@ -9,6 +9,7 @@ func body_entered(body):
 	if body.get("type") == _ENUMS.TYPE.PLAYER:
 		_SFX.play_sfx("heart_container")
 		body.global_max_hearts += 1
+		body.max_hearts += 1
 		body.global_hearts = body.global_max_hearts
 		_SIGNAL_MANAGER.update_hearts()
 		show_text()
@@ -18,6 +19,7 @@ func body_entered(body):
 func give_to_player():
 	_SFX.play_sfx("heart_container")
 	_GLOBAL_DATA.player.global_max_hearts += 1
+	_GLOBAL_DATA.player.max_hearts += 1
 	_GLOBAL_DATA.player.global_hearts = _GLOBAL_DATA.player.global_max_hearts
 	_SIGNAL_MANAGER.update_hearts()
 	show_text()

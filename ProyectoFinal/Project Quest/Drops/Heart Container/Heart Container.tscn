@@ -21,4 +21,3 @@ shape = SubResource( 1 )
 [node name="Portrait" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 3 )
-

@@ -30,6 +30,7 @@ func piece_switch(player):
 		4:
 			_SIGNAL_MANAGER.show(false, $Portrait.texture, _TRANSLATION_MANAGER.translate(tr("HEART_PIECE_4")))
 			player.global_max_hearts += 1
+			player.max_hearts += 1
 			player.global_hearts = player.global_max_hearts
 			player.heart_pieces = 0
 			_SIGNAL_MANAGER.update_hearts()
