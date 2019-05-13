@@ -32,3 +32,12 @@ func delete_temp():
 		dir.remove("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(count)+".tscn")
 		count += 1
 	get_tree().quit()
+	
+func delete_data(number): #This method deletes the selected savefile, be careful
+	var dir = Directory.new()
+	
+	var count = 0
+	while count < 10:
+		dir.remove("res://Saves/Save"+str(number)+"/RoomState/"+str(count)+".tscn")
+		count += 1
+	dir.remove("res://Saves/Save"+str(number)+"/Game/Player.tscn")

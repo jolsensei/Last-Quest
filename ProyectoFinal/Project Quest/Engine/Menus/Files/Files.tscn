@@ -1,23 +1,22 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Engine/Menus/Files/files.gd" type="Script" id=1]
-[ext_resource path="res://Engine/Pause/inventory.png" type="Texture" id=2]
+[ext_resource path="res://Engine/Menus/Files/file.png" type="Texture" id=2]
 [ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=3]
-[ext_resource path="res://Engine/Pause/save.png" type="Texture" id=4]
-[ext_resource path="res://Engine/Pause/buttom_selected.png" type="Texture" id=5]
-[ext_resource path="res://Player/GUI/Hearts/hearts.png" type="Texture" id=6]
-[ext_resource path="res://Player/GUI/Rupees/ruppes_counter.png" type="Texture" id=7]
-[ext_resource path="res://Engine/Pause/heart_pieces.png" type="Texture" id=8]
+[ext_resource path="res://Engine/Menus/Files/selected_file.png" type="Texture" id=4]
+[ext_resource path="res://Player/GUI/Hearts/hearts.png" type="Texture" id=5]
+[ext_resource path="res://Player/GUI/Rupees/ruppes_counter.png" type="Texture" id=6]
+[ext_resource path="res://Engine/Pause/heart_pieces.png" type="Texture" id=7]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 14
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=1]
-size = 10
+[sub_resource type="DynamicFont" id=2]
+size = 12
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 3 )
 
 [node name="Files" type="Control"]
@@ -28,40 +27,48 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 104, 72 )
-texture = ExtResource( 2 )
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 97, 35 )
+scale = Vector2( 1.92105, 1 )
+texture = ExtResource( 2 )
+
 [node name="NoData" type="Label" parent="."]
 visible = false
-margin_left = 64.0
-margin_top = 64.0
-margin_right = 144.0
-margin_bottom = 81.0
-custom_fonts/font = SubResource( 3 )
-text = "No data"
+margin_left = 68.0
+margin_top = 63.0
+margin_right = 148.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- No data -"
 align = 1
 valign = 1
 
 [node name="Config" type="TextureButton" parent="."]
 editor/display_folded = true
-margin_left = 88.0
-margin_top = 114.0
-margin_right = 122.0
-margin_bottom = 128.0
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+margin_left = 15.0
+margin_top = 98.0
+margin_right = 49.0
+margin_bottom = 112.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
 
 [node name="Label3" type="Label" parent="Config"]
-margin_left = 6.0
-margin_top = 2.0
-margin_right = 28.0
-margin_bottom = 13.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 8.0
+margin_top = 1.0
+margin_right = 36.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Config"
+align = 1
 
 [node name="Saves" type="Control" parent="."]
 editor/display_folded = true
@@ -69,72 +76,80 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="File1" type="TextureButton" parent="Saves"]
+editor/display_folded = true
 margin_left = 15.0
 margin_top = 32.0
 margin_right = 49.0
 margin_bottom = 46.0
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Saves/File1"]
 margin_left = 9.0
-margin_top = 2.0
-margin_right = 26.0
-margin_bottom = 13.0
-custom_fonts/font = SubResource( 1 )
+margin_top = 1.0
+margin_right = 29.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "File 1"
 
 [node name="File2" type="TextureButton" parent="Saves"]
 editor/display_folded = true
 margin_left = 15.0
-margin_top = 65.0
+margin_top = 54.0
 margin_right = 49.0
-margin_bottom = 79.0
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+margin_bottom = 68.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
 
 [node name="Label2" type="Label" parent="Saves/File2"]
 margin_left = 9.0
-margin_top = 2.0
-margin_right = 26.0
-margin_bottom = 13.0
-custom_fonts/font = SubResource( 1 )
+margin_top = 1.0
+margin_right = 31.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "File 2"
 
 [node name="File3" type="TextureButton" parent="Saves"]
 editor/display_folded = true
 margin_left = 15.0
-margin_top = 98.0
+margin_top = 76.0
 margin_right = 49.0
-margin_bottom = 112.0
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+margin_bottom = 90.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
 
 [node name="Label3" type="Label" parent="Saves/File3"]
 margin_left = 9.0
-margin_top = 2.0
-margin_right = 26.0
-margin_bottom = 13.0
-custom_fonts/font = SubResource( 1 )
+margin_top = 1.0
+margin_right = 32.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "File 3"
+align = 1
 
 [node name="Options" type="Control" parent="."]
+editor/display_folded = true
 visible = false
 
 [node name="Start" type="TextureButton" parent="Options"]
+editor/display_folded = true
 margin_left = 15.0
 margin_top = 32.0
 margin_right = 49.0
 margin_bottom = 46.0
-texture_normal = ExtResource( 4 )
-texture_focused = ExtResource( 5 )
+texture_normal = ExtResource( 2 )
+texture_focused = ExtResource( 4 )
 
 [node name="Label4" type="Label" parent="Options/Start"]
 margin_left = 9.0
-margin_top = 2.0
-margin_right = 27.0
-margin_bottom = 13.0
-custom_fonts/font = SubResource( 1 )
+margin_top = 1.0
+margin_right = 30.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Start"
 
 [node name="Clone" type="TextureButton" parent="Options"]
@@ -143,15 +158,16 @@ margin_left = 15.0
 margin_top = 65.0
 margin_right = 49.0
 margin_bottom = 79.0
-texture_normal = ExtResource( 4 )
-texture_focused = ExtResource( 5 )
+texture_normal = ExtResource( 2 )
+texture_focused = ExtResource( 4 )
 
 [node name="Label5" type="Label" parent="Options/Clone"]
 margin_left = 9.0
-margin_top = 2.0
-margin_right = 27.0
-margin_bottom = 13.0
-custom_fonts/font = SubResource( 1 )
+margin_top = 1.0
+margin_right = 31.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Clone"
 
 [node name="Delete" type="TextureButton" parent="Options"]
@@ -160,66 +176,107 @@ margin_left = 15.0
 margin_top = 98.0
 margin_right = 49.0
 margin_bottom = 112.0
-texture_normal = ExtResource( 4 )
-texture_focused = ExtResource( 5 )
+texture_normal = ExtResource( 2 )
+texture_focused = ExtResource( 4 )
 
 [node name="Label6" type="Label" parent="Options/Delete"]
 margin_left = 8.0
-margin_top = 2.0
-margin_right = 26.0
-margin_bottom = 13.0
-custom_fonts/font = SubResource( 1 )
+margin_top = 1.0
+margin_right = 33.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Delete"
+
+[node name="YesNo" type="Control" parent="."]
+editor/display_folded = true
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Yes" type="TextureButton" parent="YesNo"]
+margin_left = 15.0
+margin_top = 49.0
+margin_right = 49.0
+margin_bottom = 63.0
+texture_normal = ExtResource( 2 )
+texture_focused = ExtResource( 4 )
+
+[node name="Label4" type="Label" parent="YesNo/Yes"]
+margin_left = 9.0
+margin_top = 1.0
+margin_right = 27.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Yes"
+align = 1
+
+[node name="No" type="TextureButton" parent="YesNo"]
+margin_left = 15.0
+margin_top = 81.0
+margin_right = 49.0
+margin_bottom = 95.0
+texture_normal = ExtResource( 2 )
+texture_focused = ExtResource( 4 )
+
+[node name="Label4" type="Label" parent="YesNo/No"]
+margin_left = 9.0
+margin_top = 1.0
+margin_right = 27.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "No"
+align = 1
+valign = 1
 
 [node name="Label" type="Label" parent="."]
 margin_left = 8.0
 margin_top = 4.0
 margin_right = 68.0
 margin_bottom = 15.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Choose a file"
 
 [node name="FileData" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="FileHearts" type="Sprite" parent="FileData"]
-position = Vector2( 80, 64 )
-texture = ExtResource( 6 )
+position = Vector2( 80, 49 )
+texture = ExtResource( 5 )
 hframes = 5
-frame = 4
 
 [node name="FileRupees" type="Sprite" parent="FileData"]
-position = Vector2( 112, 64 )
-texture = ExtResource( 7 )
-
-[node name="FileHeartsN" type="Label" parent="FileData"]
-margin_left = 89.0
-margin_top = 56.0
-margin_right = 96.0
-margin_bottom = 73.0
-custom_fonts/font = SubResource( 2 )
-text = "3"
+position = Vector2( 79, 75 )
+texture = ExtResource( 6 )
 
 [node name="FileRupeesN" type="Label" parent="FileData"]
-margin_left = 121.0
-margin_top = 56.0
-margin_right = 128.0
-margin_bottom = 73.0
-custom_fonts/font = SubResource( 2 )
+margin_left = 86.0
+margin_top = 67.0
+margin_right = 93.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "3"
 
 [node name="Name" type="Label" parent="FileData"]
-margin_left = 65.0
-margin_top = 35.0
-margin_right = 143.0
-margin_bottom = 50.0
-custom_fonts/font = SubResource( 3 )
+margin_left = 67.0
+margin_top = 25.0
+margin_right = 145.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Link"
 align = 1
 valign = 1
 
 [node name="HeartPieces" type="Sprite" parent="FileData"]
-position = Vector2( 104, 92 )
-texture = ExtResource( 8 )
+position = Vector2( 121, 89 )
+texture = ExtResource( 7 )
 hframes = 4

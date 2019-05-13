@@ -10,33 +10,75 @@ onready var start = $Options/Start
 onready var copy = $Options/Clone
 onready var delete = $Options/Delete
 
+onready var yesno = $YesNo
+onready var yes = $YesNo/Yes
+onready var no = $YesNo/No
+
 var hover_save1
 var hover_save2
 var hover_save3 
 
+var select_file
+var go_back
+var start_game
+var sure_to_delete
+var cancel_delete
+var delete_file
+
 func _ready():
 	save1.grab_focus()
-	
 	refresh_focus()
+	check_file_data(_GLOBAL_DATA.slot)
 	
 func _input(event):
 	refresh_focus()
 	get_file_data()
+	get_input_event()
 	
-	if Input.is_action_just_pressed("a") and (save1.has_focus() or save2.has_focus() or save3.has_focus()):
-		start.grab_focus()
-		change_visibility()
-		Input.action_release("a")
+	match(true):
+		select_file:
+			start.grab_focus()
+			change_visibility()
+			Input.action_release("a")
+		go_back:
+			save1.grab_focus()
+			change_visibility()
+		start_game:
+			start_game()
+		sure_to_delete:
+			sure_to_delete()
+			Input.action_release("a")
+		cancel_delete:
+			cancel_delete()
+		delete_file:
+			_SAVE_SYSTEM.delete_data(_GLOBAL_DATA.slot)
+			cancel_delete()
+			check_file_data(_GLOBAL_DATA.slot)
 		
-	if Input.is_action_just_pressed("b") and (start.has_focus() or copy.has_focus() or delete.has_focus()):
-		save1.grab_focus()
-		change_visibility()
-	if Input.is_action_just_pressed("a") and start.has_focus():
-		start_game()
+func get_input_event():
+	select_file = Input.is_action_just_pressed("a") and (save1.has_focus() or save2.has_focus() or save3.has_focus())
+	go_back = Input.is_action_just_pressed("b") and (start.has_focus() or copy.has_focus() or delete.has_focus())
+	start_game = Input.is_action_just_pressed("a") and start.has_focus()
+	sure_to_delete = Input.is_action_just_pressed("a") and delete.has_focus()
+	cancel_delete = (Input.is_action_just_pressed("b") and (yes.has_focus() or no.has_focus())) or (Input.is_action_just_pressed("a") and no.has_focus())
+	delete_file = Input.is_action_just_pressed("a") and yes.has_focus()
 
 func change_visibility():
 	saves.visible = not saves.visible
 	options.visible = not options.visible
+	$Config.visible =  not $Config.visible
+	
+func sure_to_delete():
+	yesno.visible = true
+	options.visible = false
+	no.grab_focus()
+	$Label.text = "Are you sure?"
+
+func cancel_delete():
+	yesno.visible = false
+	options.visible = true
+	start.grab_focus()
+	$Label.text = "Choose a file"
 	
 func get_file_data():
 	match(true):
@@ -58,9 +100,11 @@ func check_file_data(number):
 		show_file_data(number)
 		$NoData.visible = false
 		$FileData.visible = true
+		$Sprite.visible = true
 	else:
 		$NoData.visible = true
 		$FileData.visible = false
+		$Sprite.visible = false
 		
 	
 func refresh_focus():
@@ -70,10 +114,36 @@ func refresh_focus():
 	
 func show_file_data(number):
 	var data = load("res://Saves/Save"+str(number)+"/Game/Player.tscn").instance()
-	$FileData/FileHeartsN.text = str(data.max_hearts)
+	generate_hearts(data)
 	$FileData/FileRupeesN.text = str(data.rupees)
 	$FileData/Name.text = data.player_name
 	$FileData/HeartPieces.frame = data.heart_pieces
 
 func start_game():
 	get_tree().change_scene("res://Engine/Game/Game.tscn")
+
+func generate_hearts(data):
+	
+	for child in  $FileData/FileHearts.get_children(): #We delete them as we are going to create new ones
+		 $FileData/FileHearts.remove_child(child)
+	
+	for i in data.max_hearts:
+		var new_heart = Sprite.new()
+		new_heart.texture = $FileData/FileHearts.texture
+		new_heart.hframes = $FileData/FileHearts.hframes
+		$FileData/FileHearts.add_child(new_heart)
+		
+	for heart in $FileData/FileHearts.get_children():
+		var index = heart.get_index()
+
+		var x = (index % 6) * 10
+		var y = (index / 6) * 10
+		heart.position = Vector2(x,y)
+
+		var last_heart = floor(data.hearts)
+		if index > last_heart:
+			heart.frame = 0
+		if index == last_heart:
+			heart.frame = (data.hearts - last_heart) * 4
+		if index < last_heart:
+			heart.frame = 4
