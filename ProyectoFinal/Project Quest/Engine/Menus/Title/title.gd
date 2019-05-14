@@ -1,7 +1,9 @@
 extends Control
 
 func _ready():
+	_SAVE_SYSTEM.load_config()
 	$Animation.play("version")
+	$CenterContainer2/Label.text = tr("T_PRESS_BUTTON")
 
 func _input(event):
 	if Input.is_action_just_pressed("a"):

@@ -1,0 +1,141 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Engine/Menus/Config/config.gd" type="Script" id=1]
+[ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Engine/Menus/Config/slider_grab.png" type="Texture" id=3]
+[ext_resource path="res://Engine/Menus/Config/slider.png" type="Texture" id=4]
+[ext_resource path="res://Engine/Menus/Files/file.png" type="Texture" id=5]
+[ext_resource path="res://Engine/Menus/Files/selected_file.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_top = 4
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = ExtResource( 2 )
+
+[node name="Config" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Language" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 92.0
+margin_right = 68.0
+margin_bottom = 109.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Language"
+align = 1
+valign = 1
+
+[node name="Config" type="Label" parent="."]
+margin_left = 43.0
+margin_top = 4.0
+margin_right = 116.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Configuration"
+align = 1
+valign = 1
+
+[node name="BGMSlider" type="HSlider" parent="."]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 40.0
+margin_right = 145.0
+margin_bottom = 56.0
+mouse_filter = 2
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = SubResource( 1 )
+max_value = 10.0
+value = 5.0
+ticks_on_borders = false
+
+[node name="BGM" type="Label" parent="BGMSlider"]
+margin_top = -16.0
+margin_right = 22.0
+margin_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "BGM"
+align = 1
+valign = 1
+
+[node name="SFXSlider" type="HSlider" parent="."]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 72.0
+margin_right = 145.0
+margin_bottom = 88.0
+mouse_filter = 2
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = SubResource( 1 )
+max_value = 10.0
+value = 5.0
+ticks_on_borders = false
+
+[node name="SFX" type="Label" parent="SFXSlider"]
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SFX"
+align = 1
+valign = 1
+
+[node name="Spanish" type="TextureButton" parent="."]
+margin_left = 28.0
+margin_top = 114.0
+margin_right = 66.0
+margin_bottom = 128.0
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Spanish"]
+margin_left = 8.0
+margin_top = 1.0
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Spanish"
+
+[node name="English" type="TextureButton" parent="."]
+margin_left = 90.0
+margin_top = 114.0
+margin_right = 128.0
+margin_bottom = 128.0
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="English"]
+margin_left = 8.0
+margin_top = 1.0
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "English"
+[connection signal="value_changed" from="BGMSlider" to="." method="_on_BGMSlider_value_changed"]
+[connection signal="value_changed" from="SFXSlider" to="." method="_on_SFXSlider_value_changed"]

@@ -6,7 +6,8 @@ var map
 var world = []
 var last_position
 var last_map = 0
-var volume = -20
+var bgm_volume = -50
+var sfx_volume = -50
 var locale = "en"
 
 func _init():

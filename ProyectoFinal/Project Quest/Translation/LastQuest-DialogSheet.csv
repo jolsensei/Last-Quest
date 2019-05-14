@@ -1,6 +1,7 @@
 id,en,es
 KEY,You found a /*small key*/ ! //You can use it to /*open*/ a /*locked door*/,¡ Has encontrado una /*llave pequeña*/ ! //Puedes /*usarla*/ para abrir una /*puerta cerrada*/
 ARROWS,5 /*arrows*/ ! Use them wisely,¡ 5 /*flechas*/ ! Úsalas sabiamente
+5_BOMBS,5 /*bombs*/ ! Try to be a good boy,¡ 5 /*bombas*/ ! Intenta ser un chico bueno
 HEART_CONTAINER,You got a /*heart container*/ ! //You get a new /*full heart*/ ! That's great,¡ Has conseguido un /*contenedor de corazón*/  ! //¡ Consigues un /*corazón extra*/ ! Genial
 HEART_PIECE_1,You got a /*heart piece*/ ! Get 3 more to get a /*full heart*/,¡ Has conseguido un /*cuarto de corazón*/ ! Consigue 3 más para obtener un /*corazón extra*/
 HEART_PIECE_2,You got a /*heart piece*/ ! Get 2 more to get a /*full heart*/,¡ Has conseguido un /*cuarto de corazón*/ ! Consigue 2 más para obtener un /*corazón extra*/
@@ -20,3 +21,26 @@ BOW,You got the /*Bow*/ !//Shoot powerfull arrows with it//Equip it to /*A*/ or 
 S_001,"This is a test, you can press A to skip the following Lorem Ipsum so you know...//Hope this works well","Esto es una prueba, puedes pulsar A para saltar el siguiente Lorem Ipsum asi que ya sabes...//Espero que funcione bien"
 Z_001,Dungeon of Tests,Mazmorra de las Pruebas
 Z_002,Dummy Hills,Colinas Maniquí
+,,
+,,
+,,
+,,
+,,
+,,
+T_PRESS_BUTTON,- Press A button -,- Pulsa el botón A -
+T_FILE_1,File 1,Partida 1
+T_FILE_2,File 2,Partida 2
+T_FILE_3,File 3,Partida 3
+T_NO_DATA,- No data -,- Sin datos -
+T_MESSAGE,Choose a file,Escoge partida
+T_CONFIRMATION,Are you sure?,¿Estás seguro?
+T_CONFIG,Config,Config
+T_START,Start,Comenzar
+T_CLONE,Clone,Clonar
+T_DELETE,Delete,Borrar
+T_YES,Yes,Sí
+T_NO,No,No
+T_CONFIG_MESSAGE,Configuration,Configuración
+T_LANG,Language,Idioma
+T_SPANISH,Spanish,Español
+T_ENGLISH,English,Inglés

@@ -41,3 +41,29 @@ func delete_data(number): #This method deletes the selected savefile, be careful
 		dir.remove("res://Saves/Save"+str(number)+"/RoomState/"+str(count)+".tscn")
 		count += 1
 	dir.remove("res://Saves/Save"+str(number)+"/Game/Player.tscn")
+	
+func save_config():
+	var config = File.new()
+	var dir = Directory.new()
+	config.open("res://Config/config.txt", File.WRITE)
+	config.store_line(str(_GLOBAL_DATA.bgm_volume))
+	config.store_line(str(_GLOBAL_DATA.sfx_volume))
+	config.store_line(str(_GLOBAL_DATA.locale))
+	config.close()
+	
+func load_config():
+	var config = File.new()
+	config.open("res://Config/config.txt", File.READ)
+	var line_1 = config.get_line() #BGM
+	_GLOBAL_DATA.bgm_volume = int(line_1)
+	print(_GLOBAL_DATA.bgm_volume)
+	
+	var line_2 = config.get_line() #SFX
+	_GLOBAL_DATA.sfx_volume = int(line_2)
+	print(_GLOBAL_DATA.sfx_volume)
+	
+	var line_3 = config.get_line() #Language
+	_GLOBAL_DATA.locale = line_3
+	TranslationServer.set_locale(line_3)
+	print(_GLOBAL_DATA.locale)
+	config.close()

@@ -4,6 +4,7 @@ onready var saves = $Saves
 onready var save1 = $Saves/File1
 onready var save2 = $Saves/File2
 onready var save3 = $Saves/File3
+onready var config = $Config
 
 onready var options = $Options
 onready var start = $Options/Start
@@ -24,8 +25,10 @@ var start_game
 var sure_to_delete
 var cancel_delete
 var delete_file
+var config_select
 
 func _ready():
+	translate()
 	save1.grab_focus()
 	refresh_focus()
 	check_file_data(_GLOBAL_DATA.slot)
@@ -44,16 +47,18 @@ func _input(event):
 			save1.grab_focus()
 			change_visibility()
 		start_game:
-			start_game()
+			play_game()
 		sure_to_delete:
-			sure_to_delete()
+			are_sure_to_delete()
 			Input.action_release("a")
 		cancel_delete:
-			cancel_delete()
+			cancel_delete_option()
 		delete_file:
 			_SAVE_SYSTEM.delete_data(_GLOBAL_DATA.slot)
-			cancel_delete()
+			cancel_delete_option()
 			check_file_data(_GLOBAL_DATA.slot)
+		config_select:
+			go_to_config()
 		
 func get_input_event():
 	select_file = Input.is_action_just_pressed("a") and (save1.has_focus() or save2.has_focus() or save3.has_focus())
@@ -62,23 +67,24 @@ func get_input_event():
 	sure_to_delete = Input.is_action_just_pressed("a") and delete.has_focus()
 	cancel_delete = (Input.is_action_just_pressed("b") and (yes.has_focus() or no.has_focus())) or (Input.is_action_just_pressed("a") and no.has_focus())
 	delete_file = Input.is_action_just_pressed("a") and yes.has_focus()
+	config_select = Input.is_action_just_pressed("a") and config.has_focus()
 
 func change_visibility():
 	saves.visible = not saves.visible
 	options.visible = not options.visible
 	$Config.visible =  not $Config.visible
 	
-func sure_to_delete():
+func are_sure_to_delete():
 	yesno.visible = true
 	options.visible = false
 	no.grab_focus()
-	$Label.text = "Are you sure?"
+	$Label.text = tr("T_CONFIRMATION")
 
-func cancel_delete():
+func cancel_delete_option():
 	yesno.visible = false
 	options.visible = true
 	start.grab_focus()
-	$Label.text = "Choose a file"
+	$Label.text = tr("T_MESSAGE")
 	
 func get_file_data():
 	match(true):
@@ -119,10 +125,14 @@ func show_file_data(number):
 	$FileData/Name.text = data.player_name
 	$FileData/HeartPieces.frame = data.heart_pieces
 
-func start_game():
+func play_game():
 	get_tree().change_scene("res://Engine/Game/Game.tscn")
+	
+func go_to_config():
+	get_tree().change_scene("res://Engine/Menus/Config/Config.tscn")
 
 func generate_hearts(data):
+	
 	
 	for child in  $FileData/FileHearts.get_children(): #We delete them as we are going to create new ones
 		 $FileData/FileHearts.remove_child(child)
@@ -147,3 +157,21 @@ func generate_hearts(data):
 			heart.frame = (data.hearts - last_heart) * 4
 		if index < last_heart:
 			heart.frame = 4
+
+
+func translate():
+	$Saves/File1/Label.text = tr("T_FILE_1")
+	$Saves/File2/Label2.text = tr("T_FILE_2")
+	$Saves/File3/Label3.text = tr("T_FILE_3")
+	$Config/Label3.text = tr("T_CONFIG")
+	
+	$Label.text = tr("T_MESSAGE")
+	$NoData.text = tr("T_NO_DATA")
+	
+	$Options/Start/Label4.text = tr("T_START")
+	$Options/Clone/Label5.text = tr("T_CLONE")
+	$Options/Delete/Label6.text = tr("T_DELETE")
+	
+	$YesNo/Yes/Label4.text = tr("T_YES")
+	$YesNo/No/Label4.text = tr("T_NO")
+	

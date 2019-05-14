@@ -109,7 +109,7 @@ margin_right = 119.0
 margin_bottom = 13.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "- Press A button -"
+text = "- Press a button -"
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 anims/logo = SubResource( 2 )

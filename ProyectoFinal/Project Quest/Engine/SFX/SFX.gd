@@ -40,7 +40,7 @@ var use_key = load("res://Engine/SFX/SoundsDB/use key.wav")
 func play_sfx(sound):
 	var sfx = AudioStreamPlayer.new()
 	sfx.pause_mode = Node.PAUSE_MODE_PROCESS
-	sfx.set_volume_db(-20)
+	sfx.set_volume_db(_GLOBAL_DATA.sfx_volume)
 	sfx.set_stream(get(sound))
 	add_child(sfx)
 	sfx.play()

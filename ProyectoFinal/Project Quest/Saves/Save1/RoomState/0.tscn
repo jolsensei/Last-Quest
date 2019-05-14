@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Events/Chest/Big Chest.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Events/Stone/Stone.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Events/Stone/stone.gd" type="Script" id=13]
+[ext_resource path="res://Foes/Spirak/Spirak.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Foes/Spirak/spirak.gd" type="Script" id=15]
 
 [node name="Test Room 1" type="Node"]
 
@@ -79,7 +81,7 @@ item_inside = "res://Drops/Hearts/Heart.tscn"
 [node name="Chest2" type="Node2D" parent="." instance=ExtResource( 7 )]
 position = Vector2( 56, 24 )
 script = ExtResource( 8 )
-opened = true
+opened = false
 item_inside = "res://Drops/Rupees/50/Rupee_50.tscn"
 
 [node name="Pot" type="Node2D" parent="." instance=ExtResource( 9 )]
@@ -126,3 +128,7 @@ item_inside = "res://Items/Bow/Bow.tscn"
 position = Vector2( 79, 143 )
 script = ExtResource( 13 )
 mandatory_drop = null
+
+[node name="Spirak" type="KinematicBody2D" parent="." instance=ExtResource( 14 )]
+position = Vector2( 104.92, 92.0001 )
+script = ExtResource( 15 )
