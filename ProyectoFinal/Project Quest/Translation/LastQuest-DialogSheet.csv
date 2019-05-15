@@ -44,3 +44,6 @@ T_CONFIG_MESSAGE,Configuration,Configuración
 T_LANG,Language,Idioma
 T_SPANISH,Spanish,Español
 T_ENGLISH,English,Inglés
+T_CHOOSE_NAME,Choose your name,Escoge un nombre
+T_CAPS,Caps,Mayus
+T_END,End,Fin

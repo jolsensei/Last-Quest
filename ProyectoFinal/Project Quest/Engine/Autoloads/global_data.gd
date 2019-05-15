@@ -2,6 +2,7 @@ extends Node
 
 var slot = 2
 var player
+var player_name
 var map
 var world = []
 var last_position

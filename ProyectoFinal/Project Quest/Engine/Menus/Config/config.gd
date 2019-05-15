@@ -36,6 +36,7 @@ func get_input_event():
 
 func _on_BGMSlider_value_changed(value):
 	_GLOBAL_DATA.bgm_volume = parse_volume_to_db(value)
+	_BGM.change_volume_db(_GLOBAL_DATA.bgm_volume)
 	
 func _on_SFXSlider_value_changed(value):
 	_GLOBAL_DATA.sfx_volume = parse_volume_to_db(value)

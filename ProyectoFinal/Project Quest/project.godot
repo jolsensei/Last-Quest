@@ -28,6 +28,7 @@ _ENUMS="*res://Engine/Autoloads/enums.gd"
 _DROP_MANAGER="*res://Engine/Autoloads/drops_manager.gd"
 _SIGNAL_MANAGER="*res://Engine/signal_manager.gd"
 _SFX="*res://Engine/SFX/SFX.gd"
+_BGM="*res://Engine/BGM/BGM.tscn"
 _TRANSLATION_MANAGER="*res://Translation/translation_manager.gd"
 _SAVE_SYSTEM="*res://Engine/save_system.gd"
 

@@ -71,12 +71,10 @@ text = "Config"
 align = 1
 
 [node name="Saves" type="Control" parent="."]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="File1" type="TextureButton" parent="Saves"]
-editor/display_folded = true
 margin_left = 15.0
 margin_top = 32.0
 margin_right = 49.0

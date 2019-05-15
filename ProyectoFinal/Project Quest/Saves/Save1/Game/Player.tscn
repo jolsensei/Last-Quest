@@ -263,9 +263,9 @@ tracks/0/keys = {
 extents = Vector2( 7, 9 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 44.1716, 70.7574 )
+position = Vector2( 9.56497, 55.8078 )
 script = ExtResource( 1 )
-player_name = ""
+player_name = "jolsensei"
 max_hearts = 3
 hearts = 3
 heart_pieces = 0
@@ -287,14 +287,13 @@ can_interact = false
 hands_free = true
 current_state = 0
 type = 0
-last_position = Vector2( 44.1716, 70.7574 )
+last_position = Vector2( 9.56497, 55.8078 )
 last_map = 0
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 vframes = 4
 hframes = 5
-frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

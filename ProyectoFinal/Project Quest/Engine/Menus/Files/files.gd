@@ -26,6 +26,9 @@ var sure_to_delete
 var cancel_delete
 var delete_file
 var config_select
+var go_to_title
+
+var has_data
 
 func _ready():
 	translate()
@@ -42,23 +45,32 @@ func _input(event):
 		select_file:
 			start.grab_focus()
 			change_visibility()
+			_SFX.play_sfx("cursor")
 			Input.action_release("a")
 		go_back:
 			save1.grab_focus()
+			_SFX.play_sfx("cursor")
 			change_visibility()
 		start_game:
 			play_game()
 		sure_to_delete:
 			are_sure_to_delete()
+			_SFX.play_sfx("cursor")
 			Input.action_release("a")
 		cancel_delete:
 			cancel_delete_option()
+			_SFX.play_sfx("cursor")
 		delete_file:
+			_SFX.play_sfx("cursor")
 			_SAVE_SYSTEM.delete_data(_GLOBAL_DATA.slot)
 			cancel_delete_option()
 			check_file_data(_GLOBAL_DATA.slot)
+			_GLOBAL_DATA.slot = 1
 		config_select:
+			_SFX.play_sfx("cursor")
 			go_to_config()
+		go_to_title:
+			get_tree().change_scene("res://Engine/Menus/Title/Title.tscn")
 		
 func get_input_event():
 	select_file = Input.is_action_just_pressed("a") and (save1.has_focus() or save2.has_focus() or save3.has_focus())
@@ -68,6 +80,7 @@ func get_input_event():
 	cancel_delete = (Input.is_action_just_pressed("b") and (yes.has_focus() or no.has_focus())) or (Input.is_action_just_pressed("a") and no.has_focus())
 	delete_file = Input.is_action_just_pressed("a") and yes.has_focus()
 	config_select = Input.is_action_just_pressed("a") and config.has_focus()
+	go_to_title = Input.is_action_just_pressed("b")
 
 func change_visibility():
 	saves.visible = not saves.visible
@@ -100,7 +113,7 @@ func get_file_data():
 
 
 func check_file_data(number):
-	var has_data = Directory.new().file_exists("res://Saves/Save"+str(number)+"/Game/Player.tscn")
+	has_data = Directory.new().file_exists("res://Saves/Save"+str(number)+"/Game/Player.tscn")
 
 	if has_data:
 		show_file_data(number)
@@ -126,10 +139,14 @@ func show_file_data(number):
 	$FileData/HeartPieces.frame = data.heart_pieces
 
 func play_game():
-	get_tree().change_scene("res://Engine/Game/Game.tscn")
+	if has_data:
+		get_tree().change_scene("res://Engine/Game/Game.tscn")
+	else:
+		get_tree().change_scene("res://Engine/Menus/Keyboard/Keyboard.tscn")
 	
 func go_to_config():
 	get_tree().change_scene("res://Engine/Menus/Config/Config.tscn")
+	
 
 func generate_hearts(data):
 	

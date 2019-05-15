@@ -7,10 +7,10 @@
 [ext_resource path="res://Engine/Menus/Files/file.png" type="Texture" id=5]
 [ext_resource path="res://Engine/Menus/Files/selected_file.png" type="Texture" id=6]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_top = 4
 border_color = Color( 0, 0, 0, 1 )
@@ -33,10 +33,9 @@ margin_left = 16.0
 margin_top = 92.0
 margin_right = 68.0
 margin_bottom = 109.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Language"
-align = 1
 valign = 1
 
 [node name="Config" type="Label" parent="."]
@@ -44,7 +43,7 @@ margin_left = 43.0
 margin_top = 4.0
 margin_right = 116.0
 margin_bottom = 21.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Configuration"
 align = 1
@@ -60,16 +59,15 @@ mouse_filter = 2
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 4 )
-custom_styles/slider = SubResource( 1 )
+custom_styles/slider = SubResource( 2 )
 max_value = 10.0
 value = 5.0
-ticks_on_borders = false
 
 [node name="BGM" type="Label" parent="BGMSlider"]
 margin_top = -16.0
 margin_right = 22.0
 margin_bottom = 1.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "BGM"
 align = 1
@@ -85,16 +83,15 @@ mouse_filter = 2
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 4 )
-custom_styles/slider = SubResource( 1 )
+custom_styles/slider = SubResource( 2 )
 max_value = 10.0
 value = 5.0
-ticks_on_borders = false
 
 [node name="SFX" type="Label" parent="SFXSlider"]
 margin_top = -16.0
 margin_right = 20.0
 margin_bottom = 1.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "SFX"
 align = 1

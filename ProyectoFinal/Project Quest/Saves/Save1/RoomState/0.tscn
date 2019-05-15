@@ -75,7 +75,7 @@ text = "S_001"
 [node name="Chest" type="Node2D" parent="." instance=ExtResource( 7 )]
 position = Vector2( -8, 24 )
 script = ExtResource( 8 )
-opened = false
+opened = true
 item_inside = "res://Drops/Hearts/Heart.tscn"
 
 [node name="Chest2" type="Node2D" parent="." instance=ExtResource( 7 )]
@@ -130,5 +130,5 @@ script = ExtResource( 13 )
 mandatory_drop = null
 
 [node name="Spirak" type="KinematicBody2D" parent="." instance=ExtResource( 14 )]
-position = Vector2( 104.92, 92.0001 )
+position = Vector2( 104.92, 84.0001 )
 script = ExtResource( 15 )
