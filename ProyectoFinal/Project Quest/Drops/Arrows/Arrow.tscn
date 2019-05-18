@@ -20,4 +20,3 @@ shape = SubResource( 1 )
 visible = false
 z_index = -1
 texture = ExtResource( 2 )
-

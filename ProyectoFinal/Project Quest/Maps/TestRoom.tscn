@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Events/Pot/Pot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Events/Chest/Big Chest.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Events/Stone/Stone.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Foes/Spirak/Spirak.tscn" type="PackedScene" id=9]
 
 [node name="Test Room 1" type="Node"]
 
@@ -95,6 +94,3 @@ item_inside = "res://Items/Bow/Bow.tscn"
 
 [node name="Stone" parent="." instance=ExtResource( 8 )]
 position = Vector2( 79, 143 )
-
-[node name="Spirak" parent="." instance=ExtResource( 9 )]
-position = Vector2( 90, 72 )

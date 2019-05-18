@@ -3,15 +3,15 @@
 [ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Engine/Warps/Spawn.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Foes/Gull/gull.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Drops/Rupees/1/Rupee.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Drops/Rupees/1/Rupee.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Drops/Bombs/Bombs.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Drops/Hearts/Heart.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Drops/Bombs/Bombs.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Drops/Arrows/Arrow.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Events/Chest/Chest.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Drops/Heart Piece/Heart Piece.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Drops/Heart Container/Heart Container.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Drops/Rupees/5/Rupee_5.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Drops/Arrows/Arrow.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Events/Chest/Chest.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Drops/Heart Piece/Heart Piece.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Drops/Heart Container/Heart Container.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Drops/Rupees/5/Rupee_5.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Engine/Spawner/Spawner.tscn" type="PackedScene" id=12]
 
 [node name="Test Room 2" type="Node"]
 
@@ -42,39 +42,39 @@ position = Vector2( 16, 40 )
 [node name="E_Abajo" parent="." instance=ExtResource( 3 )]
 position = Vector2( 16, 104 )
 
-[node name="gull" parent="." instance=ExtResource( 4 )]
-position = Vector2( 41, 71 )
-
-[node name="Rupee" parent="." instance=ExtResource( 5 )]
+[node name="Rupee" parent="." instance=ExtResource( 4 )]
 position = Vector2( 25, 21 )
+
+[node name="Bombs" parent="." instance=ExtResource( 5 )]
+position = Vector2( 53, 25 )
 
 [node name="Heart" parent="." instance=ExtResource( 6 )]
 position = Vector2( 68, 21 )
 
-[node name="Bombs" parent="Heart" instance=ExtResource( 7 )]
-position = Vector2( -15, 4 )
-
-[node name="Arrow" parent="." instance=ExtResource( 8 )]
+[node name="Arrow" parent="." instance=ExtResource( 7 )]
 position = Vector2( 85, 24 )
 
-[node name="Chest" parent="." instance=ExtResource( 9 )]
+[node name="Chest" parent="." instance=ExtResource( 8 )]
 position = Vector2( 104, 24 )
 item_inside = "res://Drops/Keys/Key.tscn"
 
-[node name="Chest2" parent="." instance=ExtResource( 9 )]
+[node name="Chest2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 136, 104 )
 item_inside = "res://Drops/Heart Piece/Heart Piece.tscn"
 
-[node name="Chest3" parent="." instance=ExtResource( 9 )]
+[node name="Chest3" parent="." instance=ExtResource( 8 )]
 position = Vector2( 104, 104 )
 item_inside = "res://Drops/Heart Container/Heart Container.tscn"
 
-[node name="HeartPiece3" parent="." instance=ExtResource( 10 )]
+[node name="HeartPiece3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 134, 40 )
 
-[node name="Heart Container" parent="." instance=ExtResource( 11 )]
+[node name="Heart Container" parent="." instance=ExtResource( 10 )]
 position = Vector2( 130, 73 )
 
-[node name="Rupee2" parent="." instance=ExtResource( 12 )]
+[node name="Rupee2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 38, 21 )
 
+[node name="Entity_spawner" parent="." instance=ExtResource( 12 )]
+position = Vector2( 45, 65 )
+SPAWN_LIST = 1

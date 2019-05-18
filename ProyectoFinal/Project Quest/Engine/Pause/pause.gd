@@ -63,6 +63,16 @@ func _input(event):
 	if event.is_action_pressed("a") and in_pause and $Collection/Save.has_focus():
 		_SAVE_SYSTEM.save_game()
 		_SAVE_SYSTEM.delete_temp()
+	if event.is_action_pressed("l"):
+		$TextureButton2.grab_focus()
+		$Timer.start()
+		$Anim.play("flip")
+		$Buttons.play("press_l")
+	if event.is_action_pressed("r"):
+		$TextureButton.grab_focus()
+		$Timer.start()
+		$Anim.play("flip")
+		$Buttons.play("press_r")
 	
 func _on_Timer_timeout():
 	change_visibility()

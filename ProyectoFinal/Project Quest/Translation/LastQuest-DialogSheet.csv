@@ -28,14 +28,15 @@ Z_002,Dummy Hills,Colinas Maniquí
 ,,
 ,,
 T_PRESS_BUTTON,- Press A button -,- Pulsa el botón A -
-T_FILE_1,File 1,Partida 1
-T_FILE_2,File 2,Partida 2
-T_FILE_3,File 3,Partida 3
+T_FILE_1,File 1,Part. 1
+T_FILE_2,File 2,Part. 2
+T_FILE_3,File 3,Part. 3
 T_NO_DATA,- No data -,- Sin datos -
 T_MESSAGE,Choose a file,Escoge partida
 T_CONFIRMATION,Are you sure?,¿Estás seguro?
+T_CLONING,Choose a file to override,Escoge partida a sobreescribir
 T_CONFIG,Config,Config
-T_START,Start,Comenzar
+T_START,Play,Jugar
 T_CLONE,Clone,Clonar
 T_DELETE,Delete,Borrar
 T_YES,Yes,Sí

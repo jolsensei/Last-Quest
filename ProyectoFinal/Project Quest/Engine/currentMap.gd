@@ -51,18 +51,18 @@ func changeLevel(mapToWarp, position):
 func save(number):
 	var scene = PackedScene.new()
 	scene.pack(_GLOBAL_DATA.map)
-	ResourceSaver.save("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(number)+".tscn", scene)
+	ResourceSaver.save("user://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(number)+".tscn", scene)
 	
 	
 func reload(number):
 	var scene = PackedScene.new()
 	
-	if Directory.new().file_exists("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(number)+".tscn"):
-		scene = load("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(number)+".tscn")
+	if Directory.new().file_exists("user://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(number)+".tscn"):
+		scene = load("user://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(number)+".tscn")
 		print("Temporal")
 		return scene.instance()
-	elif Directory.new().file_exists("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/RoomState/"+str(number)+".tscn"):
-		scene = load("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/RoomState/"+str(number)+".tscn")
+	elif Directory.new().file_exists("user://Saves/Save"+str(_GLOBAL_DATA.slot)+"/RoomState/"+str(number)+".tscn"):
+		scene = load("user://Saves/Save"+str(_GLOBAL_DATA.slot)+"/RoomState/"+str(number)+".tscn")
 		return scene.instance()
 		print("Guardado")
 	else:
@@ -70,8 +70,8 @@ func reload(number):
 		return _GLOBAL_DATA.world[number].instance()
 
 func load_player():
-	if Directory.new().file_exists("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Game/Player.tscn"):
+	if Directory.new().file_exists("user://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Game/Player.tscn"):
 		remove_child($Player)
-		add_child(load("res://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Game/Player.tscn").instance())
+		add_child(load("user://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Game/Player.tscn").instance())
 
 	return $Player

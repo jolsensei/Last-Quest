@@ -14,3 +14,6 @@ func stop_bgm():
 	
 func change_volume_db(db):
 	$AudioStreamPlayer.set_volume_db(db)
+
+func _on_AudioStreamPlayer_finished():
+	$AudioStreamPlayer.play()

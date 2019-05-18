@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/char_selected.png-0f834703179cd44a81d9d03c48496855.stex"
+path="res://.import/caps_grab.png-826b4edcfb2110bb464bd8145c889222.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Engine/BGM/char_selected.png"
-dest_files=[ "res://.import/char_selected.png-0f834703179cd44a81d9d03c48496855.stex" ]
+source_file="res://Engine/Menus/Keyboard/caps_grab.png"
+dest_files=[ "res://.import/caps_grab.png-826b4edcfb2110bb464bd8145c889222.stex" ]
 
 [params]
 

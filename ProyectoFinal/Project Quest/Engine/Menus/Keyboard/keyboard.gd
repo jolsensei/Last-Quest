@@ -2,28 +2,42 @@ extends Control
 
 var caps_activated = false
 
+var on_key
+var on_back
+var on_caps
+var on_end
+
 func _ready():
 	$Keyboard/A.grab_focus()
 	translate()
 	
 func _input(event):
-	if  Input.is_action_just_pressed("a") and (!$Caps.has_focus() and !$End.has_focus()):
-		var char_selected = get_focus_owner()
-		add_to_name(char_selected.get_node("Label").text)
-		_SFX.play_sfx("cursor")
-	if Input.is_action_just_pressed("b"):
-		delete_last()
-	if Input.is_action_just_pressed("a") and $Caps.has_focus():
-		to_caps()
-	if Input.is_action_just_pressed("a") and $End.has_focus():
-		start_game()
-		
-func add_to_name(character):
+	get_input_event()
 	
-	if caps_activated:
-		$Name.text = $Name.text + character.to_upper()
-	else:
-		$Name.text = $Name.text + character
+	match(true):
+		on_key:
+			var char_selected = get_focus_owner()
+			add_to_name(char_selected.get_node("Label").text)
+			_SFX.play_sfx("cursor")
+		on_back:
+			delete_last()
+		on_caps:
+			to_caps()
+		on_end:
+			start_game()
+
+func get_input_event():
+	on_key = Input.is_action_just_pressed("a") and (!$Caps.has_focus() and !$End.has_focus())
+	on_back = Input.is_action_just_pressed("b")
+	on_caps = Input.is_action_just_pressed("a") and $Caps.has_focus()
+	on_end = Input.is_action_just_pressed("a") and $End.has_focus()
+
+func add_to_name(character):
+	if $Name.text.length() < 14:
+		if caps_activated:
+			$Name.text = $Name.text + character.to_upper()
+		else:
+			$Name.text = $Name.text + character
 
 func delete_last():
 	
