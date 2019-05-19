@@ -21,4 +21,4 @@ margin_top = -7.0
 margin_right = 25.0
 margin_bottom = 9.0
 custom_fonts/font = SubResource( 1 )
-text = "000"
+text = "0"

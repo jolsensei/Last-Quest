@@ -39,9 +39,15 @@ var use_key = load("res://Engine/SFX/SoundsDB/use key.wav")
 
 func play_sfx(sound):
 	var sfx = AudioStreamPlayer.new()
+	sfx.connect("finished", self, "destroy")
 	sfx.pause_mode = Node.PAUSE_MODE_PROCESS
 	sfx.set_volume_db(_GLOBAL_DATA.sfx_volume)
 	sfx.set_stream(get(sound))
 	add_child(sfx)
 	sfx.play()
+	
+func destroy():
+	for child in get_children():
+		if !child.playing:
+			child.queue_free()
 	

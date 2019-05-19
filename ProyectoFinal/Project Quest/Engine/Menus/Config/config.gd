@@ -48,54 +48,54 @@ func parse_volume_to_db(number):
 	
 	match(str(number)): #For some reason this does not work with numbers, so it's parsed to string
 		'0':
-			db = -100
-		'1':
-			db = -90
-		'2':
 			db = -80
+		'1':
+			db = -74
+		'2':
+			db = -68
 		'3':
-			db = -70
+			db = -62
 		'4':
-			db = -60
+			db = -56
 		'5':
 			db = -50
 		'6':
-			db = -40
+			db = -44
 		'7':
-			db = -30
+			db = -38
 		'8':
-			db = -20
+			db = -32
 		'9':
-			db = -10
+			db = -26
 		'10':
-			db = 0
+			db = -20
 	return db
 	
 func parse_db_to_volume(db):
 	var volume = 5
 	
 	match(str(db)):
-		'-100':
-			volume = 0
-		'-90':
-			volume = 1
 		'-80':
+			volume = 0
+		'-74':
+			volume = 1
+		'-68':
 			volume = 2
-		'-70':
+		'-62':
 			volume = 3
-		'-60':
+		'-56':
 			volume = 4
 		'-50':
 			volume = 5
-		'-40':
+		'-44':
 			volume = 6
-		'-30':
+		'-38':
 			volume = 7
-		'-20':
+		'-32':
 			volume = 8
-		'-10':
+		'-26':
 			volume = 9
-		'0':
+		'-20':
 			volume = 10
 	return volume
 	

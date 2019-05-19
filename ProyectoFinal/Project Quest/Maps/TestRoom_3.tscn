@@ -51,4 +51,3 @@ position = Vector2( 38, 35 )
 
 [node name="Thorn-Thorn" parent="." instance=ExtResource( 9 )]
 position = Vector2( 81, 104 )
-

@@ -22,7 +22,7 @@ func _input(event):
 		_SFX.play_sfx("lift")
 		$Sprite/StaticBody2D/CollisionShape2D.disabled = true
 		picked = true
-		set_z_index(1)
+		set_z_index(0)
 		set_physics_process(true)
 		_GLOBAL_DATA.player.hands_free = false
 		Input.action_release("a")
@@ -33,7 +33,7 @@ func _input(event):
 		$Timer.start()
 		type = _ENUMS.TYPE.PLAYER
 		picked = false
-		set_z_index(0)
+		set_z_index(-1)
 		_GLOBAL_DATA.player.hands_free = true
 		dirMov = _GLOBAL_DATA.player.last_dirMov
 		drop()
@@ -44,7 +44,7 @@ func _input(event):
 		_SFX.play_sfx("land")
 		$Sprite/StaticBody2D/CollisionShape2D.disabled = false
 		picked = false
-		set_z_index(0)
+		set_z_index(-1)
 		set_physics_process(false)
 		_GLOBAL_DATA.player.hands_free = true
 		drop()

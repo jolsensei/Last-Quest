@@ -3,6 +3,10 @@ extends Node2D
 enum LIST {NONE, GULL, GLARE, THORN, SPIRAK, POT, STONE}
 export (LIST) var SPAWN_LIST
 
+enum DIRECTIONS {NONE, UP, DOWN, LEFT, RIGHT}
+
+export (DIRECTIONS) var DIRECTION 
+
 
 func spawn(to_spawn):
 	
@@ -17,7 +21,13 @@ func spawn(to_spawn):
 			spawn = load("res://Foes/Spirak/Spirak.tscn").instance()
 		LIST.THORN:
 			spawn = load("res://Foes/Thorn-Thorn/Thorn-Thorn.tscn").instance()
+			spawn.direction = DIRECTION
+		LIST.POT:
+			spawn = load("res://Events/Pot/Pot.tscn").instance()
+		LIST.STONE:
+			spawn = load("res://Events/Stone/Stone.tscn").instance()
 	
+	spawn.z_index = -1
 	get_parent().add_child(spawn)
 	spawn.global_transform = global_transform
 	

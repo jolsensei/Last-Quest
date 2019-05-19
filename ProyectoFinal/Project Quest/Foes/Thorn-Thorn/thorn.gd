@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum DIRECTIONS {UP, DOWN, LEFT, RIGHT}
+enum DIRECTIONS {NONE, UP, DOWN, LEFT, RIGHT}
 
 export (DIRECTIONS) var direction 
 
@@ -23,6 +23,8 @@ func _ready():
 			dirMov = _DIRECTIONS.left
 		DIRECTIONS.RIGHT:
 			dirMov = _DIRECTIONS.right
+		DIRECTIONS.NONE:
+			dirMov = _DIRECTIONS.center
 	
 func _physics_process(delta):
 	

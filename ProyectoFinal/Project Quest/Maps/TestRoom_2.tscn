@@ -76,5 +76,10 @@ position = Vector2( 130, 73 )
 position = Vector2( 38, 21 )
 
 [node name="Entity_spawner" parent="." instance=ExtResource( 12 )]
-position = Vector2( 45, 65 )
-SPAWN_LIST = 1
+position = Vector2( 72, 104 )
+SPAWN_LIST = 5
+
+[node name="Entity_spawner2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 72, 72 )
+SPAWN_LIST = 3
+DIRECTION = 4
