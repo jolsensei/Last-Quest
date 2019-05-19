@@ -10,6 +10,7 @@ var has_counter = false
 
 func _ready():
 	_SFX.play_sfx("arrow")
+	$Animation.play("default")
 #	add_to_group("destroy_on_hit")
 	type = get_parent().type
 	dirMov = get_parent().last_dirMov
@@ -26,6 +27,6 @@ func _process(delta):
 
 
 func _on_HitBox_body_entered(body):
-	if body.get("type") != _ENUMS.TYPE.PLAYER and body.get("type") != _ENUMS.TYPE.TERRAIN:
+	if body.get("type") != _ENUMS.TYPE.FOE and body.get("type") != _ENUMS.TYPE.TERRAIN:
 		_SFX.play_sfx("arrow_hit_wall")
 		queue_free()

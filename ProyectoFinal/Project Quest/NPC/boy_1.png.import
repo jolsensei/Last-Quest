@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Items.png-55a42ee20fe38e0d1f8812f19c2ec477.stex"
+path="res://.import/boy_1.png-d3ee5609e9c1f2e97990b37a97c5eabb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/GUI/Items/Items.png"
-dest_files=[ "res://.import/Items.png-55a42ee20fe38e0d1f8812f19c2ec477.stex" ]
+source_file="res://NPC/boy_1.png"
+dest_files=[ "res://.import/boy_1.png-d3ee5609e9c1f2e97990b37a97c5eabb.stex" ]
 
 [params]
 

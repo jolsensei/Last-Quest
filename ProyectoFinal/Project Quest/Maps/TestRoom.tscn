@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Events/Pot/Pot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Events/Chest/Big Chest.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Events/Stone/Stone.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Engine/Spawner/Spawner.tscn" type="PackedScene" id=9]
+[ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=10]
+
 
 [node name="Test Room 1" type="Node"]
 
@@ -40,9 +43,6 @@ warp_to = 2
 warp_position = "E_Medio"
 zone_name = "Z_001"
 show_keys = true
-
-[node name="Spawn" parent="." instance=ExtResource( 3 )]
-position = Vector2( 33, 71 )
 
 [node name="E_Arriba" parent="." instance=ExtResource( 3 )]
 position = Vector2( 141, 40 )
@@ -94,3 +94,11 @@ item_inside = "res://Items/Bow/Bow.tscn"
 
 [node name="Stone" parent="." instance=ExtResource( 8 )]
 position = Vector2( 79, 143 )
+
+[node name="Entity_spawner" parent="." instance=ExtResource( 9 )]
+position = Vector2( 72, 72 )
+SPAWN_LIST = 4
+
+[node name="Old man" parent="Entity_spawner" instance=ExtResource( 10 )]
+position = Vector2( -48, -16 )
+dialog = "S_001"

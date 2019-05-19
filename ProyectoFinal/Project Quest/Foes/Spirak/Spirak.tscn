@@ -3,7 +3,7 @@
 [ext_resource path="res://Foes/Spirak/spirak.gd" type="Script" id=1]
 [ext_resource path="res://Foes/Spirak/spirak.png" type="Texture" id=2]
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=1]
 resource_name = "idle_down"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -18,7 +18,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=2]
 resource_name = "idle_left"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -86,7 +86,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
@@ -115,7 +115,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 90.0 ]
@@ -144,7 +144,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ -90.0 ]
@@ -173,7 +173,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 180.0 ]
@@ -185,8 +185,8 @@ extents = Vector2( 7, 7 )
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RayShape2D" id=11]
-length = 80.0
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 20, 80, -20, 80 )
 
 [node name="Spirak" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -197,8 +197,8 @@ vframes = 3
 hframes = 4
 
 [node name="Animation" type="AnimationPlayer" parent="."]
-anims/idle_down = SubResource( 12 )
-anims/idle_left = SubResource( 13 )
+anims/idle_down = SubResource( 1 )
+anims/idle_left = SubResource( 2 )
 anims/idle_right = SubResource( 3 )
 anims/idle_up = SubResource( 4 )
 anims/walk_down = SubResource( 5 )
@@ -219,6 +219,6 @@ shape = SubResource( 10 )
 [node name="ChaseArea" type="Area2D" parent="."]
 
 [node name="ChaseArea" type="CollisionShape2D" parent="ChaseArea"]
+rotation = 3.14159
 shape = SubResource( 11 )
-
 [connection signal="body_entered" from="ChaseArea" to="." method="_on_ChaseArea_body_entered"]

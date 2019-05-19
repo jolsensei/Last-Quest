@@ -1,6 +1,6 @@
 extends "res://Engine/common_entity.gd"
 
-var movetimer_length = 30
+var movetimer_length = 100
 var movetimer = 0
 
 var speed = 20
@@ -20,18 +20,18 @@ func _init():
 
 func _ready():
 	dirMov = _DIRECTIONS.random()
-	
-	
+
+
 func _physics_process(delta):
 	movement_loop()
 	damage_loop()
-	
+
 	if movetimer > 0:
 		movetimer -= 1
 	if movetimer == 0 or is_on_wall():
 		dirMov = _DIRECTIONS.random() 
 		movetimer = movetimer_length
-		
+
 	sprite_mov_loop()
 	if dirMov != Vector2(0,0):
 		animation_switch("walk_")
@@ -41,5 +41,4 @@ func _physics_process(delta):
 
 func _on_ChaseArea_body_entered(body):
 	if body.get("type") == _ENUMS.TYPE.PLAYER :
-		print("FIREEE")
 		use_item(shoot)
