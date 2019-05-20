@@ -11,7 +11,7 @@ var has_counter = false
 func _ready():
 	_SFX.play_sfx("arrow")
 	$Animation.play("default")
-#	add_to_group("destroy_on_hit")
+	add_to_group("destroy_on_hit")
 	type = get_parent().type
 	dirMov = get_parent().last_dirMov
 	self.position = get_parent().position

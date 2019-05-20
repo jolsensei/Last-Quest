@@ -24,6 +24,11 @@ export var keys = 0
 
 export var bracelet_of_will = false
 
+export var wind_boots = false
+export var stamina = 5
+
+export var doge_pin = false
+
 
 export var item_A:Resource = load("res://Items/Sword/Iron Sword.tscn")
 export var item_B:Resource
@@ -92,6 +97,11 @@ func state_default():
 		
 	if Input.is_action_just_pressed("b") and !can_interact and hands_free:
 		use_item_by_button(_ENUMS.BUTTON.B)
+		
+	if Input.is_action_just_pressed("r") and wind_boots:
+		use_wind_boots()
+	elif Input.is_action_just_released("r") and wind_boots:
+		stop_wind_boots()
 
 		
 func state_attack():
@@ -147,3 +157,30 @@ func give_arrows(arrows):
 func give_bombs(bombs):
 	self.bombs += bombs
 	self.bombs = min(self.bombs, max_bombs)
+	
+func use_wind_boots():
+	global_speed = 80
+	$Animation.playback_speed = 2
+	$Stamina.visible = true
+	$Boots.start()
+	
+func stop_wind_boots():
+	global_speed = 60
+	$Animation.playback_speed = 1
+	
+
+
+func _on_Boots_timeout():
+	if Input.is_action_pressed("r") and stamina > 0:
+		stamina -= 1
+	else:
+		stamina += 1
+		
+	if stamina == 0:
+		stop_wind_boots()
+	if stamina >= 6:
+		stamina = 5
+		$Stamina.visible = false
+		$Boots.stop()
+		
+	$Stamina.frame = stamina

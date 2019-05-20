@@ -1,18 +1,19 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Engine/Pause/pause.gd" type="Script" id=1]
 [ext_resource path="res://Engine/Pause/inventory.png" type="Texture" id=2]
 [ext_resource path="res://Engine/Pause/heart_pieces.png" type="Texture" id=3]
 [ext_resource path="res://Items/Bracelet ofWill/bracelet_of_will.png" type="Texture" id=4]
-[ext_resource path="res://Engine/Pause/save.png" type="Texture" id=5]
-[ext_resource path="res://Engine/Pause/buttom_selected.png" type="Texture" id=6]
-[ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=7]
-[ext_resource path="res://Engine/Pause/arrow.png" type="Texture" id=8]
-[ext_resource path="res://Engine/Pause/item_selected.png" type="Texture" id=9]
+[ext_resource path="res://Items/Wind Boots/wind_boots.png" type="Texture" id=5]
+[ext_resource path="res://Engine/Pause/save.png" type="Texture" id=6]
+[ext_resource path="res://Engine/Pause/buttom_selected.png" type="Texture" id=7]
+[ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=8]
+[ext_resource path="res://Engine/Pause/arrow.png" type="Texture" id=9]
+[ext_resource path="res://Engine/Pause/item_selected.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
-font_data = ExtResource( 7 )
+font_data = ExtResource( 8 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "press_l"
@@ -138,6 +139,10 @@ __meta__ = {
 position = Vector2( -26, -26 )
 texture = ExtResource( 4 )
 
+[node name="Boots" type="Sprite" parent="Collection"]
+position = Vector2( 26, -26 )
+texture = ExtResource( 5 )
+
 [node name="Options" type="TextureButton" parent="Collection"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -145,8 +150,8 @@ margin_left = -35.0
 margin_top = 21.0
 margin_right = -81.0
 margin_bottom = -45.0
-texture_normal = ExtResource( 5 )
-texture_focused = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_focused = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="Collection/Options"]
 margin_left = 5.60001
@@ -165,8 +170,8 @@ margin_left = 1.0
 margin_top = 21.0
 margin_right = -45.0
 margin_bottom = -45.0
-texture_normal = ExtResource( 5 )
-texture_focused = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_focused = ExtResource( 7 )
 
 [node name="Label2" type="Label" parent="Collection/Save"]
 margin_left = 10.0
@@ -185,8 +190,8 @@ margin_left = 132.0
 margin_top = 72.0
 margin_right = 148.0
 margin_bottom = 88.0
-texture_normal = ExtResource( 8 )
-texture_focused = ExtResource( 9 )
+texture_normal = ExtResource( 9 )
+texture_focused = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -199,8 +204,8 @@ margin_top = 88.0
 margin_right = 44.0
 margin_bottom = 104.0
 rect_rotation = 180.0
-texture_normal = ExtResource( 8 )
-texture_focused = ExtResource( 9 )
+texture_normal = ExtResource( 9 )
+texture_focused = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }

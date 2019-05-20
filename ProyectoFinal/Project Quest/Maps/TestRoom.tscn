@@ -8,9 +8,8 @@
 [ext_resource path="res://Events/Pot/Pot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Events/Chest/Big Chest.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Events/Stone/Stone.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Engine/Spawner/Spawner.tscn" type="PackedScene" id=9]
-[ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=10]
-
+[ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Engine/Spawner/Spawner.tscn" type="PackedScene" id=10]
 
 [node name="Test Room 1" type="Node"]
 
@@ -80,6 +79,10 @@ item_inside = "res://Items/Shield/Shield of Legend.tscn"
 position = Vector2( 128, 136 )
 item_inside = "res://Items/Bracelet ofWill/Bracelet of Will.tscn"
 
+[node name="Big Chest6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 128, 168 )
+item_inside = "res://Items/Wind Boots/Wind Boots.tscn"
+
 [node name="Big Chest3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, 136 )
 item_inside = "res://Items/Boomerang/Boomerang.tscn"
@@ -95,10 +98,11 @@ item_inside = "res://Items/Bow/Bow.tscn"
 [node name="Stone" parent="." instance=ExtResource( 8 )]
 position = Vector2( 79, 143 )
 
-[node name="Entity_spawner" parent="." instance=ExtResource( 9 )]
+[node name="Old man" parent="." instance=ExtResource( 9 )]
+position = Vector2( 24, 56 )
+dialog = "S_001"
+NPC_TYPE = 4
+
+[node name="Entity_spawner" parent="." instance=ExtResource( 10 )]
 position = Vector2( 72, 72 )
 SPAWN_LIST = 4
-
-[node name="Old man" parent="Entity_spawner" instance=ExtResource( 10 )]
-position = Vector2( -48, -16 )
-dialog = "S_001"
