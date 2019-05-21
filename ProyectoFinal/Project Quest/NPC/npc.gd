@@ -21,7 +21,7 @@ func _ready():
 func _input(event):
 	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact:
 		watch_player()
-		if NPC_TYPE == TYPE.DOG and _GLOBAL_DATA.player.doge_pin:
+		if NPC_TYPE == TYPE.DOG and _GLOBAL_DATA.player.doge_badge:
 			_SIGNAL_MANAGER.show(false, null, _TRANSLATION_MANAGER.translate(tr(dog_true_dialog)))
 		else:
 			_SIGNAL_MANAGER.show(false, null, _TRANSLATION_MANAGER.translate(tr(dialog)))

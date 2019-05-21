@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Doge Badge/doge_badge.gd" type="Script" id=1]
+[ext_resource path="res://Items/Doge Badge/doge_pin.png" type="Texture" id=2]
+
+[node name="Doge Badge" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Portrait" type="Sprite" parent="."]
+texture = ExtResource( 2 )

@@ -164,6 +164,9 @@ tracks/2/keys = {
 }
 
 [node name="Iron Sword" type="Node2D"]
+position = Vector2( 10, 2 )
+rotation = 1.5708
+z_index = -1
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -194,4 +197,3 @@ anims/sword_up = SubResource( 5 )
 [node name="Portrait" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 3 )
-

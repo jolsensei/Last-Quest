@@ -14,6 +14,7 @@ func update_collection():
 	$Collection/Hearts.frame = _GLOBAL_DATA.player.heart_pieces
 	$Collection/Bracelet.visible = _GLOBAL_DATA.player.bracelet_of_will
 	$Collection/Boots.visible = _GLOBAL_DATA.player.wind_boots
+	$Collection/Doge.visible = _GLOBAL_DATA.player.doge_badge
 	
 	
 func _on_Game_game_loaded():
@@ -21,6 +22,7 @@ func _on_Game_game_loaded():
 	$Collection/Hearts.frame = _GLOBAL_DATA.player.heart_pieces
 	$Collection/Bracelet.visible = _GLOBAL_DATA.player.bracelet_of_will
 	$Collection/Boots.visible = _GLOBAL_DATA.player.wind_boots
+	$Collection/Doge.visible = _GLOBAL_DATA.player.doge_badge
 	
 	for child in $Inventory/GridContainer.get_children(): #We delete them as we are going to create new ones
 		$Inventory/GridContainer.remove_child(child)

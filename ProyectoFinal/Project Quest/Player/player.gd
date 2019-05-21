@@ -25,13 +25,13 @@ export var keys = 0
 export var bracelet_of_will = false
 
 export var wind_boots = false
-export var stamina = 5
+export var stamina = 14
 
-export var doge_pin = false
+export var doge_badge = false
 
 
 export var item_A:Resource = load("res://Items/Sword/Iron Sword.tscn")
-export var item_B:Resource
+export var item_B:Resource = load("res://Items/Goldy Blade/Goldy Blade.tscn")
 
 export var inventory = []
 
@@ -178,8 +178,8 @@ func _on_Boots_timeout():
 		
 	if stamina == 0:
 		stop_wind_boots()
-	if stamina >= 6:
-		stamina = 5
+	if stamina >= 15:
+		stamina = 14
 		$Stamina.visible = false
 		$Boots.stop()
 		

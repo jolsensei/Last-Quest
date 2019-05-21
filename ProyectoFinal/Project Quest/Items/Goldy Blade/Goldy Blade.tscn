@@ -1,0 +1,290 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Items/Goldy Blade/goldy_blade.gd" type="Script" id=1]
+[ext_resource path="res://Items/Goldy Blade/Goldy Blade.png" type="Texture" id=2]
+[ext_resource path="res://Items/Goldy Blade/goldy_blade_portrait.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2, 6 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "sword_down"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 0.000523326, 0.000523326, 0.00025275 ),
+"update": 1,
+"values": [ Vector2( 10, 0 ), Vector2( 8, 8 ), Vector2( 0, 10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 4.29748e-007, 5.782e-006, 9.39289e-006 ),
+"update": 1,
+"values": [ -1, 0, 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 0.000690535, 0.000690535, 5.03354e-006 ),
+"update": 1,
+"values": [ 90.0, 180.0, -180.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 5.69477e-005, 7.25835e-005, 6.31874e-005 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HitBox:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 2.22452e-007, 0.000290333, 2.26823e-006 ),
+"update": 0,
+"values": [ 0.0, -45.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "sword_left"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 0.000523326, 0.000523326, 0.00025275 ),
+"update": 1,
+"values": [ Vector2( 0, 10 ), Vector2( -8, 8 ), Vector2( -10, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 4.29748e-007, 5.782e-006, 9.39289e-006 ),
+"update": 1,
+"values": [ 0, 0, -1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 0.000690535, 0.000690535, 5.03354e-006 ),
+"update": 1,
+"values": [ -180.0, -90.0, -90.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 5.69477e-005, 7.25835e-005, 6.31874e-005 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HitBox:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 2.22452e-007, 0.000290333, 2.26823e-006 ),
+"update": 0,
+"values": [ 0.0, -45.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "sword_right"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 0.000523326, 0.000523326, 0.00025275 ),
+"update": 1,
+"values": [ Vector2( 0, -10 ), Vector2( 8, -8 ), Vector2( 10, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 4.29748e-007, 5.782e-006, 9.39289e-006 ),
+"update": 1,
+"values": [ -1, -1, -1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 0.000690535, 0.000690535, 5.03354e-006 ),
+"update": 1,
+"values": [ 0.0, 90.0, 90.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 5.69477e-005, 7.25835e-005, 6.31874e-005 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HitBox:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 2.22452e-007, 0.000290333, 2.26823e-006 ),
+"update": 0,
+"values": [ 0.0, -45.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "sword_up"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 0.000523326, 0.000523326, 0.00025275 ),
+"update": 1,
+"values": [ Vector2( -10, 0 ), Vector2( -8, -8 ), Vector2( 0, -10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 4.29748e-007, 5.782e-006, 9.39289e-006 ),
+"update": 1,
+"values": [ -1, -1, -1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 0.000690535, 0.000690535, 5.03354e-006 ),
+"update": 1,
+"values": [ -90.0, 0.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 5.69477e-005, 7.25835e-005, 6.31874e-005 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HitBox:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 2.22452e-007, 0.000290333, 2.26823e-006 ),
+"update": 0,
+"values": [ 0.0, -45.0, 0.0 ]
+}
+
+[node name="Goldy Blade" type="Node2D"]
+position = Vector2( 0, -10 )
+z_index = -1
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2( 0, -2 )
+shape = SubResource( 1 )
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/sword_down = SubResource( 6 )
+anims/sword_left = SubResource( 5 )
+anims/sword_right = SubResource( 7 )
+anims/sword_up = SubResource( 4 )
+
+[node name="Portrait" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]

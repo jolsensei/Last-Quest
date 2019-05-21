@@ -276,7 +276,6 @@ position = Vector2( 0, 6 )
 shape = SubResource( 1 )
 
 [node name="Animation" type="AnimationPlayer" parent="."]
-playback_speed = 2.0
 anims/idle_down = SubResource( 2 )
 anims/idle_left = SubResource( 3 )
 anims/idle_lift_down = SubResource( 4 )
@@ -317,11 +316,13 @@ position = Vector2( 0, -8 )
 position = Vector2( 0, -15 )
 
 [node name="Boots" type="Timer" parent="."]
+wait_time = 0.35
 
 [node name="Stamina" type="Sprite" parent="."]
 visible = false
 position = Vector2( 0, 12 )
 texture = ExtResource( 3 )
-hframes = 6
-frame = 5
+vframes = 2
+hframes = 8
+frame = 14
 [connection signal="timeout" from="Boots" to="." method="_on_Boots_timeout"]

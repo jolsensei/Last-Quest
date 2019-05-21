@@ -16,6 +16,7 @@ RUPEE_50,Fifty /*rupees*/ ! Make sure you don't spend them suddenly,¡ Cincuenta
 LEGENDS_SHIELD,"You got the /*Legend's Shield*/ ! Wait, this is from an anime, right ?!//You can /*block*/ enemy attacks with it //Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Escudo Legendario*/ ! Espera, !¿ Esto es de un anime, verdad ?¡//Úsalo para /*bloquear*/ ataques enemigos //Equípalo en la /*A*/ o /*B*/"
 BRACELET_OF_WILL,"You got the /*Bracelet of Will*/ ! //With this bracelet, you can even /*lift rocks*/ //You know, where there is a will, there is a way","¡ Has conseguido el /*Bracelete de la voluntad*/ ! //Con este bracelete, puedes /*levantar*/ incluso /*piedras*/ //Ya sabes, querer es poder"
 WIND_BOOTS,"You got the /*Wind Boots*/ ! //With them, you can move faster holding /*R*/ //Do you know which direction the wind is blowing ...? Blows towards tomorrow","¡ Has conseguido las /*Botas del viento*/ ! //Con ellas, puedes moverte más rápido manteniendo /*R*/ //¿ Sabes hacia que dirección sopla el viento ...? Sopla hacia el mañana"
+DOGE_BADGE,"You go-... // Oh, really ? // You got the /*Doge Badge*/ ! //Now you can understand dogs because of Doge's /*such dog*/ power, /*WOW*/","¡ Has con-... //Oh, ¿en serio?//¡ Has conseguido el /*Pin de Doge*/ !//Ahora puedes entender a los perros gracias al poderoso /*such dog*/ de Doge, /*WOW*/"
 BOMBS,"You got the /*Bombs*/ !//Be careful, they are quite dangerous//Equip them to /*A*/ or /*B*/","¡ Has conseguido las /*Bombas*/ !//Cuidado, son bastante peligrosas//Equípalas en la /*A*/ o /*B*/"
 BOOMERANG,"You got the /*Boomerang*/ !//Deals no damage, but it can pick up items for you !//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Búmeran*/ ! //No hace daño, pero puede recoger objetos por ti//Equípalo en la /*A*/ o /*B*/"
 BOW,You got the /*Bow*/ !//Shoot powerfull arrows with it//Equip it to /*A*/ or /*B*/,¡ Has conseguido el /*Arco*/ ! //Dispara poderosas flechas con el//Equípalo en la /*A*/ o /*B*/
@@ -49,3 +50,9 @@ T_ENGLISH,English,Inglés
 T_CHOOSE_NAME,Choose your name,Escoge un nombre
 T_CAPS,Caps,Mayus
 T_END,End,Fin
+,,
+,,
+,,
+D_DOG_1,Woof ! Woof !,Guau ! Guau !
+D_DOG_2,Woof ?,Guau ?
+D_TRUE_DOG_1,Looks like someone finally can understand me ! //I'm a good boi so I'll help you hooman !,"¡ Parece que al fin alguien me entiende ! //Soy un chico bueno asi que te ayudaré, humano"
