@@ -20,6 +20,11 @@ func _init():
 
 func _ready():
 	dirMov = _DIRECTIONS.random()
+	
+	if _GLOBAL_DATA.player.emissary_of_the_edge:
+		$ChaseArea/ChaseArea.shape.set_points([Vector2(0,0), Vector2(20, 40), Vector2(-20, 40)])
+#		print($ChaseArea/ChaseArea.shape.get_points())
+		
 
 
 func _physics_process(delta):

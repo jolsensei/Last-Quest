@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2, 6 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 resource_name = "sword_down"
 length = 0.3
 tracks/0/type = "value"
@@ -71,7 +71,7 @@ tracks/4/keys = {
 "values": [ 0.0, -45.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "sword_left"
 length = 0.3
 tracks/0/type = "value"
@@ -135,7 +135,7 @@ tracks/4/keys = {
 "values": [ 0.0, -45.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=4]
 resource_name = "sword_right"
 length = 0.3
 tracks/0/type = "value"
@@ -199,8 +199,7 @@ tracks/4/keys = {
 "values": [ 0.0, -45.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "sword_up"
+[sub_resource type="Animation" id=5]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -279,12 +278,11 @@ position = Vector2( 0, -2 )
 shape = SubResource( 1 )
 
 [node name="Animation" type="AnimationPlayer" parent="."]
-anims/sword_down = SubResource( 6 )
-anims/sword_left = SubResource( 5 )
-anims/sword_right = SubResource( 7 )
-anims/sword_up = SubResource( 4 )
+anims/sword_down = SubResource( 2 )
+anims/sword_left = SubResource( 3 )
+anims/sword_right = SubResource( 4 )
+anims/sword_up = SubResource( 5 )
 
 [node name="Portrait" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 3 )
-[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]

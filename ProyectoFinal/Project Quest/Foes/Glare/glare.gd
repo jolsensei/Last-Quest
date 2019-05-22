@@ -21,6 +21,9 @@ func _ready():
 	dirMov = _DIRECTIONS.random()
 	$Animation.play("default")
 	
+	if _GLOBAL_DATA.player.emissary_of_the_edge:
+		$ChaseArea/ChaseArea.shape.radius = 30
+	
 	
 func _physics_process(delta):
 	if chase:

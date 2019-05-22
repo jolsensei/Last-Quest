@@ -9,7 +9,7 @@ extents = Vector2( 6, 6 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "default"
 length = 0.6
 loop = true
@@ -26,8 +26,8 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="CircleShape2D" id=3]
-radius = 30.0
+[sub_resource type="CircleShape2D" id=4]
+radius = 40.0
 
 [node name="Glare" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -48,12 +48,11 @@ visible = false
 shape = SubResource( 2 )
 
 [node name="Animation" type="AnimationPlayer" parent="."]
-anims/default = SubResource( 4 )
+anims/default = SubResource( 3 )
 
 [node name="ChaseArea" type="Area2D" parent="."]
 
 [node name="ChaseArea" type="CollisionShape2D" parent="ChaseArea"]
-shape = SubResource( 3 )
-
+shape = SubResource( 4 )
 [connection signal="body_entered" from="ChaseArea" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="ChaseArea" to="." method="_on_Area2D_body_exited"]

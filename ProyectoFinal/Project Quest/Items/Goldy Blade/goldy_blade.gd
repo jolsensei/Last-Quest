@@ -21,7 +21,8 @@ func destroy(animation):
 		
 	queue_free()
 
-func _on_Animation_animation_finished(anim_name):
-	match(anim_name):
-		"sword_left":
-			$Animation.play("left_up")
+
+func give_to_player():
+	_GLOBAL_DATA.player.inventory[1] = load("res://Items/Goldy Blade/Goldy Blade.tscn")
+	_SIGNAL_MANAGER.update_inventory()
+	_SIGNAL_MANAGER.show(true, $Portrait.texture, _TRANSLATION_MANAGER.translate(tr("GOLDY_BLADE")))
