@@ -14,6 +14,13 @@ func _input(event):
 		_BGM.stop_bgm()
 		_BGM.play_bgm("files")
 		get_tree().change_scene("res://Engine/Menus/Files/Files.tscn")
+	if Input.is_action_just_pressed("b"):
+		get_tree().quit()
+
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		_SAVE_SYSTEM.delete_temp()
+		get_tree().quit()
 
 func _on_Animation_animation_finished(anim_name):
 	match(anim_name):

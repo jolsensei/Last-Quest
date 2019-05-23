@@ -6,6 +6,7 @@ export(String, FILE, "*.tscn") var item_inside
 func _ready():
 	if opened:
 		$Sprite.frame = 1    
+	$Sprite.z_index = 0
 
 func _input(event):
 	
@@ -29,3 +30,13 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	_on_body_exited(body)
 	$Sprite.z_index = 0
+
+
+func _on_Front_body_entered(body):
+	_on_body_exited(body)
+	$Sprite.z_index = 0
+
+
+func _on_Front_body_exited(body):
+	_on_body_entered(body)
+	$Sprite.z_index = 1

@@ -12,6 +12,7 @@ func _ready():
 		_GLOBAL_DATA.player.player_name = _GLOBAL_DATA.player_name
 	
 func _notification(what):
-    if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
-        _SAVE_SYSTEM.delete_temp()
-		
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		_SAVE_SYSTEM.delete_temp()
+		get_tree().quit()
+

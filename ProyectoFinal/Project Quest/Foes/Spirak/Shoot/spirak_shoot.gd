@@ -27,6 +27,6 @@ func _process(delta):
 
 
 func _on_HitBox_body_entered(body):
-	if body.get("type") != _ENUMS.TYPE.FOE and body.get("type") != _ENUMS.TYPE.TERRAIN:
+	if body.get("type") != _ENUMS.TYPE.FOE:
 		_SFX.play_sfx("arrow_hit_wall")
 		queue_free()

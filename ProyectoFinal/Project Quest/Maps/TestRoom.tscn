@@ -92,6 +92,10 @@ item_inside = "res://Items/Boomerang/Boomerang.tscn"
 position = Vector2( 0, 200 )
 item_inside = "res://Items/Bomb/Bomb.tscn"
 
+[node name="Big Chest9" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0, 232 )
+item_inside = "res://Items/Warrior's Shield/Warrior's Shield.tscn"
+
 [node name="Big Chest8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 128, 232 )
 item_inside = "res://Items/Emissary/Emissary.tscn"

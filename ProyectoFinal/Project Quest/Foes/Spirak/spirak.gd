@@ -3,7 +3,7 @@ extends "res://Engine/common_entity.gd"
 var movetimer_length = 100
 var movetimer = 0
 
-var speed = 20
+var speed = 0 #20
 var damage = 0.25
 var hitstun = 15
 var max_hearts = 1

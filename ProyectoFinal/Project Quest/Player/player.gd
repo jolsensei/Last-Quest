@@ -33,7 +33,7 @@ export var emissary_of_the_edge = false
 
 
 export var item_A:Resource = load("res://Items/Sword/Iron Sword.tscn")
-export var item_B:Resource #= load("res://Items/Goldy Blade/Goldy Blade.tscn")
+export var item_B:Resource = load("res://Items/Warrior's Shield/Warrior's Shield.tscn")
 
 export var inventory = []
 

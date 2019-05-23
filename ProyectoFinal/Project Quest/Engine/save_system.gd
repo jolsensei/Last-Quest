@@ -36,7 +36,7 @@ func delete_temp():
 			print("Exist")
 			dir.remove("user://Saves/Save"+str(_GLOBAL_DATA.slot)+"/Temp/"+str(count)+".tscn")
 		count += 1
-	get_tree().quit()
+#	get_tree().quit()
 	
 func delete_data(number): #This method deletes the selected savefile, be careful
 	var dir = Directory.new()

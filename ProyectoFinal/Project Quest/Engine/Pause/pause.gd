@@ -49,13 +49,13 @@ func _input(event):
 		in_pause = not in_pause
 		if !in_pause and $Collection.visible:
 			change_visibility()
-
+			
 	if event.is_action_pressed("a") and in_pause:
 		change_item(_ENUMS.BUTTON.A)
 	if event.is_action_pressed("b") and in_pause:
 		change_item(_ENUMS.BUTTON.B)
 	if in_pause and (event.is_action_pressed("ui_down") or event.is_action_pressed("ui_up") or event.is_action_pressed("ui_left") or event.is_action_pressed("ui_right")):
-			_SFX.play_sfx("cursor")
+		_SFX.play_sfx("cursor")
 	if event.is_action_pressed("a") and in_pause and ($TextureButton.has_focus() or $TextureButton2.has_focus()):
 		$Timer.start()
 		$Anim.play("flip")
@@ -66,9 +66,15 @@ func _input(event):
 				$Buttons.play("press_r")
 			bottom_left:
 				$Buttons.play("press_l")
-	if event.is_action_pressed("a") and in_pause and $Collection/Save.has_focus():
+	if event.is_action_pressed("a") and in_pause and $Collection/SaveExit/Save.has_focus():
 		_SAVE_SYSTEM.save_game()
+		save_animation()
+	if event.is_action_pressed("a") and in_pause and $Collection/SaveExit/Exit.has_focus():
+		ask_go_to_title()
+	if event.is_action_pressed("a") and in_pause and $Collection/YesNo/Yes.has_focus():
+		go_to_title()
 		_SAVE_SYSTEM.delete_temp()
+		
 	if event.is_action_pressed("l"):
 		$TextureButton2.grab_focus()
 		$Timer.start()
@@ -112,3 +118,23 @@ func change_visibility():
 	$Collection.visible = not $Collection.visible
 	$Inventory.visible = not $Inventory.visible
 	$Inventory/GridContainer.visible = not $Inventory/GridContainer.visible
+
+func ask_go_to_title():
+	$BackToTitle.text = "Are you sure?"
+	$Collection/SaveExit.visible = false
+	$Collection/YesNo.visible = true
+	$TextureButton.visible = false
+	$TextureButton2.visible = false
+	$BackToTitle.visible = true
+	
+	$Collection/YesNo/No.grab_focus()
+
+func go_to_title():
+	Input.action_release("a")
+	get_tree().paused = false
+	get_tree().quit()
+	
+func save_animation():
+	$BackToTitle.text = "Saved"
+	$BackToTitle.visible = true
+	$Anim.play("saved")

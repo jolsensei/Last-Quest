@@ -13,6 +13,7 @@ var type = _ENUMS.TYPE.FOE
 var go_back = false
 
 func _ready():
+	add_to_group("shield")
 	$Animation.play("default")
 	match(direction):
 		DIRECTIONS.UP:
