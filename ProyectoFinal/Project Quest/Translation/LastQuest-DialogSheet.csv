@@ -19,7 +19,8 @@ LEGENDS_SHIELD,"You got the /*Legend's Shield*/ ! Wait, this is from an anime, r
 BRACELET_OF_WILL,"You got the /*Bracelet of Will*/ ! //With this bracelet, you can even /*lift rocks*/ //You know, where there is a will, there is a way","¡ Has conseguido el /*Bracelete de la voluntad*/ ! //Con este bracelete, puedes /*levantar*/ incluso /*piedras*/ //Ya sabes, querer es poder"
 WIND_BOOTS,"You got the /*Wind Boots*/ ! //With them, you can move faster holding /*R*/ //Do you know which direction the wind is blowing ...? Blows towards tomorrow","¡ Has conseguido las /*Botas del viento*/ ! //Con ellas, puedes moverte más rápido manteniendo /*R*/ //¿ Sabes hacia que dirección sopla el viento ...? Sopla hacia el mañana"
 DOGE_BADGE,"You go-... // Oh, really ? // You got the /*Doge Badge*/ ! //Now you can understand dogs because of Doge's /*such dog*/ power, /*WOW*/","¡ Has con-... //Oh, ¿en serio?//¡ Has conseguido el /*Pin de Doge*/ !//Ahora puedes entender a los perros gracias al poderoso /*such dog*/ de Doge, /*WOW*/"
-EMISSARY,"You got the /*Emissary of the Edge robes*/ !// With them, it will be more /*difficult*/ to foes to /*see*/ you!//CRAAAAAWLING IN MY SKIN... Can't handle the edge","¡ Has conseguido los /*ropajes del Emisario del Edge*/ !//Con ellos, será más difícil para los enemigos verte//CRAAAAAWLING IN MY SKIN... No puedo controlar el edge"
+EMISSARY,"You got the /*Emissary of the Edge robes*/ !// With them, it will be more /*difficult*/ to foes to /*see*/ you!//CRAAAAAWLING IN MY SKIN... Can't handle the edge","¡ Has conseguido los /*ropajes del Emisario del Edge*/ !//Con ellos, será más /*difíci*/l que los enemigos /*te vean*/ //CRAAAAAWLING IN MY SKIN... No puedo controlar el edge"
+BIG_WALLET,You got the /*Big Wallet*/ !//Now you can carry up to 500 rupees ! That's a lot of money,¡ Has conseguido la /*Cartera Grande*/ !//Ahora puedes llevar hasta 500 rupias ! Eso es mucho dinero
 BOMBS,"You got the /*Bombs*/ !//Be careful, they are quite dangerous//Equip them to /*A*/ or /*B*/","¡ Has conseguido las /*Bombas*/ !//Cuidado, son bastante peligrosas//Equípalas en la /*A*/ o /*B*/"
 BOOMERANG,"You got the /*Boomerang*/ !//Deals no damage, but it can pick up items for you !//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Búmeran*/ ! //No hace daño, pero puede recoger objetos por ti//Equípalo en la /*A*/ o /*B*/"
 BOW,You got the /*Bow*/ !//Shoot powerfull arrows with it//Equip it to /*A*/ or /*B*/,¡ Has conseguido el /*Arco*/ ! //Dispara poderosas flechas con el//Equípalo en la /*A*/ o /*B*/
@@ -53,8 +54,9 @@ T_ENGLISH,English,Inglés
 T_CHOOSE_NAME,Choose your name,Escoge un nombre
 T_CAPS,Caps,Mayus
 T_END,End,Fin
-,,
-,,
+T_SAVE,Save,Guardar
+T_DATA_SAVED,Saved,Guardado
+T_EXIT,Exit,Salir
 ,,
 D_DOG_1,Woof ! Woof !,Guau ! Guau !
 D_DOG_2,Woof ?,Guau ?

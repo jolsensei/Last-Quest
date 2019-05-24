@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Engine/Pause/pause.gd" type="Script" id=1]
 [ext_resource path="res://Engine/Pause/inventory.png" type="Texture" id=2]
@@ -6,16 +6,17 @@
 [ext_resource path="res://Items/Bracelet ofWill/bracelet_of_will.png" type="Texture" id=4]
 [ext_resource path="res://Items/Doge Badge/doge_pin.png" type="Texture" id=5]
 [ext_resource path="res://Items/Emissary/emissary_of_the_edge.png" type="Texture" id=6]
-[ext_resource path="res://Items/Wind Boots/wind_boots.png" type="Texture" id=7]
-[ext_resource path="res://Engine/Pause/empty.png" type="Texture" id=8]
-[ext_resource path="res://Engine/Pause/file_2.png" type="Texture" id=9]
-[ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=10]
-[ext_resource path="res://Engine/Pause/arrow.png" type="Texture" id=11]
-[ext_resource path="res://Engine/Pause/item_selected.png" type="Texture" id=12]
+[ext_resource path="res://Items/Big Wallet/big_wallet.png" type="Texture" id=7]
+[ext_resource path="res://Items/Wind Boots/wind_boots.png" type="Texture" id=8]
+[ext_resource path="res://Engine/Pause/empty.png" type="Texture" id=9]
+[ext_resource path="res://Engine/Pause/exit_hover.png" type="Texture" id=10]
+[ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=11]
+[ext_resource path="res://Engine/Pause/arrow.png" type="Texture" id=12]
+[ext_resource path="res://Engine/Pause/item_selected.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
-font_data = ExtResource( 10 )
+font_data = ExtResource( 11 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "press_l"
@@ -89,11 +90,11 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "saved"
 length = 3.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("BackToTitle:modulate")
+tracks/0/path = NodePath("Saved:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -105,9 +106,9 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 18
-font_data = ExtResource( 10 )
+font_data = ExtResource( 11 )
 
 [node name="Pause-Inventory" type="Control"]
 pause_mode = 2
@@ -166,12 +167,15 @@ texture = ExtResource( 5 )
 position = Vector2( 26, -6 )
 texture = ExtResource( 6 )
 
-[node name="Boots" type="Sprite" parent="Collection"]
-position = Vector2( 26, -26 )
+[node name="Wallet" type="Sprite" parent="Collection"]
+position = Vector2( 26, 11.6 )
 texture = ExtResource( 7 )
 
+[node name="Boots" type="Sprite" parent="Collection"]
+position = Vector2( 26, -26 )
+texture = ExtResource( 8 )
+
 [node name="YesNo" type="Control" parent="Collection"]
-editor/display_folded = true
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
@@ -179,17 +183,17 @@ margin_bottom = 40.0
 [node name="No" type="TextureButton" parent="Collection/YesNo"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 16.0
-margin_top = 16.8
-margin_right = -7.99999
-margin_bottom = -7.2
-texture_normal = ExtResource( 8 )
-texture_focused = ExtResource( 9 )
+margin_left = -8.0
+margin_top = 16.0
+margin_right = -32.0
+margin_bottom = -8.0
+texture_normal = ExtResource( 9 )
+texture_focused = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="Collection/YesNo/No"]
-margin_left = 5.60002
-margin_top = 4.8
-margin_right = 14.6
+margin_left = 4.00002
+margin_top = 4.79998
+margin_right = 13.0
 margin_bottom = 15.8
 custom_fonts/font = SubResource( 1 )
 text = "No"
@@ -199,18 +203,18 @@ valign = 1
 [node name="Yes" type="TextureButton" parent="Collection/YesNo"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -32.0
-margin_top = 16.0
-margin_right = -56.0
-margin_bottom = -8.0
-texture_normal = ExtResource( 8 )
-texture_focused = ExtResource( 9 )
+margin_left = -8.0
+margin_top = 7.62939e-006
+margin_right = -32.0
+margin_bottom = -24.0
+texture_normal = ExtResource( 9 )
+texture_focused = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="Collection/YesNo/Yes"]
-margin_left = 3.20002
-margin_top = 5.60001
-margin_right = 16.2
-margin_bottom = 16.6
+margin_left = 1.60002
+margin_top = 3.2
+margin_right = 14.6
+margin_bottom = 14.2
 custom_fonts/font = SubResource( 1 )
 text = "Yes"
 align = 1
@@ -223,18 +227,18 @@ margin_bottom = 40.0
 [node name="Exit" type="TextureButton" parent="Collection/SaveExit"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -35.2
-margin_top = 18.4
-margin_right = -59.2
-margin_bottom = -5.60001
-texture_normal = ExtResource( 8 )
-texture_focused = ExtResource( 9 )
+margin_left = -8.0
+margin_top = 16.0
+margin_right = -32.0
+margin_bottom = -7.99999
+texture_normal = ExtResource( 9 )
+texture_focused = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="Collection/SaveExit/Exit"]
-margin_left = 2.0
-margin_top = 5.2
-margin_right = 18.0
-margin_bottom = 16.2
+margin_left = 1.2
+margin_top = 5.0
+margin_right = 17.2
+margin_bottom = 16.0
 custom_fonts/font = SubResource( 1 )
 text = "Salir"
 align = 1
@@ -243,18 +247,18 @@ valign = 1
 [node name="Save" type="TextureButton" parent="Collection/SaveExit"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.79998
-margin_top = 18.4
-margin_right = -19.2
-margin_bottom = -5.60001
-texture_normal = ExtResource( 8 )
-texture_focused = ExtResource( 9 )
+margin_left = -8.0
+margin_top = -1.6
+margin_right = -32.0
+margin_bottom = -25.6
+texture_normal = ExtResource( 9 )
+texture_focused = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="Collection/SaveExit/Save"]
-margin_left = 2.0
-margin_top = 5.2
-margin_right = 18.0
-margin_bottom = 16.2
+margin_left = -5.19996
+margin_top = 5.0
+margin_right = 22.8
+margin_bottom = 16.0
 custom_fonts/font = SubResource( 1 )
 text = "Guardar"
 align = 1
@@ -267,8 +271,8 @@ margin_left = 132.0
 margin_top = 72.0
 margin_right = 148.0
 margin_bottom = 88.0
-texture_normal = ExtResource( 11 )
-texture_focused = ExtResource( 12 )
+texture_normal = ExtResource( 12 )
+texture_focused = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -281,8 +285,8 @@ margin_top = 88.0
 margin_right = 44.0
 margin_bottom = 104.0
 rect_rotation = 180.0
-texture_normal = ExtResource( 11 )
-texture_focused = ExtResource( 12 )
+texture_normal = ExtResource( 12 )
+texture_focused = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -293,19 +297,31 @@ anims/press_r = SubResource( 3 )
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 anims/flip = SubResource( 4 )
-anims/saved = SubResource( 6 )
+anims/saved = SubResource( 5 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="Saved" type="Label" parent="."]
+visible = false
+margin_top = 6.0
+margin_right = 160.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Saved"
+align = 1
+valign = 1
 
 [node name="BackToTitle" type="Label" parent="."]
 visible = false
 margin_top = 6.0
 margin_right = 160.0
 margin_bottom = 26.0
-custom_fonts/font = SubResource( 5 )
-text = "Saved"
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Are you sure? "
 align = 1
 valign = 1
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

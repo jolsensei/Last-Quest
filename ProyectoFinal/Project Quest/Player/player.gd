@@ -31,6 +31,8 @@ export var doge_badge = false
 
 export var emissary_of_the_edge = false
 
+export var big_wallet = false
+
 
 export var item_A:Resource = load("res://Items/Sword/Iron Sword.tscn")
 export var item_B:Resource = load("res://Items/Warrior's Shield/Warrior's Shield.tscn")
