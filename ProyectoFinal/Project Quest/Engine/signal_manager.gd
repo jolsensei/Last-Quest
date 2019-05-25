@@ -9,6 +9,8 @@ signal update_hearts
 signal update_collection
 signal dialog_finished
 signal show_keys
+signal game_over
+signal start_shop
 
 func show(sfx_activated, texture, text):
 	emit_signal("send_dialog", sfx_activated, texture, text)
@@ -36,3 +38,9 @@ func dialog_finished():
 	
 func show_keys(boolean):
 	emit_signal("show_keys", boolean)
+	
+func game_over():
+	emit_signal("game_over")
+
+func start_shop(item1, item2, item3):
+	emit_signal("start_shop", item1, item2, item3)

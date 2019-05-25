@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Engine/Game/game.gd" type="Script" id=1]
 [ext_resource path="res://Engine/currentMap.gd" type="Script" id=2]
@@ -9,7 +9,8 @@
 [ext_resource path="res://Player/GUI/Items/Items.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Engine/Pause/Pause.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Engine/Dialogs/Dialog.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Engine/Transition.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Engine/Shops/Shop.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Engine/Transition.tscn" type="PackedScene" id=11]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
@@ -20,7 +21,7 @@ NEW_MAP = "res://Maps/TestRoom.tscn"
 WARP_POSITION = "Spawn"
 
 [node name="Player" parent="CurrentMap" instance=ExtResource( 3 )]
-position = Vector2( 83.6881, 72.2887 )
+position = Vector2( 84, 72 )
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
@@ -52,12 +53,16 @@ visible = false
 pause_mode = 2
 visible = false
 
-[node name="Transition" parent="." instance=ExtResource( 10 )]
+[node name="Shop" parent="Menu" instance=ExtResource( 10 )]
+pause_mode = 2
+visible = false
+
+[node name="Transition" parent="." instance=ExtResource( 11 )]
+[connection signal="game_loaded" from="." to="Menu/Pause-Inventory" method="_on_Game_game_loaded"]
 [connection signal="game_loaded" from="." to="GUI/Keys" method="_on_Game_game_loaded"]
 [connection signal="game_loaded" from="." to="GUI/Rupees" method="_on_Game_game_loaded"]
-[connection signal="game_loaded" from="." to="Menu/Pause-Inventory" method="_on_Game_game_loaded"]
-[connection signal="loaded" from="CurrentMap" to="GUI/Hearts" method="_on_map_loaded"]
 [connection signal="loaded" from="CurrentMap" to="GUI/Items" method="_on_map_loaded"]
+[connection signal="loaded" from="CurrentMap" to="GUI/Hearts" method="_on_map_loaded"]
 [connection signal="key_picked" from="CurrentMap/Player" to="GUI/Keys" method="_on_Player_key_picked"]
 [connection signal="rupee_picked" from="CurrentMap/Player" to="GUI/Rupees" method="_on_player_rupee_picked"]
 [connection signal="equipment_changed" from="Menu/Pause-Inventory" to="GUI/Items" method="_on_PauseInventory_equipment_changed"]

@@ -18,6 +18,7 @@ func update_collection():
 	$Collection/Doge.visible = _GLOBAL_DATA.player.doge_badge
 	$Collection/Emissary.visible = _GLOBAL_DATA.player.emissary_of_the_edge
 	$Collection/Wallet.visible = _GLOBAL_DATA.player.big_wallet
+	$Collection/Band.visible = _GLOBAL_DATA.player.head_band
 	
 	
 func _on_Game_game_loaded():
@@ -135,8 +136,10 @@ func ask_go_to_title():
 
 func go_to_title():
 	Input.action_release("a")
-#	get_tree().paused = false
-	get_tree().quit()
+	get_tree().paused = false
+#	get_tree().quit()
+	_CURRENT_MAP.restart()
+	get_tree().change_scene("res://Engine/Menus/Title/Title.tscn")
 	
 func save_animation():
 	$Saved.visible = true

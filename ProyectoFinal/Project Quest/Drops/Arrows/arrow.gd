@@ -1,5 +1,7 @@
 extends "res://Drops/drop.gd"
 
+var price = 15
+
 func body_entered(body):
 	if body.get("type") == _ENUMS.TYPE.PLAYER and body.get("arrows") < body.get("max_arrows"):
 		body.give_arrows(5)

@@ -48,6 +48,11 @@ func changeLevel(mapToWarp, position):
 	
 	emit_signal("loaded")
 	
+func restart():
+	_GLOBAL_DATA.map.remove_child(_GLOBAL_DATA.player)
+	_GLOBAL_DATA.map.queue_free()
+	_GLOBAL_DATA.player.queue_free()
+	
 func save(number):
 	var scene = PackedScene.new()
 	scene.pack(_GLOBAL_DATA.map)

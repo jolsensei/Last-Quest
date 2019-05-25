@@ -2,6 +2,7 @@ extends Control
 
 var title = load("res://Engine/BGM/BGMDB/Dunes at Night.wav")
 var files = load("res://Engine/BGM/BGMDB/Blueberry March.wav")
+var game_over = load("res://Engine/BGM/BGMDB/At the End of the Day.wav")
 
 func play_bgm(track):
 	 

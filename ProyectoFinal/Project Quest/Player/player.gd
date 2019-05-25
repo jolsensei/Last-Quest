@@ -33,6 +33,8 @@ export var emissary_of_the_edge = false
 
 export var big_wallet = false
 
+export var head_band = false
+
 
 export var item_A:Resource = load("res://Items/Sword/Iron Sword.tscn")
 export var item_B:Resource = load("res://Items/Warrior's Shield/Warrior's Shield.tscn")
@@ -67,6 +69,7 @@ func _init():
 #	inventory[7] = load("res://Items/Bomb/Bomb.tscn")
 	
 func _ready():
+	_SIGNAL_MANAGER.connect("game_over", self, "game_over")
 	global_max_hearts = max_hearts
 	global_hearts = hearts
 	
@@ -107,7 +110,7 @@ func state_default():
 	elif Input.is_action_just_released("r") and wind_boots:
 		stop_wind_boots()
 
-		
+
 func state_attack():
 	animation_switch("idle_")
 	damage_loop()
@@ -151,6 +154,8 @@ func add_keys(keys):
 	emit_signal("key_picked")
 	
 func heal(hearts):
+	if head_band:
+		hearts *= 2
 	self.global_hearts += hearts
 	global_hearts = min(global_hearts, global_max_hearts)
 	
@@ -173,10 +178,10 @@ func stop_wind_boots():
 	$Animation.playback_speed = 1
 	
 
-
 func _on_Boots_timeout():
 	if Input.is_action_pressed("r") and stamina > 0:
 		stamina -= 1
+#		_SFX.play_sfx("boots")
 	else:
 		stamina += 1
 		
@@ -188,3 +193,19 @@ func _on_Boots_timeout():
 		$Boots.stop()
 		
 	$Stamina.frame = stamina
+	
+func game_over():
+	$Animation.stop(true)
+	set_physics_process(false)
+	current_state = _ENUMS.STATE.ATTACK
+	_BGM.stop_bgm()
+	$GameOver.play("game_over")
+	_SFX.play_sfx("link_dies")
+
+func _on_GameOver_animation_finished(anim_name):
+	match(anim_name):
+		"game_over":
+			_SAVE_SYSTEM.delete_temp()
+			get_tree().change_scene("res://Engine/Menus/Game over/Game over.tscn")
+			_CURRENT_MAP.restart()
+			

@@ -1,5 +1,7 @@
 extends "res://Drops/drop.gd"
 
+var price = 5
+
 func body_entered(body):
 	if body.get("type") == _ENUMS.TYPE.PLAYER and body.get("global_hearts") < body.get("global_max_hearts"):
 		_SFX.play_sfx("heart")

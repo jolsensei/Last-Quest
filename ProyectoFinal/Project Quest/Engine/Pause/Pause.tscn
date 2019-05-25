@@ -1,22 +1,23 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Engine/Pause/pause.gd" type="Script" id=1]
 [ext_resource path="res://Engine/Pause/inventory.png" type="Texture" id=2]
 [ext_resource path="res://Engine/Pause/heart_pieces.png" type="Texture" id=3]
 [ext_resource path="res://Items/Bracelet ofWill/bracelet_of_will.png" type="Texture" id=4]
 [ext_resource path="res://Items/Doge Badge/doge_pin.png" type="Texture" id=5]
-[ext_resource path="res://Items/Emissary/emissary_of_the_edge.png" type="Texture" id=6]
-[ext_resource path="res://Items/Big Wallet/big_wallet.png" type="Texture" id=7]
-[ext_resource path="res://Items/Wind Boots/wind_boots.png" type="Texture" id=8]
-[ext_resource path="res://Engine/Pause/empty.png" type="Texture" id=9]
-[ext_resource path="res://Engine/Pause/exit_hover.png" type="Texture" id=10]
-[ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=11]
-[ext_resource path="res://Engine/Pause/arrow.png" type="Texture" id=12]
-[ext_resource path="res://Engine/Pause/item_selected.png" type="Texture" id=13]
+[ext_resource path="res://Items/Headband/headband.png" type="Texture" id=6]
+[ext_resource path="res://Items/Emissary/emissary_of_the_edge.png" type="Texture" id=7]
+[ext_resource path="res://Items/Big Wallet/big_wallet.png" type="Texture" id=8]
+[ext_resource path="res://Items/Wind Boots/wind_boots.png" type="Texture" id=9]
+[ext_resource path="res://Engine/Pause/empty.png" type="Texture" id=10]
+[ext_resource path="res://Engine/Pause/exit_hover.png" type="Texture" id=11]
+[ext_resource path="res://Font/PIXELADE.TTF" type="DynamicFontData" id=12]
+[ext_resource path="res://Engine/Pause/arrow.png" type="Texture" id=13]
+[ext_resource path="res://Engine/Pause/item_selected.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
-font_data = ExtResource( 11 )
+font_data = ExtResource( 12 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "press_l"
@@ -108,7 +109,7 @@ tracks/0/keys = {
 
 [sub_resource type="DynamicFont" id=6]
 size = 18
-font_data = ExtResource( 11 )
+font_data = ExtResource( 12 )
 
 [node name="Pause-Inventory" type="Control"]
 pause_mode = 2
@@ -163,17 +164,21 @@ texture = ExtResource( 4 )
 position = Vector2( -26, -6 )
 texture = ExtResource( 5 )
 
-[node name="Emissary" type="Sprite" parent="Collection"]
-position = Vector2( 26, -6 )
+[node name="Band" type="Sprite" parent="Collection"]
+position = Vector2( -26, 14 )
 texture = ExtResource( 6 )
 
-[node name="Wallet" type="Sprite" parent="Collection"]
-position = Vector2( 26, 11.6 )
+[node name="Emissary" type="Sprite" parent="Collection"]
+position = Vector2( 26, -6 )
 texture = ExtResource( 7 )
+
+[node name="Wallet" type="Sprite" parent="Collection"]
+position = Vector2( 26, 14 )
+texture = ExtResource( 8 )
 
 [node name="Boots" type="Sprite" parent="Collection"]
 position = Vector2( 26, -26 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="YesNo" type="Control" parent="Collection"]
 visible = false
@@ -187,8 +192,8 @@ margin_left = -8.0
 margin_top = 16.0
 margin_right = -32.0
 margin_bottom = -8.0
-texture_normal = ExtResource( 9 )
-texture_focused = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+texture_focused = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Collection/YesNo/No"]
 margin_left = 4.00002
@@ -207,8 +212,8 @@ margin_left = -8.0
 margin_top = 7.62939e-006
 margin_right = -32.0
 margin_bottom = -24.0
-texture_normal = ExtResource( 9 )
-texture_focused = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+texture_focused = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Collection/YesNo/Yes"]
 margin_left = 1.60002
@@ -231,8 +236,8 @@ margin_left = -8.0
 margin_top = 16.0
 margin_right = -32.0
 margin_bottom = -7.99999
-texture_normal = ExtResource( 9 )
-texture_focused = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+texture_focused = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Collection/SaveExit/Exit"]
 margin_left = 1.2
@@ -251,8 +256,8 @@ margin_left = -8.0
 margin_top = -1.6
 margin_right = -32.0
 margin_bottom = -25.6
-texture_normal = ExtResource( 9 )
-texture_focused = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+texture_focused = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Collection/SaveExit/Save"]
 margin_left = -5.19996
@@ -271,8 +276,8 @@ margin_left = 132.0
 margin_top = 72.0
 margin_right = 148.0
 margin_bottom = 88.0
-texture_normal = ExtResource( 12 )
-texture_focused = ExtResource( 13 )
+texture_normal = ExtResource( 13 )
+texture_focused = ExtResource( 14 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -285,8 +290,8 @@ margin_top = 88.0
 margin_right = 44.0
 margin_bottom = 104.0
 rect_rotation = 180.0
-texture_normal = ExtResource( 12 )
-texture_focused = ExtResource( 13 )
+texture_normal = ExtResource( 13 )
+texture_focused = ExtResource( 14 )
 __meta__ = {
 "_edit_lock_": true
 }

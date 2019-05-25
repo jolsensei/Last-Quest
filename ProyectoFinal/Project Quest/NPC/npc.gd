@@ -5,7 +5,13 @@ export(String) var dog_true_dialog
 enum TYPE {OLD_MAN, GIRL_1, GIRL_2, BOY_1, DOG}
 export (TYPE) var NPC_TYPE
 
+export var has_shop:bool
+export (String, FILE, "*.tscn") var item1
+export (String, FILE, "*.tscn") var item2
+export (String, FILE, "*.tscn") var item3
+
 func _ready():
+	
 	match(NPC_TYPE):
 		TYPE.OLD_MAN:
 			$Sprite.texture = load("res://NPC/old_man.png")
@@ -21,10 +27,13 @@ func _ready():
 func _input(event):
 	if Input.is_action_just_pressed("a") and _GLOBAL_DATA.player.can_interact:
 		watch_player()
-		if NPC_TYPE == TYPE.DOG and _GLOBAL_DATA.player.doge_badge:
-			_SIGNAL_MANAGER.show(false, null, _TRANSLATION_MANAGER.translate(tr(dog_true_dialog)))
+		if has_shop:
+			_SIGNAL_MANAGER.start_shop(load(item1).instance(), load(item2).instance(), load(item3).instance())
 		else:
-			_SIGNAL_MANAGER.show(false, null, _TRANSLATION_MANAGER.translate(tr(dialog)))
+			if NPC_TYPE == TYPE.DOG and _GLOBAL_DATA.player.doge_badge:
+				_SIGNAL_MANAGER.show(false, null, _TRANSLATION_MANAGER.translate(tr(dog_true_dialog)))
+			else:
+				_SIGNAL_MANAGER.show(false, null, _TRANSLATION_MANAGER.translate(tr(dialog)))
 
 func _on_Area2D_body_entered(body):
 	_on_body_entered(body)

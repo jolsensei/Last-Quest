@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pegasus boots.wav-2547031082aaa29e5384a68af93287b6.sample"
+
+[deps]
+
+source_file="res://Engine/SFX/SoundsDB/pegasus boots.wav"
+dest_files=[ "res://.import/pegasus boots.wav-2547031082aaa29e5384a68af93287b6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

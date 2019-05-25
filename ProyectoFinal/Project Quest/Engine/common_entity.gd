@@ -61,7 +61,7 @@ func damage_loop():
 		if global_type == _ENUMS.TYPE.FOE and global_hearts <=0:
 			foe_death()
 		if global_type == _ENUMS.TYPE.PLAYER and global_hearts <=0:
-			get_tree().quit()
+			game_over()
 	for area in $HitBox.get_overlapping_areas():
 		var body = area.get_parent()
 		if area.name!='ChaseArea' and global_hitstun == 0 and body.get("damage") != null and body.get("type") != global_type  and body.get("type") != _ENUMS.TYPE.TERRAIN:
@@ -90,6 +90,11 @@ func foe_death():
 	get_parent().add_child(death_animation)
 	death_animation.global_transform = global_transform
 	queue_free()
+	
+func game_over():
+	set_physics_process(false)
+	_SIGNAL_MANAGER.game_over()
+#	queue_free()
 	
 	
 	

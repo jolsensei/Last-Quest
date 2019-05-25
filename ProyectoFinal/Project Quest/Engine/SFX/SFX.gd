@@ -4,6 +4,7 @@ var arrow_hit_wall = load("res://Engine/SFX/SoundsDB/arrow hit wall.wav")
 var arrow = load("res://Engine/SFX/SoundsDB/arrow.wav")
 var bomb_explode = load("res://Engine/SFX/SoundsDB/bomb explode.wav")
 var boomerang = load("res://Engine/SFX/SoundsDB/boomerang.wav")
+var boots = load("res://Engine/SFX/SoundsDB/pegasus boots.wav")
 var break_sound = load("res://Engine/SFX/SoundsDB/break.wav")
 var chest_appears = load("res://Engine/SFX/SoundsDB/chest appears.wav")
 var chest_open = load("res://Engine/SFX/SoundsDB/chest open.wav")
@@ -34,6 +35,7 @@ var secret = load("res://Engine/SFX/SoundsDB/secret.wav")
 var sword = load("res://Engine/SFX/SoundsDB/sword.wav")
 var throw = load("res://Engine/SFX/SoundsDB/throw.wav")
 var use_key = load("res://Engine/SFX/SoundsDB/use key.wav")
+var wallet = load("res://Engine/SFX/SoundsDB/wallet 1.wav")
 
 
 

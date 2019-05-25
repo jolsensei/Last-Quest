@@ -9,9 +9,9 @@ HEART_PIECE_3,You got a /*heart piece*/ ! Get only 1 more to get a /*full heart*
 HEART_PIECE_4,You got a /*heart piece*/ ! You get a /*full heart*/!,¡ Has conseguido un /*cuarto de corazón*/ ! Obtienes un /*corazón extra*/
 HEART,You healed one full heart,Te has curado un corazón
 RUPEE_1,"WoW, a single /*rupee*/, today is a day to celebrate","Vaya, una /*rupia*/, un día para celebrar"
-RUPEE_5,"Yeah, five /*rupees*/, not so bad","Yeah, cinco /*rupias*/, ni tan mal"
-RUPEE_20,"Ohh, twenty /*rupees*/, a good reason to smile !","Ohh, veinte /*rupias*/, un buen motivo para sonreir"
-RUPEE_50,Fifty /*rupees*/ ! Make sure you don't spend them suddenly,¡ Cincuenta /*rupias*/ ! Asegurate de no gastarlas de golpe
+RUPEE_5,"Yeah, 5 /*rupees*/, not so bad","Yeah, 5 /*rupias*/, ni tan mal"
+RUPEE_20,"Ohh, 20 /*rupees*/, a good reason to smile !","Ohh, 20 /*rupias*/, un buen motivo para sonreir"
+RUPEE_50,50 /*rupees*/ ! Make sure you don't spend them suddenly,¡ 50 /*rupias*/ ! Asegurate de no gastarlas de golpe
 ,,
 GOLDY_BLADE,You got the /*Goldy Blade*/ ! //It's said that this sword was forged after a promise between humans and demons//Equip it to /*A*/ or  /*B*/,¡ Has conseguido la /*Hoja Dorada*/ !//Se dice que esta espada fue forjada tras una promesa entre humanos y demonios//Equípala en la /*A*/ o /*B*/
 WARRIOR_SHIELD,"You got the /*Warrior Shield*/ !//It's made of wood, so it doesn't seem very reliable, well, is better than nothing//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Escudo de Guerrero*/ !//Está hecho de madera, no parece muy confiable pero es mejor que nada//Equípalo en la /*A*/ o /*B*/"
@@ -21,6 +21,7 @@ WIND_BOOTS,"You got the /*Wind Boots*/ ! //With them, you can move faster holdin
 DOGE_BADGE,"You go-... // Oh, really ? // You got the /*Doge Badge*/ ! //Now you can understand dogs because of Doge's /*such dog*/ power, /*WOW*/","¡ Has con-... //Oh, ¿en serio?//¡ Has conseguido el /*Pin de Doge*/ !//Ahora puedes entender a los perros gracias al poderoso /*such dog*/ de Doge, /*WOW*/"
 EMISSARY,"You got the /*Emissary of the Edge robes*/ !// With them, it will be more /*difficult*/ to foes to /*see*/ you!//CRAAAAAWLING IN MY SKIN... Can't handle the edge","¡ Has conseguido los /*ropajes del Emisario del Edge*/ !//Con ellos, será más /*difíci*/l que los enemigos /*te vean*/ //CRAAAAAWLING IN MY SKIN... No puedo controlar el edge"
 BIG_WALLET,You got the /*Big Wallet*/ !//Now you can carry up to 500 rupees ! That's a lot of money,¡ Has conseguido la /*Cartera Grande*/ !//Ahora puedes llevar hasta 500 rupias ! Eso es mucho dinero
+HEADBAND,You got the /*Hisshou Hachimaki*/ !//You feel unbeatable ! Now /*hearts*/ heals you /*twice*/ // JUST... DO IT !,¡ Has conseguido el /*Hachimaki - Hisshou*/ !//¡ Te sientes invencible ! Ahora los /*corazones*/ te curan el /*doble*/ //JUST... DO IT !
 BOMBS,"You got the /*Bombs*/ !//Be careful, they are quite dangerous//Equip them to /*A*/ or /*B*/","¡ Has conseguido las /*Bombas*/ !//Cuidado, son bastante peligrosas//Equípalas en la /*A*/ o /*B*/"
 BOOMERANG,"You got the /*Boomerang*/ !//Deals no damage, but it can pick up items for you !//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Búmeran*/ ! //No hace daño, pero puede recoger objetos por ti//Equípalo en la /*A*/ o /*B*/"
 BOW,You got the /*Bow*/ !//Shoot powerfull arrows with it//Equip it to /*A*/ or /*B*/,¡ Has conseguido el /*Arco*/ ! //Dispara poderosas flechas con el//Equípalo en la /*A*/ o /*B*/
@@ -57,6 +58,12 @@ T_END,End,Fin
 T_SAVE,Save,Guardar
 T_DATA_SAVED,Saved,Guardado
 T_EXIT,Exit,Salir
+T_CONTINUE,Continue?,¿Continuar?
+,,
+S_WELCOME,Welcome,Bienvenido
+S_NOT_RUPEES,Not enought rupees,Te faltan rupias
+S_TAKE_YOUR_TIME,Take your time,Tómate tu tiempo
+S_THANKS,Thanks,¡ Gracias !
 ,,
 D_DOG_1,Woof ! Woof !,Guau ! Guau !
 D_DOG_2,Woof ?,Guau ?
