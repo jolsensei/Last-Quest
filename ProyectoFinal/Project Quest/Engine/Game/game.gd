@@ -2,6 +2,8 @@ extends Node
 
 signal game_loaded
 
+enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, DUNGEON}
+
 func _ready():
 	_GLOBAL_DATA.map = $CurrentMap
 	_GLOBAL_DATA.map.initialize()
@@ -10,6 +12,14 @@ func _ready():
 	get_tree().set_auto_accept_quit(false)
 	if _GLOBAL_DATA.player_name != null:
 		_GLOBAL_DATA.player.player_name = _GLOBAL_DATA.player_name
+		
+	match(_GLOBAL_DATA.last_map):
+				WORLDS.OVERWORLD:
+					_BGM.play_bgm("overworld")
+				WORLDS.TOWN:
+					_BGM.play_bgm("town")
+				WORLDS.BEACH:
+					_BGM.play_bgm("beach")
 	
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:

@@ -79,12 +79,12 @@ func _input(event):  #TODO This should be replaced with a true match
 		normal_state()
 		$Collection/SaveExit/Exit.grab_focus()
 		
-	if event.is_action_pressed("l"):
+	if event.is_action_pressed("l") and in_pause:
 		$TextureButton2.grab_focus()
 		$Timer.start()
 		$Anim.play("flip")
 		$Buttons.play("press_l")
-	if event.is_action_pressed("r"):
+	if event.is_action_pressed("r") and in_pause:
 		$TextureButton.grab_focus()
 		$Timer.start()
 		$Anim.play("flip")

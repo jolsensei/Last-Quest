@@ -26,12 +26,12 @@ BOMBS,"You got the /*Bombs*/ !//Be careful, they are quite dangerous//Equip them
 BOOMERANG,"You got the /*Boomerang*/ !//Deals no damage, but it can pick up items for you !//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Búmeran*/ ! //No hace daño, pero puede recoger objetos por ti//Equípalo en la /*A*/ o /*B*/"
 BOW,You got the /*Bow*/ !//Shoot powerfull arrows with it//Equip it to /*A*/ or /*B*/,¡ Has conseguido el /*Arco*/ ! //Dispara poderosas flechas con el//Equípalo en la /*A*/ o /*B*/
 S_001,"This is a test, you can press A to skip the following Lorem Ipsum so you know...//Hope this works well","Esto es una prueba, puedes pulsar A para saltar el siguiente Lorem Ipsum asi que ya sabes...//Espero que funcione bien"
+,,
 Z_001,Dungeon of Tests,Mazmorra de las Pruebas
 Z_002,Dummy Hills,Colinas Maniquí
-,,
-,,
-,,
-,,
+Z_BEACH,Beach,Playa
+Z_FIELDS,Fields,Campo
+Z_MORIOH,Morioh Village,Pueblo de Morioh
 ,,
 ,,
 T_PRESS_BUTTON,- Press A button -,- Pulsa el botón A -
@@ -68,3 +68,9 @@ S_THANKS,Thanks,¡ Gracias !
 D_DOG_1,Woof ! Woof !,Guau ! Guau !
 D_DOG_2,Woof ?,Guau ?
 D_TRUE_DOG_1,Looks like someone finally can understand me ! //I'm a good boi so I'll help you hooman !,"¡ Parece que al fin alguien me entiende ! //Soy un chico bueno asi que te ayudaré, humano"
+D_001,"If you didn't tried to open the door yet, don't do it//In some towns they have that extrange practice, but here we don't trust anyone","Si aún no has intentado abrir la puerta, no lo hagas//En otros pueblos tienen esa costumbre, pero aqui no nos fiamos de nadie"
+D_002,"My daddy is a street vendor, sells everything","Mi papi es un vendedor ambulante, vende de todo"
+D_003,"Sometimes, I feel like dogs wants to tell me something, maybe I'm losing my mind//...//Isn't this beach beautiful ?","A veces, siento que los perros quieren decirme algo, quizás me estoy volviendo loco//...//¿ No es esta playa hermosa ?"
+,,
+S_002,Follow this path to reach /*Morioh Village*/,Sigue este camino para llegar al /*Pueblo de Morioh*/
+S_003,To the beach,Hacia la playa

@@ -5,7 +5,7 @@ var throw = false
 
 var dirMov = null
 var max_amount = 3
-var speed = 80
+var speed = 90
 
 var type = _ENUMS.TYPE.TERRAIN
 var damage = 2

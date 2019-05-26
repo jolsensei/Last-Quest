@@ -287,7 +287,7 @@ tracks/0/keys = {
 "values": [ 6, 7 ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=19]
 resource_name = "game_over"
 length = 3.0
 tracks/0/type = "value"
@@ -303,7 +303,7 @@ tracks/0/keys = {
 "values": [ 0, 3, 5, 8, 0, 3, 5, 8, 0, 3, 5 ]
 }
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 7, 9 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -341,12 +341,11 @@ anims/walk_up = SubResource( 18 )
 
 [node name="GameOver" type="AnimationPlayer" parent="."]
 playback_speed = 1.5
-anims/game_over = SubResource( 20 )
+anims/game_over = SubResource( 19 )
 
 [node name="TopDownFollow" type="Camera2D" parent="."]
 visible = false
 current = true
-smoothing_speed = 1.5
 drag_margin_left = 0.0
 drag_margin_top = 0.0
 drag_margin_right = 0.0
@@ -356,7 +355,7 @@ drag_margin_bottom = 0.0
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-shape = SubResource( 19 )
+shape = SubResource( 20 )
 
 [node name="Lift" type="Position2D" parent="."]
 visible = false

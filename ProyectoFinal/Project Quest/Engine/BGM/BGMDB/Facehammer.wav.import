@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Facehammer.wav-2726514f52448d7a580f70f0a525b74f.sample"
+
+[deps]
+
+source_file="res://Engine/BGM/BGMDB/Facehammer.wav"
+dest_files=[ "res://.import/Facehammer.wav-2726514f52448d7a580f70f0a525b74f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

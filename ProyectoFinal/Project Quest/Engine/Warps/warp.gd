@@ -2,7 +2,7 @@ extends Area2D
 
 signal player_entered
 
-enum WORLDS{TEST, TEST2, TEST3}
+enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, DUNGEON}
 
 #export(String, FILE, "*.tscn") var warp_to
 export(WORLDS) var warp_to
@@ -20,3 +20,11 @@ func _physics_process(delta):
 			body.hands_free = true
 			body.can_interact = true
 			_SIGNAL_MANAGER.show_keys(show_keys)
+			
+			match(warp_to):
+				WORLDS.OVERWORLD:
+					_BGM.play_bgm("overworld")
+				WORLDS.TOWN:
+					_BGM.play_bgm("town")
+				WORLDS.BEACH:
+					_BGM.play_bgm("beach")

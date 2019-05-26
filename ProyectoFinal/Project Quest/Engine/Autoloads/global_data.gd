@@ -13,6 +13,9 @@ var locale = "en"
 
 func _init():
 	world.resize(3)
-	world[0] = load("res://Maps/TestRoom.tscn")
-	world[1] = load("res://Maps/TestRoom_2.tscn")
-	world[2] = load("res://Maps/TestRoom_3.tscn")
+#	world[0] = load("res://Maps/TestRoom.tscn")
+#	world[1] = load("res://Maps/TestRoom_2.tscn")
+#	world[2] = load("res://Maps/TestRoom_3.tscn")
+	world[0] = load("res://Maps/Beach.tscn")
+	world[1] = load("res://Maps/Overworld.tscn")
+	world[2] = load("res://Maps/Town.tscn")

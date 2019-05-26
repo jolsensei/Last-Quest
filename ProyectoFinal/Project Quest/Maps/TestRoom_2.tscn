@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Tiles/TestRoom.tres" type="TileSet" id=1]
+[ext_resource path="res://Tiles/Overworld.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Engine/Warps/Spawn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Drops/Rupees/1/Rupee.tscn" type="PackedScene" id=4]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Drops/Heart Container/Heart Container.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Drops/Rupees/5/Rupee_5.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Engine/Spawner/Spawner.tscn" type="PackedScene" id=12]
+
 
 [node name="Test Room 2" type="Node"]
 

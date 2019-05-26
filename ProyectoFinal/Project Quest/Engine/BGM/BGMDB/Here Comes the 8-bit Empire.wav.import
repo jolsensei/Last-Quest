@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Here Comes the 8-bit Empire.wav-f495981d6dd3f977ca10611161bc88b0.sample"
+
+[deps]
+
+source_file="res://Engine/BGM/BGMDB/Here Comes the 8-bit Empire.wav"
+dest_files=[ "res://.import/Here Comes the 8-bit Empire.wav-f495981d6dd3f977ca10611161bc88b0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

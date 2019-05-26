@@ -13,7 +13,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
@@ -81,6 +81,5 @@ text = "SALA"
 align = 1
 valign = 1
 autowrap = true
-
 [connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
 [connection signal="animation_finished" from="LabelAnimation" to="." method="_on_Animation_animation_finished"]
