@@ -170,4 +170,3 @@ shape = SubResource( 9 )
 visible = false
 position = Vector2( 0, -1 )
 shape = SubResource( 10 )
-

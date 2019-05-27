@@ -88,5 +88,4 @@ anims/down = SubResource( 2 )
 anims/left = SubResource( 3 )
 anims/right = SubResource( 4 )
 anims/up = SubResource( 5 )
-
 [connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]

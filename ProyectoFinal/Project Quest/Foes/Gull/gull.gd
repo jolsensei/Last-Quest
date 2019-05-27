@@ -4,9 +4,9 @@ var movetimer_length = 15
 var movetimer = 0
 
 var speed = 10
-var damage = 0.5
+var damage = 1
 var hitstun = 15
-var max_hearts = 2
+var max_hearts = 4
 
 var type = _ENUMS.TYPE.FOE
 

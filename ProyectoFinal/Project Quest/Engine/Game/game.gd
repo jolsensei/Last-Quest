@@ -20,6 +20,8 @@ func _ready():
 					_BGM.play_bgm("town")
 				WORLDS.BEACH:
 					_BGM.play_bgm("beach")
+				WORLDS.CAVES:
+					_BGM.play_bgm("caves")
 	
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
