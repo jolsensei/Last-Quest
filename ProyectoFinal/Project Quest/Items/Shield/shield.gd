@@ -30,3 +30,11 @@ func give_to_player():
 func _on_HitBox_body_entered(body):
 	if body.is_in_group("shield"):
 		body.speed = body.speed * -1
+		_SFX.play_sfx("arrow_hit_wall")
+
+
+func _on_HitBox_area_entered(area):
+	if area.get_parent().is_in_group("destroy_on_hit"):
+		area.get_parent().speed = area.get_parent().speed * -1
+		area.get_parent().type = type
+		_SFX.play_sfx("arrow_hit_wall")

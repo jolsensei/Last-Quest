@@ -193,4 +193,5 @@ anims/shield_up = SubResource( 5 )
 [node name="Portrait" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 3 )
+[connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]

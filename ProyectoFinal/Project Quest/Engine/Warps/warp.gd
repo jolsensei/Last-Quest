@@ -10,6 +10,14 @@ export(String) var warp_position
 export(String) var zone_name
 export(bool) var show_keys
 
+func _init():
+	set_physics_process(false)
+
+func _ready():
+	_CURRENT_MAP.connect("loaded", self, "map_loaded")
+
+func map_loaded():
+	set_physics_process(true)
 
 func _physics_process(delta):
 	var bodies = get_overlapping_bodies()

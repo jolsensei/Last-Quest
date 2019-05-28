@@ -32,6 +32,7 @@ Z_002,Dummy Hills,Colinas Maniquí
 Z_BEACH,Beach,Playa
 Z_FIELDS,Fields,Campo
 Z_MORIOH,Morioh Village,Pueblo de Morioh
+Z_RUINS,Mysterious Ruins,Ruinas Misteriosas
 ,,
 ,,
 T_PRESS_BUTTON,- Press A button -,- Pulsa el botón A -
@@ -68,6 +69,7 @@ S_THANKS,Thanks,¡ Gracias !
 D_DOG_1,Woof ! Woof !,Guau ! Guau !
 D_DOG_2,Woof ?,Guau ?
 D_TRUE_DOG_1,Looks like someone finally can understand me ! //I'm a good boi so I'll help you hooman !,"¡ Parece que al fin alguien me entiende ! //Soy un chico bueno asi que te ayudaré, humano"
+D_TRUE_DOG_2,"Hooman ! This place, is wonderful// There is something, ... below the longer vine", 
 D_001,"If you didn't tried to open the door yet, don't do it//In some towns they have that extrange practice, but here we don't trust anyone","Si aún no has intentado abrir la puerta, no lo hagas//En otros pueblos tienen esa costumbre, pero aqui no nos fiamos de nadie"
 D_002,"My daddy is a street vendor, sells everything","Mi papi es un vendedor ambulante, vende de todo"
 D_003,"Sometimes, I feel like dogs wants to tell me something, maybe I'm losing my mind//...//Isn't this beach beautiful ?","A veces, siento que los perros quieren decirme algo, quizás me estoy volviendo loco//...//¿ No es esta playa hermosa ?"
