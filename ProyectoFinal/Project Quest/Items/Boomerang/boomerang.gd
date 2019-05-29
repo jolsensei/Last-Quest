@@ -14,6 +14,8 @@ var body_exited = false
 var item = null
 var carry_item = false
 
+var price = 150
+
 func _ready():
 	$Timer.start()
 	$SFX.start()

@@ -29,7 +29,7 @@ export var stamina = 14
 
 export var doge_badge = true
 
-export var emissary_of_the_edge = true
+export var emissary_of_the_edge = false
 
 export var big_wallet = true
 

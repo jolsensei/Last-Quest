@@ -20,3 +20,4 @@ func _init():
 	world[1] = load("res://Maps/Overworld.tscn")
 	world[2] = load("res://Maps/Town.tscn")
 	world[3] = load("res://Maps/Cave.tscn")
+	world[4] = load("res://Maps/Goldy Pond.tscn")

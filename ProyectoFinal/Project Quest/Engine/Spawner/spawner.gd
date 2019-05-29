@@ -7,6 +7,8 @@ enum DIRECTIONS {NONE, UP, DOWN, LEFT, RIGHT}
 
 export (DIRECTIONS) var DIRECTION 
 
+export var custom_speed = -1 #-1 means no value, not activated
+
 
 func spawn(to_spawn):
 	
@@ -26,6 +28,9 @@ func spawn(to_spawn):
 			spawn = load("res://Events/Pot/Pot.tscn").instance()
 		LIST.STONE:
 			spawn = load("res://Events/Stone/Stone.tscn").instance()
+			
+	if custom_speed != -1:
+		spawn.global_speed = custom_speed
 	
 	spawn.z_index = -1
 	get_parent().add_child(spawn)

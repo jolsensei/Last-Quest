@@ -32,11 +32,9 @@ func _on_Area2D_body_exited(body):
 	$Sprite.z_index = 0
 
 
-func _on_Front_body_entered(body):
-	_on_body_exited(body)
+func _on_Area2D2_body_entered(body):
 	$Sprite.z_index = 0
 
 
-func _on_Front_body_exited(body):
-	_on_body_entered(body)
+func _on_Area2D2_body_exited(body):
 	$Sprite.z_index = 1

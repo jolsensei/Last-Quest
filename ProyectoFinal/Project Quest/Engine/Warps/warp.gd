@@ -2,7 +2,7 @@ extends Area2D
 
 signal player_entered
 
-enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, DUNGEON}
+enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, GOLDY, DUNGEON}
 
 #export(String, FILE, "*.tscn") var warp_to
 export(WORLDS) var warp_to

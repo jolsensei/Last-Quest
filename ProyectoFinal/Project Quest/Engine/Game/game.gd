@@ -2,7 +2,7 @@ extends Node
 
 signal game_loaded
 
-enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, DUNGEON}
+enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, GOLDY, DUNGEON}
 
 func _ready():
 	_GLOBAL_DATA.map = $CurrentMap
