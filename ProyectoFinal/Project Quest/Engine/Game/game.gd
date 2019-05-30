@@ -2,7 +2,7 @@ extends Node
 
 signal game_loaded
 
-enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, GOLDY, DUNGEON}
+enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, GOLDY, MOUNTAIN, DUNGEON}
 
 func _ready():
 	_GLOBAL_DATA.map = $CurrentMap
@@ -22,6 +22,8 @@ func _ready():
 					_BGM.play_bgm("beach")
 				WORLDS.CAVES:
 					_BGM.play_bgm("caves")
+				WORLDS.MOUNTAIN:
+					_BGM.play_bgm("mountain")
 	
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:

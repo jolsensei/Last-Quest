@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tiles/Overworld.tres" type="TileSet" id=1]
+[ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
+
+[node name="Mountain" type="Node"]
+
+[node name="Floor" type="TileMap" parent="."]
+position = Vector2( 1600, 1600 )
+z_index = -1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65543, 55, 0, -65542, 55, 0, -65541, 55, 0, -65540, 55, 0, -65539, 55, 0, -65538, 55, 0, -65537, 28, 0, -131072, 28, 0, -7, 63, 0, -6, 63, 0, -5, 63, 0, -4, 63, 0, -3, 63, 0, -2, 63, 0, -1, 28, 0, -65536, 28, 0, 65531, 28, 0, 65532, 28, 0, 65533, 28, 0, 65534, 28, 0, 65535, 28, 0, 0, 28, 0, 131067, 28, 0, 131068, 28, 0, 131069, 28, 0, 131070, 28, 0, 131071, 28, 0, 65536, 28, 0, 196603, 53, 0, 196604, 53, 0, 196605, 53, 0, 196606, 53, 0 )
+
+[node name="Extra" type="TileMap" parent="Floor"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Warp" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1544, 1600 )
+scale = Vector2( 1, 4 )
+warp_to = 1
+warp_position = "Overworld_10"
+zone_name = "Z_FIELDS"
+
+[node name="Mountain_1" type="Position2D" parent="."]
+position = Vector2( 1562, 1600 )
