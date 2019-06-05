@@ -10,8 +10,6 @@ var speed = 100
 var type = _ENUMS.TYPE.TERRAIN
 var damage = 2
 
-export(String, FILE, "*.tscn") var mandatory_drop = null
-
 func _ready():
 	set_physics_process(false)
 	set_process(false)

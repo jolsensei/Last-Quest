@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Tiles/Overworld.tres" type="TileSet" id=1]
 [ext_resource path="res://Drops/Heart Piece/Heart Piece.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=4]
 [ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Events/Bombable wall/Bombable wall.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Events/Sign/Sign.tscn" type="PackedScene" id=7]
 
 [node name="Beach" type="Node"]
 __meta__ = {
@@ -25,7 +26,7 @@ tile_data = PoolIntArray( -4390931, 43, 0, -4390930, 43, 0, -4390929, 43, 0, -43
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -3342348, 64, 0, -3342345, 27, 0, -3407867, 90, 0, -3407866, 91, 0, -3276802, 77, 0, -3342331, 92, 0, -3342330, 93, 0, -3211267, 77, 0, -3211266, 87, 0, -3276798, 19, 0, -3145732, 78, 0, -3211260, 19, 0, -3080196, 78, 0, -3145723, 90, 0, -3145722, 91, 0, -3014660, 78, 0, -3080187, 92, 0, -3080186, 93, 0, -2949130, 27, 0, -2818055, 27, 0, -2621451, 64, 0, -2621449, 27, 0, -2555909, 64, 0, -1048577, 78, 0, -983042, 26, 0, -983041, 78, 0, -983040, 79, 0, -917504, 78, 0, -917502, 87, 0, -851967, 80, 0, -851966, 80, 0, -851965, 79, 0, -786428, 80, 0, -524290, 26, 0, -327676, 27, 0, -327673, 57, 0, -196611, 27, 0, -131069, 64, 0, 65534, 64, 0 )
+tile_data = PoolIntArray( -4063232, 15, 0, -3342348, 64, 0, -3342345, 27, 0, -3407867, 90, 0, -3407866, 91, 0, -3276802, 77, 0, -3342331, 92, 0, -3342330, 93, 0, -3211267, 77, 0, -3211266, 87, 0, -3276798, 19, 0, -3145732, 78, 0, -3211260, 19, 0, -3080196, 78, 0, -3145723, 90, 0, -3145722, 91, 0, -3014660, 78, 0, -3080187, 92, 0, -3080186, 93, 0, -2949130, 27, 0, -2818055, 27, 0, -2621451, 64, 0, -2621449, 27, 0, -2555909, 64, 0, -1048577, 78, 0, -983042, 26, 0, -983041, 78, 0, -983040, 79, 0, -917504, 78, 0, -917502, 87, 0, -851967, 80, 0, -851966, 80, 0, -851965, 79, 0, -786428, 80, 0, -524290, 26, 0, -327676, 27, 0, -327673, 57, 0, -196611, 27, 0, -131069, 64, 0, 65534, 64, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -124,6 +125,19 @@ position = Vector2( 1513, 728 )
 dialog = "D_003"
 NPC_TYPE = 3
 
+[node name="NPC2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1482, 738 )
+dialog = "D_DOG_2"
+NPC_TYPE = 4
+
 [node name="Bombable wall" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1720, 1528 )
 sprite = "res://Events/Bombable wall/bombable_hidden.png"
+
+[node name="Bombable wall2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1608, 616 )
+sprite = "res://Events/Bombable wall/bombable_rock.png"
+
+[node name="Sign" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1575, 616 )
+text = "S_007"

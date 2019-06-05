@@ -43,7 +43,6 @@ func _on_Area2D_body_exited(body):
 	_on_body_exited(body)
 	
 func watch_player():
-	print(_GLOBAL_DATA.player.last_dirMov)
 	match(_GLOBAL_DATA.player.last_dirMov):
 		_DIRECTIONS.down:
 			$Sprite.frame = 1

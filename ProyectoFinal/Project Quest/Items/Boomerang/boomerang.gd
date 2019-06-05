@@ -17,6 +17,7 @@ var carry_item = false
 var price = 150
 
 func _ready():
+	add_to_group("boomerang")
 	$Timer.start()
 	$SFX.start()
 	type = get_parent().type

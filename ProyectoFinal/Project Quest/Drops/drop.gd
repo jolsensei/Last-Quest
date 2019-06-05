@@ -1,6 +1,6 @@
 extends Area2D
 
-export(bool) var disappears = false
+#export(bool) var disappears = false
 
 func _ready():
 	connect("body_entered", self, "body_entered")
