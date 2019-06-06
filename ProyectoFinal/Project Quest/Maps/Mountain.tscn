@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Tiles/Overworld.tres" type="TileSet" id=1]
 [ext_resource path="res://Engine/Warps/Warp.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Events/Bombable wall/Bombable wall.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Events/Chest/Chest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Engine/Spawner/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=6]
 
 [node name="Mountain" type="Node"]
 
@@ -132,3 +133,9 @@ warp_position = "Cave_14"
 position = Vector2( 1608, 1064 )
 warp_to = 3
 warp_position = "Cave_13"
+
+[node name="NPC" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1913, 1277 )
+dialog = "D_DOG_1"
+dog_true_dialog = "D_TRUE_DOG_5"
+NPC_TYPE = 4

@@ -68,6 +68,11 @@ position = Vector2( 1880, 1416 )
 warp_to = 3
 warp_position = "Cave_1"
 
+[node name="Warp11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2200, 1288 )
+warp_to = 3
+warp_position = "Cave_16"
+
 [node name="Warp5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1560, 1383 )
 scale = Vector2( 0.8, 0.8 )
@@ -113,6 +118,9 @@ position = Vector2( 1592, 1574 )
 
 [node name="Overworld_3" type="Position2D" parent="."]
 position = Vector2( 1880, 1434 )
+
+[node name="Overworld_11" type="Position2D" parent="."]
+position = Vector2( 2200, 1306 )
 
 [node name="Overworld_5" type="Position2D" parent="."]
 position = Vector2( 1560, 1400 )

@@ -72,6 +72,7 @@ item3 = "res://Drops/Hearts/Heart.tscn"
 [node name="NPC2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1664, 1600 )
 dialog = "D_DOG_1"
+dog_true_dialog = "D_TRUE_DOG_4"
 NPC_TYPE = 4
 
 [node name="NPC5" parent="." instance=ExtResource( 3 )]

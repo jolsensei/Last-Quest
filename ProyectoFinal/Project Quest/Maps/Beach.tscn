@@ -111,6 +111,11 @@ warp_to = 2
 warp_position = "Town_2"
 zone_name = "Z_MORIOH"
 
+[node name="Warp4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1609, 615 )
+warp_to = 3
+warp_position = "Cave_15"
+
 [node name="Beach_1" type="Position2D" parent="."]
 position = Vector2( 1640, 1418 )
 
@@ -120,6 +125,9 @@ position = Vector2( 1720, 1546 )
 [node name="Beach_2" type="Position2D" parent="."]
 position = Vector2( 1606, 825 )
 
+[node name="Beach_4" type="Position2D" parent="."]
+position = Vector2( 1591, 616 )
+
 [node name="NPC" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1513, 728 )
 dialog = "D_003"
@@ -128,6 +136,7 @@ NPC_TYPE = 3
 [node name="NPC2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1482, 738 )
 dialog = "D_DOG_2"
+dog_true_dialog = "D_TRUE_DOG_1"
 NPC_TYPE = 4
 
 [node name="Bombable wall" parent="." instance=ExtResource( 6 )]
