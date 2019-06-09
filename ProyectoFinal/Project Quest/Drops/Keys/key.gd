@@ -12,5 +12,5 @@ func animation():
 func give_to_player():
 	_SFX.play_sfx("key")
 	if _GLOBAL_DATA.player.keys < _GLOBAL_DATA.player.max_keys:
-		_GLOBAL_DATA.player.keys += 1
+		_GLOBAL_DATA.player.add_keys(1)
 	_SIGNAL_MANAGER.show(false, null, _TRANSLATION_MANAGER.translate(tr("KEY")))

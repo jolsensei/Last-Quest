@@ -52,8 +52,8 @@ export var hands_free = true
 export var current_state = _ENUMS.STATE.DEFAULT
 export var type = _ENUMS.TYPE.PLAYER
 
-export var last_position:Vector2 = Vector2(1600,1600)
-export var last_map:int
+export var last_position:Vector2 = Vector2(1592,1570) #1600-1600
+export var last_map:int  = 6
 
 func _init():
 	global_speed = speed

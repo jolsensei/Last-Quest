@@ -76,8 +76,9 @@ dog_true_dialog = "D_TRUE_DOG_4"
 NPC_TYPE = 4
 
 [node name="NPC5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1795, 1490 )
+position = Vector2( 1794, 1427 )
 dialog = "D_DOG_2"
+dog_true_dialog = "D_TRUE_DOG_3"
 NPC_TYPE = 4
 
 [node name="Entity_spawner" parent="." instance=ExtResource( 4 )]

@@ -9,6 +9,7 @@ var beach = load("res://Engine/BGM/BGMDB/Middle Park.wav")
 var credits = load("res://Engine/BGM/BGMDB/Getting Started.wav")
 var caves = load("res://Engine/BGM/BGMDB/Here Comes the 8-bit Empire.wav")
 var mountain = load("res://Engine/BGM/BGMDB/Facehammer.wav")
+var dungeon = load("res://Engine/BGM/BGMDB/Boktipset Fran Helvetet.wav")
 
 func play_bgm(track):
 	 

@@ -41,3 +41,5 @@ func _physics_process(delta):
 					_BGM.play_bgm("caves")
 				WORLDS.MOUNTAIN:
 					_BGM.play_bgm("mountain")
+				WORLDS.DUNGEON:
+					_BGM.play_bgm("dungeon")
