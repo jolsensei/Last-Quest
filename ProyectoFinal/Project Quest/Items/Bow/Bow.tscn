@@ -88,4 +88,8 @@ anims/down = SubResource( 2 )
 anims/left = SubResource( 3 )
 anims/right = SubResource( 4 )
 anims/up = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 [connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

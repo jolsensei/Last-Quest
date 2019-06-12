@@ -9,6 +9,7 @@ export (DIRECTIONS) var DIRECTION
 
 export var custom_speed = -1 #-1 means no value, not activated
 
+export var active = true
 
 func spawn(to_spawn):
 	
@@ -41,5 +42,14 @@ func spawn(to_spawn):
 
 
 func _on_Timer_timeout():
-	if SPAWN_LIST != LIST.NONE:
+	if SPAWN_LIST != LIST.NONE and active:
 		spawn(SPAWN_LIST)
+
+
+
+func _on_Area2D_body_entered(body):
+	if body.get("type") == _ENUMS.TYPE.PLAYER:
+		active = false
+
+func _on_Area2D_body_exited(body):
+		active = true

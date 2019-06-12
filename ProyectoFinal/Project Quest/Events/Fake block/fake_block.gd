@@ -22,7 +22,7 @@ func _input(event):
 		_GLOBAL_DATA.player.hands_free = false
 		Input.action_release("a")
 		
-	elif Input.is_action_just_pressed("a") and picked:
+	elif Input.is_action_just_pressed("a") and picked and !_GLOBAL_DATA.player.is_on_wall():
 		_SFX.play_sfx("land")
 		$Sprite/StaticBody2D/CollisionShape2D.disabled = false
 		picked = false

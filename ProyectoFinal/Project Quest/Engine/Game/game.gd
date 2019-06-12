@@ -26,6 +26,7 @@ func _ready():
 					_BGM.play_bgm("mountain")
 				WORLDS.DUNGEON:
 					_BGM.play_bgm("dungeon")
+					_SIGNAL_MANAGER.show_keys(true)
 	
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:

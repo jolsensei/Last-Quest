@@ -1,5 +1,6 @@
 id,en,es
 KEY,You found a /*small key*/ ! //You can use it to /*open*/ a /*locked door*/,¡ Has encontrado una /*llave pequeña*/ ! //Puedes /*usarla*/ para abrir una /*puerta cerrada*/
+BOSS_KEY,You found the /*Boos Key*/ ! //Now you are able to open de boss door!,¡ Has encontrado la /*Llave del Jefe*/ !//Ahora eres capaz de abrir la puerta del jefe
 ARROWS,5 /*arrows*/ ! Use them wisely,¡ 5 /*flechas*/ ! Úsalas sabiamente
 5_BOMBS,5 /*bombs*/ ! Try to be a good boy,¡ 5 /*bombas*/ ! Intenta ser un chico bueno
 HEART_CONTAINER,You got a /*heart container*/ ! //You get a new /*full heart*/ ! That's great,¡ Has conseguido un /*contenedor de corazón*/  ! //¡ Consigues un /*corazón extra*/ ! Genial
@@ -14,8 +15,8 @@ RUPEE_20,"Ohh, 20 /*rupees*/, a good reason to smile !","Ohh, 20 /*rupias*/, un 
 RUPEE_50,50 /*rupees*/ ! Make sure you don't spend them suddenly,¡ 50 /*rupias*/ ! Asegurate de no gastarlas de golpe
 ,,
 GOLDY_BLADE,You got the /*Goldy Blade*/ ! //It's said that this sword was forged after a promise between humans and demons//Equip it to /*A*/ or  /*B*/,¡ Has conseguido la /*Hoja Dorada*/ !//Se dice que esta espada fue forjada tras una promesa entre humanos y demonios//Equípala en la /*A*/ o /*B*/
-WARRIOR_SHIELD,"You got the /*Warrior Shield*/ !//It's made of wood, so it doesn't seem very reliable, well, is better than nothing//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Escudo de Guerrero*/ !//Está hecho de madera, no parece muy confiable pero es mejor que nada//Equípalo en la /*A*/ o /*B*/"
-LEGENDS_SHIELD,"You got the /*Legend's Shield*/ ! Wait, this is from an anime, right ?!//You can /*block*/ enemy attacks with it //Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Escudo Legendario*/ ! Espera, !¿ Esto es de un anime, verdad ?¡//Úsalo para /*bloquear*/ ataques enemigos //Equípalo en la /*A*/ o /*B*/"
+WARRIOR_SHIELD,"You got the /*Warrior Shield*/ !//It's made of wood, so it doesn't seem very reliable, well, is better than nothing//You can /*block*/ enemy attacks with it//Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Escudo de Guerrero*/ !//Está hecho de madera, no parece muy confiable pero es mejor que nada//Puedes /*bloquear*/ ataques enemigos//Equípalo en la /*A*/ o /*B*/"
+LEGENDS_SHIELD,"You got the /*Legend's Shield*/ ! Wait, this is from an anime, right ?!//You can /*block and reflect*/ enemy attacks with it //Equip it to /*A*/ or /*B*/","¡ Has conseguido el /*Escudo Legendario*/ ! Espera, !¿ Esto es de un anime, verdad ?¡//Úsalo para /*bloquear y devolver*/ ataques enemigos //Equípalo en la /*A*/ o /*B*/"
 BRACELET_OF_WILL,"You got the /*Bracelet of Will*/ ! //With this bracelet, you can even /*lift rocks*/ //You know, where there is a will, there is a way","¡ Has conseguido el /*Bracelete de la voluntad*/ ! //Con este bracelete, puedes /*levantar*/ incluso /*piedras*/ //Ya sabes, querer es poder"
 WIND_BOOTS,"You got the /*Wind Boots*/ ! //With them, you can move faster holding /*R*/ //Do you know which direction the wind is blowing ...? Blows towards tomorrow","¡ Has conseguido las /*Botas del viento*/ ! //Con ellas, puedes moverte más rápido manteniendo /*R*/ //¿ Sabes hacia que dirección sopla el viento ...? Sopla hacia el mañana"
 DOGE_BADGE,"You go-... // Oh, really ? // You got the /*Doge Badge*/ ! //Now you can understand dogs because of Doge's /*such dog*/ power, /*WOW*/","¡ Has con-... //Oh, ¿en serio?//¡ Has conseguido el /*Pin de Doge*/ !//Ahora puedes entender a los perros gracias al poderoso /*such dog*/ de Doge, /*WOW*/"

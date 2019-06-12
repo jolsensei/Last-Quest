@@ -28,6 +28,7 @@ func _physics_process(delta):
 			emit_signal("player_entered")
 			body.hands_free = true
 			body.can_interact = true
+			body.stop_wind_boots()
 			_SIGNAL_MANAGER.show_keys(show_keys)
 			
 			match(warp_to):

@@ -19,6 +19,7 @@ func _ready():
 		get_parent().arrows -= 1
 		_SIGNAL_MANAGER.update_counter(get_parent().arrows, self.name)
 #		print(get_parent().arrows)
+		$Timer.start()
 		
 		var new_parent = get_parent().get_parent()
 		get_parent().remove_child(self)
@@ -41,3 +42,7 @@ func give_to_player():
 	_GLOBAL_DATA.player.inventory[6] = load("res://Items/Bow/Bow.tscn")
 	_SIGNAL_MANAGER.update_inventory()
 	_SIGNAL_MANAGER.show(true, $Portrait.texture, _TRANSLATION_MANAGER.translate(tr("BOW")))
+
+
+func _on_Timer_timeout():
+	queue_free()

@@ -22,6 +22,8 @@ export var bombs = 10
 export var max_keys = 9
 export var keys = 0
 
+export var boss_key = false
+
 export var bracelet_of_will = true
 
 export var wind_boots = true
@@ -53,7 +55,7 @@ export var current_state = _ENUMS.STATE.DEFAULT
 export var type = _ENUMS.TYPE.PLAYER
 
 export var last_position:Vector2 = Vector2(1592,1570) #1600-1600
-export var last_map:int  = 6
+export var last_map:int = 6
 
 func _init():
 	global_speed = speed
@@ -74,6 +76,8 @@ func _ready():
 	_SIGNAL_MANAGER.connect("game_over", self, "game_over")
 	global_max_hearts = max_hearts
 	global_hearts = hearts
+	can_interact = false
+	hands_free = true
 	
 func _physics_process(delta):
 	
@@ -109,6 +113,7 @@ func state_default():
 		
 	if Input.is_action_just_pressed("r") and wind_boots:
 		use_wind_boots()
+		_on_Boots_timeout() #To avoid exploit
 	elif Input.is_action_just_released("r") and wind_boots:
 		stop_wind_boots()
 
@@ -197,6 +202,7 @@ func _on_Boots_timeout():
 	$Stamina.frame = stamina
 	
 func game_over():
+	type = _ENUMS.TYPE.TERRAIN
 	$Animation.stop(true)
 	set_physics_process(false)
 	current_state = _ENUMS.STATE.ATTACK

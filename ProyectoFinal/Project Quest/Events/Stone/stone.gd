@@ -26,7 +26,7 @@ func _input(event):
 		Input.action_release("a")
 		
 
-	if Input.is_action_just_pressed("a") and picked and _GLOBAL_DATA.player.dirMov != Vector2(0,0):
+	if Input.is_action_just_pressed("a") and picked and _GLOBAL_DATA.player.dirMov != Vector2(0,0) and !_GLOBAL_DATA.player.is_on_wall():
 		_SFX.play_sfx("throw")
 		$Timer.start()
 		type = _ENUMS.TYPE.PLAYER
@@ -38,7 +38,7 @@ func _input(event):
 		Input.action_release("a")
 		throw = true
 		
-	elif Input.is_action_just_pressed("a") and picked:
+	elif Input.is_action_just_pressed("a") and picked and !_GLOBAL_DATA.player.is_on_wall():
 		_SFX.play_sfx("land")
 		$Sprite/StaticBody2D/CollisionShape2D.disabled = false
 		picked = false
