@@ -64,8 +64,9 @@ func to_caps():
 		character.get_node("Label").uppercase = caps_activated
 		
 func start_game():
-	_GLOBAL_DATA.player_name = $Name.text
-	get_tree().change_scene("res://Engine/Game/Game.tscn")
+	if $Name.text.length() != 0:
+		_GLOBAL_DATA.player_name = $Name.text
+		get_tree().change_scene("res://Engine/Game/Game.tscn")
 	
 func translate():
 	$Label.text = tr("T_CHOOSE_NAME")

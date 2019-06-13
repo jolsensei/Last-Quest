@@ -12,7 +12,7 @@ var sfx_volume = -50
 var locale = "en"
 
 func _init():
-	world.resize(7)
+	world.resize(8)
 #	world[0] = load("res://Maps/TestRoom.tscn")
 #	world[1] = load("res://Maps/TestRoom_2.tscn")
 #	world[2] = load("res://Maps/TestRoom_3.tscn")
@@ -23,3 +23,4 @@ func _init():
 	world[4] = load("res://Maps/Goldy Pond.tscn")
 	world[5] = load("res://Maps/Mountain.tscn")
 	world[6] = load("res://Maps/Dungeon.tscn")
+	world[7] = load("res://Maps/BossCredits.tscn")

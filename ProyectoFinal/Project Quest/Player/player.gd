@@ -24,22 +24,22 @@ export var keys = 0
 
 export var boss_key = false
 
-export var bracelet_of_will = true
+export var bracelet_of_will = false
 
-export var wind_boots = true
+export var wind_boots = false
 export var stamina = 14
 
-export var doge_badge = true
+export var doge_badge = false
 
 export var emissary_of_the_edge = false
 
-export var big_wallet = true
+export var big_wallet = false
 
-export var head_band = true
+export var head_band = false
 
 
 export var item_A:Resource = load("res://Items/Sword/Iron Sword.tscn")
-export var item_B:Resource = load("res://Items/Boomerang/Boomerang.tscn")
+export var item_B:Resource #= load("res://Items/Boomerang/Boomerang.tscn")
 
 export var inventory = []
 
@@ -55,7 +55,7 @@ export var current_state = _ENUMS.STATE.DEFAULT
 export var type = _ENUMS.TYPE.PLAYER
 
 export var last_position:Vector2 = Vector2(1592,1570) #1600-1600
-export var last_map:int = 6
+export var last_map:int
 
 func _init():
 	global_speed = speed
@@ -64,13 +64,13 @@ func _init():
 
 	inventory.resize(16)
 
-	inventory[0] = load("res://Items/Sword/Iron Sword.tscn")
-	inventory[1] = load("res://Items/Goldy Blade/Goldy Blade.tscn")
-	inventory[2] = load("res://Items/Warrior's Shield/Warrior's Shield.tscn")
-	inventory[3] = load("res://Items/Shield/Shield of Legend.tscn")
-	inventory[5] = load("res://Items/Boomerang/Boomerang.tscn")
-	inventory[6] = load("res://Items/Bow/Bow.tscn")
-	inventory[7] = load("res://Items/Bomb/Bomb.tscn")
+	#inventory[0] = load("res://Items/Sword/Iron Sword.tscn")
+	#inventory[1] = load("res://Items/Goldy Blade/Goldy Blade.tscn")
+	#inventory[2] = load("res://Items/Warrior's Shield/Warrior's Shield.tscn")
+	#inventory[3] = load("res://Items/Shield/Shield of Legend.tscn")
+	#inventory[5] = load("res://Items/Boomerang/Boomerang.tscn")
+	#inventory[6] = load("res://Items/Bow/Bow.tscn")
+	#inventory[7] = load("res://Items/Bomb/Bomb.tscn")
 	
 func _ready():
 	_SIGNAL_MANAGER.connect("game_over", self, "game_over")

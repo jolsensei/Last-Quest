@@ -2,7 +2,7 @@ extends Area2D
 
 signal player_entered
 
-enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, GOLDY, MOUNTAIN, DUNGEON}
+enum WORLDS{BEACH, OVERWORLD, TOWN, CAVES, GOLDY, MOUNTAIN, DUNGEON, CREDITS}
 
 #export(String, FILE, "*.tscn") var warp_to
 export(WORLDS) var warp_to
@@ -44,3 +44,5 @@ func _physics_process(delta):
 					_BGM.play_bgm("mountain")
 				WORLDS.DUNGEON:
 					_BGM.play_bgm("dungeon")
+				WORLDS.CREDITS:
+					_BGM.play_bgm("credits")

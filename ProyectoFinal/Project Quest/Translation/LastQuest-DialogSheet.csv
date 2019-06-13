@@ -1,6 +1,6 @@
 id,en,es
 KEY,You found a /*small key*/ ! //You can use it to /*open*/ a /*locked door*/,¡ Has encontrado una /*llave pequeña*/ ! //Puedes /*usarla*/ para abrir una /*puerta cerrada*/
-BOSS_KEY,You found the /*Boos Key*/ ! //Now you are able to open de boss door!,¡ Has encontrado la /*Llave del Jefe*/ !//Ahora eres capaz de abrir la puerta del jefe
+BOSS_KEY,You found the /*Boss Key*/ ! //Now you are able to open de boss door!,¡ Has encontrado la /*Llave del Jefe*/ !//Ahora eres capaz de abrir la puerta del jefe
 ARROWS,5 /*arrows*/ ! Use them wisely,¡ 5 /*flechas*/ ! Úsalas sabiamente
 5_BOMBS,5 /*bombs*/ ! Try to be a good boy,¡ 5 /*bombas*/ ! Intenta ser un chico bueno
 HEART_CONTAINER,You got a /*heart container*/ ! //You get a new /*full heart*/ ! That's great,¡ Has conseguido un /*contenedor de corazón*/  ! //¡ Consigues un /*corazón extra*/ ! Genial
@@ -31,12 +31,13 @@ S_001,"This is a test, you can press A to skip the following Lorem Ipsum so you 
 Z_001,Dungeon of Tests,Mazmorra de las Pruebas
 Z_002,Dummy Hills,Colinas Maniquí
 Z_BEACH,Beach,Playa
-Z_FIELDS,Fields,Campo
+Z_FIELDS,Wild Fields,Campos Salvajes
 Z_MORIOH,Morioh Village, Pueblo de Morioh
 Z_RUINS,Mysterious Ruins,Ruinas Misteriosas
 Z_GOLDY,Goldy Pond,Estanque Dorado
 Z_MOUNTAIN,Deathly Mountain,Montaña letal
 Z_DUNGEON,Nightmare Dungeon,Mazmorra de las Pesadillas
+Z_CREDITS,Thanks for playing !,¡ Gracias por jugar !
 ,,
 T_PRESS_BUTTON,- Press A button -,- Pulsa el botón A -
 T_FILE_1,File 1,Part. 1
@@ -57,7 +58,7 @@ T_LANG,Language,Idioma
 T_SPANISH,Spanish,Español
 T_ENGLISH,English,Inglés
 T_CHOOSE_NAME,Choose your name,Escoge un nombre
-T_CAPS,Caps,Mayus
+T_CAPS,Caps,Caps
 T_END,End,Fin
 T_SAVE,Save,Guardar
 T_DATA_SAVED,Saved,Guardado
@@ -87,3 +88,4 @@ S_004,To the /*Deathly Mountain*/,Hacia la /*Montaña Letal*/
 S_005,You should think twice before continue . . .//Unless you want to face a terrible fate,Deberías pensartelo dos veces antes de seguir . . .//A no ser que quieras enfrentarte a un terrible destino 
 S_006,A deep secret awaits...//Make the beach rock /*explode*/,Un profundo secreto te espera...//Haz que la roca de la playa /*estalle*/
 S_007,"Beach viewpoint//. . .//. . .//The programmer was quite busy and did not have time to animate the water, sorry ","Mirador de la playa//. . .//. . .//El programador estaba bastante ocupado y no le dio tiempo a animar el agua, lo siento"
+S_008,"Thank you so much for playing /*Last Quest*/ //This game was made by one student in 3 months as a final school project, hope you like it!// /*Director:*/ jolsensei// /*Music:*/ Ozzed// /*Art:*/ DragonDePlatino - jolsensei// /*Programming:*/ jolsensei// /*Translation:*/ jolsensei","¡ Muchas gracias por jugar /*Last Quest*/ !//Este juego se ha hecho por un alumno en 3 meses para un proyecto final,  espero que lo hayas disfrutado// /*Director:*/ jolsensei// /*Música:*/ Ozzed// /*Arte:*/ DragonDePlatino - jolsensei// /*Programación:*/ jolsensei // /*Traducción:*/ jolsensei"
